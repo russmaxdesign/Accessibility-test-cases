@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Adding instructions for form fields</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Adding instructions for form fields</h1>
+			<ul>
+				<li><a href="#one">Option 1 - instructions outside label, after input</a></li>
+				<li><a href="#two">Option 2 - instructions inside label, after input</a></li>
+				<li><a href="#three">Option 3 - instructions outside label, after input, using describedby</a></li>
+				<li><a href="#four">Option 4 - instructions outside label, after input, using labelledby</a></li>
+				<li><a href="#five">Option 5 - instructions using placeholder</a></li>
+			</ul>
+			
+			<h2 id="one">Option 1 - instructions outside label, after input</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>Instructions <b>should be visible</b> on the page</li> 
+				<li>Instructions <b>should be announced</b> to screen readers with label information</li> 
+			</ul>
+			<h3>Example</h3>
+			<form class="example" action="#">
+				<div>
+					<label class="label" for="a">Email</label>
+					<input class="input" type="text" name="a" id="a">
+					<span class="hint-message">Make sure you use a valid email address</span>
+				</div>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;div&gt;
+	&lt;label for="a"&gt;Email&lt;/label&gt;
+	&lt;input type="text" id="a"&gt;
+	&lt;span&gt;Make sure you use a valid email address&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="fail">"Email. Edit. Blank"</td>
+						<td class="fail">"Email. Edit. Type in text"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">"Email. Edit. Blank"</td>
+						<td class="fail">"Email. Edit. Type in text"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">"Email. Edit. Blank"</td>
+						<td class="fail">"Email. Edit. Type in text"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">"Email. Edit with autocomplete. Blank"</td>
+						<td class="fail">"Email. Edit. Type in text"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">"Email. Edit. Text"</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">"Email. Text"</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">"Email. Edit. Text"</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<h2 id="two">Option 2 - instructions inside label, after input</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>Instructions <b>should be visible</b> on the page</li> 
+				<li>Instructions <b>should be announced</b> to screen readers with label information</li> 
+			</ul>
+			<h3>Example</h3>
+			<form class="example" action="#">
+				<div>
+					<label for="b">
+						<span class="label">Phone</span>
+						<input class="input" type="text" name="b" id="b">
+						<span class="hint-message">Include area code</span>
+					</label>
+				</div>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;div&gt;
+	&lt;label for="b"&gt;
+		Phone
+		&lt;input type="text" id="b"&gt;
+		&lt;span&gt;Include area code&lt;/span&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">"Phone. <b>Include area code</b>. Edit. Blank"</td>
+						<td class="pass">"Phone. <b>Include area code</b>. Edit. Type in text"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">"Phone. <b>Include area code</b>. Edit. Blank"</td>
+						<td class="pass">"Phone. <b>Include area code</b>. Edit. Type in text"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">"Phone. <b>Include area code</b>. Edit. Blank"</td>
+						<td class="pass">"Phone. <b>Include area code</b>. Edit. Type in text"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">"Phone. <b>Include area code</b>. Edit with autocomplete. Blank"</td>
+						<td class="pass">"Phone. <b>Include area code</b>. Edit. Type in text"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">"Phone. <b>Include area code</b>. Edit. Text"</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">"Phone. <b>Include area code</b>. Phone. Instructions. Text"</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">"Phone. <b>Include area code</b>. Edit. Text"</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<h2 id="three">Option 3 - instructions outside label, after input, using describedby</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>Instructions <b>should be visible</b> on the page</li> 
+				<li>Instructions <b>should be announced</b> to screen readers with label information</li> 
+			</ul>
+			<h3>Example</h3>
+			<form class="example" action="#">
+				<div>
+					<label class="label" for="c">Address</label>
+					<input class="input" type="text" id="c" aria-describedby="instructions3">
+					<span class="hint-message" id="instructions3">Include full address</span>
+				</div>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;div&gt;
+	&lt;label for="c"&gt;Address&lt;/label&gt;
+	&lt;input type="text" id="c" aria-describedby="instructions3"&gt;
+	&lt;span id="instructions3"&gt;Include full address&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">"Address. Edit. <b>Include full address</b>. Blank"</td>
+						<td class="pass">"Address. Edit. <b>Include full address</b>. Type in text"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">"Address. Edit. <b>Include full address</b>. Blank"</td>
+						<td class="pass">"Address. Edit. <b>Include full address</b>. Type in text"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">"Address. Edit. <b>Include full address</b>. Blank"</td>
+						<td class="pass">"Address. Edit. <b>Include full address</b>. Type in text"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">"Address. Edit with autocomplete.<b> Include full address</b>. Blank"</td>
+						<td class="pass">"Address. Edit. <b>Include full address</b>. Type in text"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">"Address. Edit. Text"</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">"Address. <b>Include full address</b>. Text"</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">"Address. Edit. Text"</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<h2 id="four">Option 4 - instructions outside label, after input, using labelledby</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>Instructions <b>should be visible</b> on the page</li> 
+				<li>Instructions <b>should be announced</b> to screen readers with label information</li> 
+			</ul>
+			<h3>Example</h3>
+			<form class="example" action="#">
+				<div>
+					<label class="label" for="d">Account no.</label>
+					<input class="input" type="text" name="d" id="d" aria-labelledby="instructions4">
+					<span class="hint-message" id="instructions4">Use 10 digit number</span>
+				</div>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;div&gt;
+	&lt;label for="d"&gt;Account no.&lt;/label&gt;
+	&lt;input type="text" id="d" aria-labelledby="instructions4"&gt;
+	&lt;span id="instructions4"&gt;Use 10 digit number&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="fail">"Use 10 digit number. Edit. Blank"</td>
+						<td class="fail">"Use 10 digit number. Edit. Blank"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">"<b>Use 10 digit number</b>. Edit. Blank"</td>
+						<td class="fail">"<b>Use 10 digit number</b>. Edit. Blank"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">"<b>Use 10 digit number</b>. Edit. Blank"</td>
+						<td class="fail">"<b>Use 10 digit number</b>. Edit. Blank"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">"<b>Use 10 digit number</b>. Edit with autocomplete. Blank"</td>
+						<td class="fail">"<b>Use 10 digit number</b>. Edit. Blank"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">"Account no. <b>Use 10 digit number</b>. Edit. Text"</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">"<b>Use 10 digit number</b>. Text"</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">"Account no. <b>Use 10 digit number</b>. Edit. Text"</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<h2 id="five">Option 5 - instructions using placeholder</h2>
+			<ul>
+				<li>The placeholder <b>should be visible</b> on the page</li> 
+				<li>The placeholder value <b>should be announced</b> on focus</li>
+			</ul>
+			<h3>Example</h3>
+			<form method="get" action="#" class="example">
+				<div class="row-form">
+					<label class="label" for="a">Name</label>
+					<input class="input" id="a" name="a" type="text" placeholder="Add your name">
+				</div>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;input type="text" placeholder="Add your name"&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="fail">
+							"Name. Edit. Blank"
+						</td>
+						<td class="fail">
+							"Name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">
+							"Name. Edit. Blank"
+						</td>
+						<td class="fail">
+							"Name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							"Name. Edit. <b>Add your name</b>"
+						</td>
+						<td class="pass">
+							"Name. Edit. <b>Add your name</b>. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">
+							"Name. Edit with autocomplete. Blank"
+						</td>
+						<td class="fail">
+							"Name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							"Name. Edit. Text."
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							"Name. Text."
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"<b>Add you name</b>. Name. Edit. Text."
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Test: role="application"</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Role="application" test</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>Application <b>should be announced</b> when entering and leaving application region</li> 
+				<li>Screen readers <b>should announce</b> content inside the application when in line-by-line mode</li> 
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<div role="application">
+					<h2 style="margin: 0 0 .5em;">Heading</h2>
+					<p>A paragraph of text</p> 
+					<form method="get" action="#">
+						<div class="row-form">
+							<label class="label" for="a">Name</label>
+							<input class="input" id="a" name="a" type="text">
+						</div>
+						<div class="row-form row-indent">
+							<button type="submit">Submit</button>
+						</div>
+					</form>
+				</div>	
+			</div>		
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;div role="application"&gt;
+	&lt;h2&gt;Heading&lt;/h2&gt;
+	&lt;p&gt;A paragraph of text&lt;/p&gt;
+	&lt;form method="get" action="#"&gt;
+		&lt;div class="row-form"&gt;
+			&lt;label class="label" for="a"&gt;Name&lt;/label&gt;
+			&lt;input class="input" id="a" name="a" type="text"&gt;
+		&lt;/div&gt;
+		&lt;div class="row-form"&gt;
+			&lt;button type="submit"&gt;Submit&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/form&gt;
+&lt;/div&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td>
+<b>Line-by-line mode:</b><br>
+"<span class="pass">Application</span>"<br>
+<span class="fail">Nothing further available in line-by-line mode</span><br>
+<br>
+<b>Tab mode:</b><br>
+Switches into forms mode. "Heading. A paragraph of text. Name. Submit. Name. Edit. Blank"<br>
+<span class="fail">All general content associated with form controls - like a legend</span><br>
+<span class="fail">Application not announced</span>
+						</td>
+						<td>
+<b>Line-by-line mode:</b><br>
+"<span class="pass">Entering application region. Application</span>"<br>
+"Heading level 2. Heading"<br>
+"A paragraph of text"<br>
+"Name"<br>
+"Edit"<br>
+"Submit button"<br>
+"Application end"<br>
+<br>
+<b>Tab mode:</b>
+"<span class="pass">Entering application region</span>. Name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td>X</td>
+						<td>X</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td>
+<b>Line-by-line mode:</b><br>
+"<span class="pass">Application</span>"<br>
+<span class="fail">Nothing further available in line-by-line mode</span><br>
+<br>
+<b>Tab mode:</b><br>
+Switches into forms mode. "<span class="pass">Application</span>. Name. Edit. Blank"
+						</td>
+						<td>
+<b>Line-by-line mode:</b><br>
+"<span class="pass">Entering application region</span>. <span class="pass">Application</span>"<br>
+"Heading level 2. Heading"<br>
+"A paragraph of tex"t<br>
+"Name"<br>
+"Edit"<br>
+"Submit button"<br>
+"Application end"<br>
+<br>
+<b>Tab mode:</b>
+"<span class="pass">Entering application region</span>. Name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td>
+<b>Line-by-line mode:</b><br>
+"<span class="pass">Application</span>"<br>
+<span class="fail">Nothing further available in line-by-line mode</span><br>
+<br>
+<b>Tab mode:</b><br>
+"<span class="pass">Application</span>. Name. Edit. With autocomplete. Blank"
+						</td>
+						<td>
+<b>Line-by-line mode:</b><br>
+"<span class="pass">Entering application region</span>. <span class="pass">Application</span>"<br>
+"Heading level 2. Heading"<br>
+"A paragraph of text"<br>
+"Name"<br>
+"Edit"<br>
+"Submit button"<br>
+"Application end"<br>
+<br>
+<b>Tab mode:</b>
+"<span class="pass">Entering application region</span>. Name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td>
+<b>Line-by-line mode:</b><br>
+"<span class="pass">Entering application landmark</span>. Collapsed. Heading level 2. Heading"<br>
+"A paragraph of text"<br>
+"Name"<br>
+"Name. Edit. Text"<br>
+"Submit. Collapsed. Button"<br>
+"Leaving application landmark"<br>
+<br>
+<b>Tab mode:</b><br>
+"Name. Edit. Text"<br>
+<span class="fail">Application not announced</span>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td>
+<b>Line-by-line mode:</b><br>
+"Heading level 2. Heading"<br>
+"A paragraph of text"<br>
+"Name"<br>
+"Name. Text"<br>
+"Submit. Button"<br>
+<br>
+<b>Tab mode:</b>
+"Name. Text"<br>
+<span class="fail">Application not announced</span>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td>
+<b>Line-by-line mode:</b><br>
+"<span class="pass">Entering application landmark</span>. Heading level 2. Heading"<br>
+"A paragraph of text"<br>
+"Name"<br>
+"Name. Edit. Text"<br>
+"Submit. Button"<br>
+"Leaving application landmark"<br>
+<br>
+<b>Tab mode:</b><br>
+"Name. Edit. Text"<br>
+<span class="fail">Application not announced</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

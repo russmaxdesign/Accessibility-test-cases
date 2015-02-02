@@ -1,0 +1,126 @@
+
+/* (static) general canvas styles */
+html, body
+{
+	font:normal normal normal 100%/1.4 sans-serif;
+	
+	background:#fff;
+	color:#000;
+}
+@media all and (min-width:50em)
+{
+	body
+	{
+		width:66%;
+		margin:0 auto;
+	}
+}
+h1
+{
+	font-weight:normal;
+	font-size:2em;
+}
+dfn
+{
+	font-style:normal;
+	font-weight:bold;
+}
+
+
+
+/* (static) tabgroup container */
+#tabgroup 
+{
+	/* relative positioning establishes a stacking context */
+	position:relative;
+	
+	padding:20px;
+	
+	background:#eee;
+}
+
+/* (static) tablist and individual tabs */
+#tabgroup > nav,
+#tabgroup > nav *
+{
+	display:block;
+	
+	margin:0;
+	padding:0;
+	
+	list-style-type:none;
+}
+#tabgroup > nav > ul *
+{
+	display:inline-block;
+}
+#tabgroup > nav a
+{
+	padding:10px 20px;
+	
+	font-weight:bold;
+	text-decoration:none;
+	
+	border:1px solid #000;
+
+	background:#ffc;
+	color:#000;
+}
+
+/* (static) individual tab panels */
+#tabgroup > section
+{
+	display:block;
+	padding:10px 20px;
+	
+	height:20em;
+	overflow-y:auto;
+	
+	border:1px solid #000;
+	
+	background:#ffc;
+}
+
+
+
+/* (dynamic) tablist and individual tabs */
+#tabgroup > nav a[role="tab"],
+#tabgroup > nav a[data-role="tab"]
+{
+	/* the active tab is above the panels */
+	position:relative;
+	z-index:3000;
+
+	border-bottom:none;
+	
+	/* specify a cursor since the link has had its href removed */
+	cursor:pointer;
+}
+#tabgroup > nav a[role="tab"][aria-selected="false"],
+#tabgroup > nav a[data-role="tab"][data-selected="false"]
+{
+	/* inactive tabs are beneath the panels */
+	z-index:1000;
+
+	border-color:#ccc;
+	
+	background:#ccc;
+}
+
+/* (dynamic) individual tab panels */
+#tabgroup > section[role="tabpanel"],
+#tabgroup > section[data-role="tabpanel"]
+{
+	/* panels are above the inactive tabs but below the active tab 
+	   then offset to create the appearance of a seamless join */
+	position:relative;
+	z-index:2000;
+	top:-1px;
+}
+#tabgroup > section[role="tabpanel"][aria-expanded="false"],
+#tabgroup > section[data-role="tabpanel"][data-expanded="false"]
+{
+	display:none;
+}		
+
+

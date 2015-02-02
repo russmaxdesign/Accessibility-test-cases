@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Table test 10</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Table test 10</h1>
+			<h2>Example 1 - Hidden label in column 1</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>
+							<label for="one">
+								<input id="one" name="one" type="checkbox">
+								<span class="ally-context">Select all</span>
+							</label>
+						</th>
+						<th>Column heading here</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<label for="checkbox1">
+								<input id="checkbox1" name="stuff" type="checkbox">
+								<span class="ally-context">Hidden content here</span>
+							</label>
+						</td>
+						<td>Something else</td>
+					</tr>
+				</tbody>
+			</table>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;tr&gt;
+	&lt;td&gt;
+		&lt;label for="checkbox1"&gt;
+			&lt;input id="checkbox1" name="stuff" type="checkbox"&gt;
+			&lt;span class="ally-context"&gt;Hidden content here&lt;/span&gt;
+		&lt;/label&gt;
+	&lt;/td&gt;
+	&lt;td&gt;Something else&lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<h2>Example 2 - Visible label in column 2</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>
+							<label for="two">
+								<input id="two" name="two" type="checkbox">
+								<span class="ally-context">Select all</span>
+							</label>
+						</th>
+						<th>Column heading here</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input id="checkbox2" name="stuff" type="checkbox"></td>
+						<td><label for="checkbox2">Eat a goat</label></td>
+					</tr>
+				</tbody>
+			</table>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;tr&gt;
+	&lt;td&gt;
+		&lt;input id="checkbox2" name="stuff" type="checkbox"&gt;
+	&lt;/td&gt;
+	&lt;td&gt;
+		&lt;label for="checkbox2"&gt;Eat a goat&lt;/label&gt;
+	&lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>
+
+

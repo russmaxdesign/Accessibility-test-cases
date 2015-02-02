@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Skip link test</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/skip2.js"></script>
+ <style>
+a.skip-link
+{
+	position: absolute;
+	left: -1000px;
+	z-index: 2;
+	padding: .5em;
+	color: #fff;
+	background: #000;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.skip-link:active,
+a.skip-link:focus,
+a.skip-link:hover 
+{
+	display: inline;
+	top: 0;
+	left: 0;
+}
+		</style>
+	</head>
+	<body>
+		<a class="skip-link" href="#main">Skip to content - Press enter</a>	
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>
+				Skip link test
+			</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum enim sed dignissim pulvinar. Maecenas cursus auctor consequat. Nulla vel arcu vehicula, sodales justo ac, placerat tellus. Vivamus tincidunt velit condimentum blandit lacinia. Mauris tortor nulla, dictum at consequat quis, facilisis id nunc. Maecenas tempor lectus id molestie consectetur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur malesuada dui sed dolor venenatis convallis. Aliquam nec est euismod, eleifend neque vel, semper justo.</p>
+			<p><a href="#">This is dummy link 02</a></p>
+			<p>Duis nec vehicula metus. Proin aliquam non metus eget pharetra. Vivamus pharetra, enim eu suscipit interdum, nisl tortor porttitor neque, vitae blandit diam mauris molestie orci. Praesent imperdiet, magna vitae hendrerit consectetur, sapien felis sollicitudin mauris, ut pharetra magna sem non ligula. Proin imperdiet ac lectus et pulvinar. Cras et enim lacinia, hendrerit erat venenatis, rhoncus ipsum. Donec felis erat, dapibus ut gravida fermentum, condimentum et turpis. Etiam placerat id urna facilisis consequat. Nulla ac purus in risus egestas dictum. Pellentesque in felis erat.</p>
+			<p><a href="#">This is dummy link 03</a></p>
+			<p>Nam bibendum ullamcorper nibh sed ultrices. Nunc eget augue fringilla, aliquam turpis sed, congue turpis. Morbi cursus posuere purus. Sed mauris lectus, tincidunt a magna et, venenatis porta sapien. Sed quis feugiat arcu, non lacinia ligula. Cras at dui lectus. Mauris faucibus viverra arcu. Nam sit amet ligula non nunc pharetra scelerisque. Sed ultrices purus eget metus venenatis fringilla. Quisque tortor ante, blandit et condimentum at, tristique at neque. In erat odio, dapibus at vulputate nec, lacinia in arcu.</p>
+			<p><a href="#">This is dummy link 04</a></p>
+			<p>Suspendisse tristique suscipit augue, eu pellentesque lacus pharetra eget. Duis a risus aliquet, malesuada arcu sed, laoreet erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec nec dignissim ipsum. In mollis ultricies libero, sed accumsan ipsum placerat eget. Praesent rutrum pellentesque sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non libero at nisi facilisis tincidunt eget non diam. In ac sem eu mauris imperdiet bibendum. Nulla faucibus lectus eu massa euismod, at aliquet orci tincidunt. Proin dignissim lectus quis sodales tristique. Praesent nec lobortis tellus. Donec massa augue, convallis ut justo gravida, condimentum eleifend mi. Praesent ac rhoncus quam, quis ullamcorper diam. Aliquam vel semper augue, vitae commodo tortor.</p>
+			<p><a href="#">This is dummy link 05</a></p>
+			<h2>
+				Some more reading:
+			</h2>
+			<ul>
+				<li><a href="http://terrillthompson.com/blog/161" target="_blank">Back to Basics: Skip to Main Content Links</a></li>
+				<li><a href="http://webaim.org/media/scripts/main.js" target="_blank">WebAim JS file</a></li>
+			</ul>
+			<div id="main" tabindex="-1">
+				<h2>Target should be here</h2>
+				<p><a href="#">THIS LINK SHOULD BE IN FOCUS AFTER SKIP LINK ACTIVATED</a></p>
+				<p>Cras a lobortis dui. Morbi vel eros vitae sem feugiat cursus vel vitae massa. Praesent enim ligula, consectetur in leo in, vulputate fermentum tellus. Curabitur mi nulla, ultricies interdum laoreet eget, feugiat id quam. Aenean interdum eleifend sem, in pulvinar metus consectetur a. Pellentesque fermentum est est, et consectetur tellus pretium ac. Duis purus sem, dapibus ullamcorper lobortis nec, volutpat ultricies nisi. Donec non sagittis eros, nec lobortis quam. Etiam sagittis ante nec sodales cursus. Nulla a varius neque. Nulla facilisi.</p>
+				<p><a href="#">This is dummy link 07</a></p>
+				<p>Duis nec vehicula metus. Proin aliquam non metus eget pharetra. Vivamus pharetra, enim eu suscipit interdum, nisl tortor porttitor neque, vitae blandit diam mauris molestie orci. Praesent imperdiet, magna vitae hendrerit consectetur, sapien felis sollicitudin mauris, ut pharetra magna sem non ligula. Proin imperdiet ac lectus et pulvinar. Cras et enim lacinia, hendrerit erat venenatis, rhoncus ipsum. Donec felis erat, dapibus ut gravida fermentum, condimentum et turpis. Etiam placerat id urna facilisis consequat. Nulla ac purus in risus egestas dictum. Pellentesque in felis erat.</p>
+				<p><a href="#">This is dummy link 08</a></p>
+				<p>Nam bibendum ullamcorper nibh sed ultrices. Nunc eget augue fringilla, aliquam turpis sed, congue turpis. Morbi cursus posuere purus. Sed mauris lectus, tincidunt a magna et, venenatis porta sapien. Sed quis feugiat arcu, non lacinia ligula. Cras at dui lectus. Mauris faucibus viverra arcu. Nam sit amet ligula non nunc pharetra scelerisque. Sed ultrices purus eget metus venenatis fringilla. Quisque tortor ante, blandit et condimentum at, tristique at neque. In erat odio, dapibus at vulputate nec, lacinia in arcu.</p>
+				<p><a href="#">This is dummy link 09</a></p>
+				<p>Suspendisse tristique suscipit augue, eu pellentesque lacus pharetra eget. Duis a risus aliquet, malesuada arcu sed, laoreet erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec nec dignissim ipsum. In mollis ultricies libero, sed accumsan ipsum placerat eget. Praesent rutrum pellentesque sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non libero at nisi facilisis tincidunt eget non diam. In ac sem eu mauris imperdiet bibendum. Nulla faucibus lectus eu massa euismod, at aliquet orci tincidunt. Proin dignissim lectus quis sodales tristique. Praesent nec lobortis tellus. Donec massa augue, convallis ut justo gravida, condimentum eleifend mi. Praesent ac rhoncus quam, quis ullamcorper diam. Aliquam vel semper augue, vitae commodo tortor.</p>
+			</div>
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

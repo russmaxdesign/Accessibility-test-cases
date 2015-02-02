@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML input type="color" element</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>HTML input type="color" element test</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>The label <b>should be announced</b></li>
+				<li>Users <b>should be able to</b> choose a color using either text input or a system color dialog</li>
+			</ul>
+			<h3>Example</h3>
+			<form class="example" method="get" action="#">
+				<div class="row-form">
+					<label class="label" for="a">Choose a color</label>
+					<input class="input" id="a" name="a" type="color">
+				</div>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;label for="a"&gt;Name&lt;/label&gt;
+&lt;input id="a" type="color"&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td>
+"<span class="pass">Choose a color</span>. Edit. Blank"<br>
+<span class="pass">Input text only</span>
+						</td>
+						<td>
+"<span class="pass">Choose a color</span>. Edit. Type in text"<br>
+<span class="pass">Input text only</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td>
+							x
+						</td>
+						<td>
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td>
+<span class="fail">"0% Red. 0% green. 0% blue"</span><br>
+<span class="fail">Cannot input text value</span>
+						</td>
+						<td>
+"<span class="pass">Choose a color</span>. 0% Red. 0% green. 0% blue"<br>
+<span class="pass">Color dialog box appears</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td>
+"<span class="pass">Choose a color</span>. Button"
+<span class="fail">Color dialog box appears but cannot be accessed using keyboard</span>
+						</td>
+						<td>
+"<span class="pass">Choose a color</span>. Button. To activate press space bar"
+<span class="fail">Color dialog box appears but cannot be accessed using keyboard</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td>
+"Black. <span class="pass">Choose a color</span>. Color well"<br>
+<span class="pass">Color dialog box appears</span>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td>
+"<span class="pass">Choose a color</span>. Button"<br>
+<span class="pass">Color dialog box appears</span>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td>
+"<span class="pass">Choose a color</span>. Edit text"<br>
+<span class="pass">Input text only</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

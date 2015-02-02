@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Table test 09</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Table test 09</h1>
+			<h2>Example 1</h2>
+			<p>This example uses headers and IDs to avoid repeating information on subsequent rows.</p>
+			<table>
+				<thead>
+					<tr>
+						<th id="th1">Account name</th>
+						<th id="th2">Account number</th>
+						<th id="th3">Account details</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th id="r2c1" headers="th1">Bankwest account</th>
+						<th id="r2c2" headers="th2">39 045 912</th>
+						<td headers="th3 r2c1 r2c2">Jeff</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td headers="th3 r2c1 r2c2">Peter</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td headers="th3 r2c1 r2c2">Mary</td>
+					</tr>
+				</tbody>
+			</table>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th id="th1"&gt;Account name&lt;/th&gt;
+			&lt;th id="th2"&gt;Account number&lt;/th&gt;
+			&lt;th id="th3"&gt;Account details&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th id="r2c1" headers="th1"&gt;Bankwest account&lt;/th&gt;
+			&lt;th id="r2c2" headers="th2"&gt;39 045 912&lt;/th&gt;
+			&lt;td headers="th3 r2c1 r2c2"&gt;Jeff&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td headers="th3 r2c1 r2c2"&gt;Peter&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td headers="th3 r2c1 r2c2"&gt;Mary&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<h2>Example 2</h2>
+			<p>This example places the repeated information in each row, but it is hidden when repeated.</p>
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">Account name</th>
+						<th scope="col">Account number</th>
+						<th scope="col">Account details</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Bankwest account</td>
+						<td>39 045 912</td>
+						<td>Jeff</td>
+					</tr>
+					<tr>
+						<td><span class="ally-context">Bankwest account</span></td>
+						<td><span class="ally-context">39 045 912</span></td>
+						<td>Peter</td>
+					</tr>
+					<tr>
+						<td><span class="ally-context">Bankwest account</span></td>
+						<td><span class="ally-context">39 045 912</span></td>
+						<td>Mary</td>
+					</tr>
+				</tbody>
+			</table>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th scope="col"&gt;Account name&lt;/th&gt;
+			&lt;th scope="col"&gt;Account number&lt;/th&gt;
+			&lt;th scope="col"&gt;Account details&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Bankwest account&lt;/td&gt;
+			&lt;td&gt;39 045 912&lt;/td&gt;
+			&lt;td&gt;Jeff&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;span class="ally-context"&gt;Bankwest account&lt;/span&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;span class="ally-context"&gt;39 045 912&lt;/span&gt;&lt;/td&gt;
+			&lt;td&gt;Peter&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;span class="ally-context"&gt;Bankwest account&lt;/span&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;span class="ally-context"&gt;39 045 912&lt;/span&gt;&lt;/td&gt;
+			&lt;td&gt;Mary&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<!-- code end -->
+		</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

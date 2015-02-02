@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML details element</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>HTML details element test</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>The &lt;details&gt; element summary content <b>must be announced</b>.</li>
+				<li>The &lt;details&gt; element content <b>must be announced</b>.</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<details>
+					<summary>Latest news</summary>
+					<p>News item here</p>
+				</details>
+				<details open>
+					<summary>Latest RSS feeds</summary>
+					<p>RSS feed here</p>
+				</details>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;details&gt;
+	&lt;summary&gt;Latest news&lt;/summary&gt;
+	&lt;p&gt;News item here&lt;/p&gt;
+&lt;/details&gt;
+&lt;details open&gt;
+	&lt;summary&gt;Latest RSS feeds&lt;/summary&gt;
+	&lt;p&gt;RSS feed here&lt;/p&gt;
+&lt;/details&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							"Latest news"<br>
+							"News item here"<br>
+							"Latest RSS feeds"<br>
+							"RSS feed here"
+						</td>
+						<td class="pass">
+							"Latest news"<br>
+							"Blank"<br>
+							"News item here"<br>
+							"Blank"<br>
+							"Latest RSS feeds"<br>
+							"Blank"<br>
+							"RSS feed here"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							"Latest news"<br>
+							"News item here"<br>
+							"Latest RSS feeds"<br>
+							"RSS feed here"
+						</td>
+						<td class="pass">
+							"Latest news"<br>
+							"Blank"<br>
+							"News item here"<br>
+							"Blank"<br>
+							"Latest RSS feeds"<br>
+							"Blank"<br>
+							"RSS feed here"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">
+							Page with &lt;details&gt; element crashes when NVDA turned on.
+						</td>
+						<td class="fail">
+							Page with &lt;details&gt; element crashes when JAWS turned on.
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							"Latest news"<br>
+							"News item here"<br>
+							"Latest RSS feeds"<br>
+							"RSS feed here"
+						</td>
+						<td class="pass">
+							"Latest news"<br>
+							"Blank"<br>
+							"News item here"<br>
+							"Blank"<br>
+							"Latest RSS feeds"<br>
+							"Blank"<br>
+							"RSS feed here"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							Page with &lt;details&gt; element crashes when Voiceover turned on
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Latest news"<br>
+							"News item here"<br>
+							"Latest RSS feeds"<br>
+							"RSS feed here"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Latest news. Dimmed"<br>
+							"News item here"<br>
+							"Latest RSS feeds. Dimmed"<br>
+							"RSS feed here"
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

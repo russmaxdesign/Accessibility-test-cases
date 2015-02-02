@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5 footer element</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>HTML5 footer element test</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>On &lt;footer&gt; elements that <b>do</b> include the appropriate role, the &lt;footer&gt; element <b>should be announced</b> when entering and optionally when leaving the element.</li> 
+				<li>On &lt;footer&gt; elements that <b>do not</b> include the appropriate role, the &lt;footer&gt; element <b>may be announced</b> when entering and optionally when leaving the element.</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<footer>
+					This is the footer
+				</footer>
+				<footer role="contentinfo">
+					This is the footer with a landmark
+				</footer>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;footer&gt;
+	This is the footer
+&lt;/footer&gt;
+&lt;footer role="contentinfo"&gt;
+	This is the footer
+&lt;/footer&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							"This is the footer"<br><br>
+							"Contentinfo landmark. This is the footer with a landmark"
+						</td>
+						<td class="pass">
+							"This is the footer"<br>
+							"Content information"<br>
+							"This is the footer with a landmark"<br>
+							"Content information end"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							"This is the footer"<br><br>
+							"Contentinfo landmark. This is the footer with a landmark"
+						</td>
+						<td class="pass">
+							"This is the footer"<br>
+							"Content information"<br>
+							"This is the footer with a landmark"<br>
+							"Content information end"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							"Contentinfo landmark. This is the footer"<br><br>
+							"Contentinfo landmark. This is the footer with a landmark"
+						</td>
+						<td class="pass">
+							"Content information"<br>
+							"This is the footer"<br>
+							"Content information end"<br><br>
+							"Content information"<br>
+							"This is the footer with a landmark"<br>
+							"Content information end"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							"Contentinfo landmark. This is the footer"<br><br>
+							"Contentinfo landmark. This is the footer with a landmark"
+						</td>
+						<td class="pass">
+							"Content information"<br>
+							"This is the footer"<br>
+							"Content information end"<br><br>
+							"Content information"<br>
+							"This is the footer with a landmark"<br>
+							"Content information end"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Entering footer landmark. This is the footer"<br>
+							"Leaving footer landmark"<br><br>
+							"Entering contentinfo landmark. This is the footer with a landmark"<br>
+							"Leaving contentinfo landmark"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Entering content landmark. This is the footer"<br>
+							"Leaving content landmark"<br><br>
+							"Entering content landmark. This is the footer with a landmark"<br>
+							"Leaving content landmark"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Entering footer landmark. This is the footer"<br>
+							"Leaving footer landmark"<br><br>
+							"Entering content information landmark. This is the footer with a landmark"<br>
+							"Leaving content information landmark"
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

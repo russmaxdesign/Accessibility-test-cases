@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Page title - adding additional info</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Page title - adding additional info</h1>
+			<p>A simple test to determine how screen readers will read spaces within HTML title elements.</p>
+			<h3>Test</h3>
+			<div class="example">
+				<p>Page title | additional info</p>
+				<p>Page title / additional info</p>
+				<p>Page title: additional info</p>
+				<p>Page title; additional info</p>
+				<p>Page title (additional info)</p>
+				<p>Page title [additional info]</p>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;title&gt;Page title - additional info&lt;/title&gt;
+&lt;title&gt;Page title | additional info&lt;/title&gt;
+&lt;title&gt;Page title / additional info&lt;/title&gt;
+&lt;title&gt;Page title: additional info&lt;/title&gt;
+&lt;title&gt;Page title; additional info&lt;/title&gt;
+&lt;title&gt;Page title (additional info)&lt;/title&gt;
+&lt;title&gt;Page title [additional info]&lt;/title&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							"Page title. Additional info"<br>
+							"Page title. Slash. Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. Additional info"<br>
+							"Page title. Additional info"<br>
+						</td>
+						<td class="pass">
+							"Page title. Vertical bar. Additional info"<br>
+							"Page title. Slash. Additional info"<br>
+							"Page title. Colon. Additional info"<br>
+							"Page title. Semi-colon. Additional info"<br>
+							"Page title. Left parent. Additional info. Right parent"<br>
+							"Page title. Left bracket. Additional info. Right bracket"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							"Page title. Additional info"<br>
+							"Page title. Slash. Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. Additional info"<br>
+							"Page title. Additional info"<br>
+						</td>
+						<td class="pass">
+							"Page title. Vertical bar. Additional info"<br>
+							"Page title. Slash. Additional info"<br>
+							"Page title. Colon. Additional info"<br>
+							"Page title. Semi-colon. Additional info"<br>
+							"Page title. Left parent. Additional info. Right parent"<br>
+							"Page title. Left bracket. Additional info. Right bracket"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							"Page title. Additional info"<br>
+							"Page title. Slash. Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. Additional info"<br>
+							"Page title. Additional info"<br>
+						</td>
+						<td class="pass">
+							"Page title. Vertical bar. Additional info"<br>
+							"Page title. Slash. Additional info"<br>
+							"Page title. Colon. Additional info"<br>
+							"Page title. Semi-colon. Additional info"<br>
+							"Page title. Left parent. Additional info. Right parent"<br>
+							"Page title. Left bracket. Additional info. Right bracket"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							"Page title. Additional info"<br>
+							"Page title. Slash. Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. Additional info"<br>
+							"Page title. Additional info"<br>
+						</td>
+						<td class="pass">
+							"Page title. Vertical bar. Additional info"<br>
+							"Page title. Slash. Additional info"<br>
+							"Page title. Colon. Additional info"<br>
+							"Page title. Semi-colon. Additional info"<br>
+							"Page title. Left parent. Additional info. Right parent"<br>
+							"Page title. Left bracket. Additional info. Right bracket"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Page title. Vertical line. Additional info"<br>
+							"Page title. Slash. Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Page title. Vertical line. Additional info"<br>
+							"Page title. Slash. Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Page title. Vertical line. Additional info"<br>
+							"Page title. Slash. Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+							"Page title. (Pause). Additional info"<br>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

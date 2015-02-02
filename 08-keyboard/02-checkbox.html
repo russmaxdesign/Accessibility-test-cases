@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Checkboxes and keyboard use</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+			a:focus,input:focus { outline: 1px solid red; } 		
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Checkboxes and keyboard use</h1>
+			<h3>Operation</h3>
+			<ul>
+				<li>TAB to focus on checkbox options</li>
+				<li>Focus appears on first checkbox option</li>
+				<li>TAB to next checkbox</li>
+				<li>SHIFT + TAB to previous checkbox</li>
+				<li>Select one or more checkboxes using SPACE BAR</li>
+			</ul>
+			<h3>Example</h3>
+			<form class="example" action="#">
+				<fieldset>
+					<legend>Favourite colors?</legend>
+					<div>
+						<input type="checkbox" id="red" name="red">
+						<label for="red">red</label>
+					</div>
+					<div>
+						<input type="checkbox" id="green" name="green">
+						<label for="green">green</label>
+					</div>
+					<div>
+						<input type="checkbox" id="blue" name="blue">
+						<label for="blue">blue</label>
+					</div>
+					<div>
+						<input type="checkbox" id="yellow" name="yello">
+						<label for="yellow">yellow</label>
+					</div>
+				</fieldset>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;form class="example" action="#"&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Favourite colors?&lt;/legend&gt;
+		&lt;div&gt;
+			&lt;input type="checkbox" id="red" name="red"&gt;
+			&lt;label for="red"&gt;red&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;input type="checkbox" id="green" name="green"&gt;
+			&lt;label for="green"&gt;green&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;input type="checkbox" id="blue" name="blue"&gt;
+			&lt;label for="blue"&gt;blue&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;input type="checkbox" id="yellow" name="yello"&gt;
+			&lt;label for="yellow"&gt;yellow&lt;/label&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

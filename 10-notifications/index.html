@@ -1,0 +1,945 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Injecting content into the page</title>
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js">
+		</script>
+		<script src="../assets/js/prism.js">
+		</script>
+	</head>
+	<body>
+		<h1>Injecting content into the page tests</h1>
+		<h2><a href="manual/alert.html">Manual - role="alert"</a></h2>
+		<ul>
+			<li>The error message <b>should be announced</b> when manually triggered</li>
+			<li>The error message <b>should be announced</b> when navigated to</li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>OS</th>
+					<th>Browser</th>
+					<th>NVDA 2014.4</th>
+					<th>JAWS 16</th>
+					<th>VoiceOver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows 7</td>
+					<td>IE 11</td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Chrome 39</td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="fail">Not announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Firefox 34</td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Chrome 39</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Firefox 34</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Safari 7</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2><a href="manual/assertive.html">Manual - aria-live="assertive"</a></h2>
+		<ul>
+			<li>The error message <b>should be announced</b> when manually triggered</li>
+			<li>The error message <b>should be announced</b> when navigated to</li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>OS</th>
+					<th>Browser</th>
+					<th>NVDA 2014.4</th>
+					<th>JAWS 16</th>
+					<th>VoiceOver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows 7</td>
+					<td>IE 11</td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Chrome 39</td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="fail">Not announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Firefox 34</td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Chrome 39</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Firefox 34</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Safari 7</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2><a href="manual/assertive-alert.html">Manual - aria-live="assertive" and role="alert"</a></h2>
+		<ul>
+			<li>The error message <b>should be announced</b> when manually triggered</li>
+			<li>The error message <b>should be announced</b> when navigated to</li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>OS</th>
+					<th>Browser</th>
+					<th>NVDA 2014.4</th>
+					<th>JAWS 16</th>
+					<th>VoiceOver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows 7</td>
+					<td>IE 11</td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Chrome 39</td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="fail">Not announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Firefox 34</td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Chrome 39</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Firefox 34</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="fail">Not announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Safari 7</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2><a href="manual/polite.html">Manual - aria-live="polite"</a></h2>
+		<ul>
+			<li>The error message <b>should be announced</b> when manually triggered as no other actions should be underway</li>
+			<li>The error message <b>should be announced</b> when navigated to</li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>OS</th>
+					<th>Browser</th>
+					<th>NVDA 2014.4</th>
+					<th>JAWS 16</th>
+					<th>VoiceOver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows 7</td>
+					<td>IE 11</td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Chrome 39</td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="fail">Not announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Firefox 34</td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Chrome 39</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Firefox 34</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="fail">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Safari 7</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2><a href="manual/off.html">Manual - aria-live="off"</a></h2>
+		<ul>
+			<li>The error message <b>should not be announced</b> when manually triggered</li>
+			<li>The error message <b>should be announced</b> when navigated to</li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>OS</th>
+					<th>Browser</th>
+					<th>NVDA 2014.4</th>
+					<th>JAWS 16</th>
+					<th>VoiceOver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows 7</td>
+					<td>IE 11</td>
+					<td>
+						<span class="pass">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Chrome 39</td>
+					<td>
+						<span class="pass">Not announced when manually triggered</span><br>
+						<span class="fail">Not announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Not announced when manually triggered</span><br>
+						<span class="fail">Not announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Firefox 34</td>
+					<td>
+						<span class="pass">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Chrome 39</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Firefox 34</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Safari 7</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Not announced when manually triggered</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2><a href="auto/alert.html">Auto - role="alert"</a></h2>
+		<ul>
+			<li>The error message <b>should be announced</b> when auto-triggered <b>during silence</b></li>
+			<li>The error message <b>should be announced</b> when auto-triggered <b>while reading</b> current section</li>
+			<li>The error message <b>should be announced</b> when navigated to</li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>OS</th>
+					<th>Browser</th>
+					<th>NVDA 2014.4</th>
+					<th>JAWS 16</th>
+					<th>VoiceOver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows 7</td>
+					<td>IE 11</td>
+					<td>
+						<span class="fail">Not announced when auto-triggered during silence</span><br>
+						<span class="fail">Not announced when auto-triggered while or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="fail">Not announced when auto-triggered during silence</span><br>
+						<span class="fail">Not announced when auto-triggered while or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Chrome 39</td>
+					<td>
+						<span class="fail">Not announced when auto-triggered during silence</span><br>
+						<span class="fail">Not announced when auto-triggered while or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="fail">Not announced when auto-triggered during silence</span><br>
+						<span class="fail">Not announced when auto-triggered while or after reading current section</span><br>
+						<span class="fail">Not announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Firefox 34</td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="pass">Announced when auto-triggered while or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="pass">Announced when auto-triggered while or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Chrome 39</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="fail">Not announced when auto-triggered during silence</span><br>
+						<span class="fail">Not announced when auto-triggered while or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Firefox 34</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="fail">Not announced when auto-triggered during silence</span><br>
+						<span class="fail">Not announced when auto-triggered while or after reading current section</span><br>
+						<span class="fail">Not announced when navigated to - announced as "Window"</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Safari 7</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="pass">Announced when auto-triggered <b>while</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2><a href="auto/assertive.html">Auto - aria-live="assertive"</a></h2>
+		<ul>
+			<li>The error message <b>should be announced</b> when auto-triggered <b>during silence</b></li>
+			<li>The error message <b>should be announced</b> when auto-triggered <b>while reading</b> current section</li>
+			<li>The error message <b>should be announced</b> when navigated to</li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>OS</th>
+					<th>Browser</th>
+					<th>NVDA 2014.4</th>
+					<th>JAWS 16</th>
+					<th>VoiceOver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows 7</td>
+					<td>IE 11</td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="fail">Announced when auto-triggered <b>after</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="fail">Announced when auto-triggered <b>after</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Chrome 39</td>
+					<td>
+						<span class="fail">Not announced when auto-triggered during silence</span><br>
+						<span class="fail">Not announced when auto-triggered while or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="fail">Not announced when auto-triggered during silence</span><br>
+						<span class="fail">Not announced when auto-triggered while or after reading current section</span><br>
+						<span class="fail">Not announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Firefox 34</td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="fail">Announced when auto-triggered <b>after</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="fail">Announced when auto-triggered <b>after</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Chrome 39</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="pass">Announced when auto-triggered while reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Firefox 34</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="fail">Not announced when auto-triggered during silence</span><br>
+						<span class="fail">Not announced when auto-triggered while or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Safari 7</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="pass">Announced when auto-triggered while reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2><a href="auto/assertive-alert.html">Auto - role="alert" and aria-live="assertive"</a></h2>
+		<ul>
+			<li>The error message <b>should be announced</b> when auto-triggered <b>during silence</b></li>
+			<li>The error message <b>should be announced</b> when auto-triggered <b>while reading</b> current section</li>
+			<li>The error message <b>should be announced</b> when navigated to</li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>OS</th>
+					<th>Browser</th>
+					<th>NVDA 2014.4</th>
+					<th>JAWS 16</th>
+					<th>VoiceOver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows 7</td>
+					<td>IE 11</td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="fail">Announced when auto-triggered <b>after</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="fail">Announced when auto-triggered <b>after</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Chrome 39</td>
+					<td>
+						<span class="fail">Not announced when auto-triggered during silence</span><br>
+						<span class="fail">Not announced when auto-triggered during or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="fail">Not announced when auto-triggered during silence</span><br>
+						<span class="fail">Not announced when auto-triggered during or after reading current section</span><br>
+						<span class="fail">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Firefox 34</td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="pass">Announced when auto-triggered <b>during</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="pass">Announced when auto-triggered <b>during</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Chrome 39</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="pass">Announced when auto-triggered while reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Firefox 34</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="fail">Not announced when auto-triggered during silence</span><br>
+						<span class="fail">Not announced when auto-triggered while reading current section</span><br>
+						<span class="fail">Not announced when navigated to - announced as "Window"</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Safari 7</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="pass">Announced when auto-triggered while reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2><a href="auto/polite.html">Auto - aria-live="polite"</a></h2>
+		<ul>
+			<li>The error message <b>should be announced</b> when auto-triggered <b>during silence</b></li>
+			<li>The error message <b>should be announced</b> when auto-triggered <b>after reading</b> current section</li>
+			<li>The error message <b>should be announced</b> when navigated to</li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>OS</th>
+					<th>Browser</th>
+					<th>NVDA 2014.4</th>
+					<th>JAWS 16</th>
+					<th>VoiceOver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows 7</td>
+					<td>IE 11</td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="pass">Announced when auto-triggered <b>after</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="pass">Announced when auto-triggered <b>after</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Chrome 39</td>
+					<td>
+						<span class="fail">Not announced when auto-triggered during silence</span><br>
+						<span class="fail">Not announced when auto-triggered <b>after</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="fail">Not announced when auto-triggered during silence</span><br>
+						<span class="fail">Not announced when auto-triggered <b>after</b> reading current section</span><br>
+						<span class="fail">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Firefox 34</td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="pass">Announced when auto-triggered <b>after</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="pass">Announced when auto-triggered <b>after</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Chrome 39</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="pass">Announced when auto-triggered <b>after</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Firefox 34</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="fail">Not announced when auto-triggered during silence</span><br>
+						<span class="fail">Not announced when auto-triggered <b>after</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Safari 7</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Announced when auto-triggered during silence</span><br>
+						<span class="pass">Announced when auto-triggered <b>after</b> reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2><a href="auto/off.html">Auto - aria-live="off"</a></h2>
+		<ul>
+			<li>The error message <b>should not be announced</b> when auto-triggered <b>during silence</b></li>
+			<li>The error message <b>should not be announced</b> when auto-triggered <b>while reading</b> current section</li>
+			<li>The error message <b>should be announced</b> when navigated to</li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>OS</th>
+					<th>Browser</th>
+					<th>NVDA 2014.4</th>
+					<th>JAWS 16</th>
+					<th>VoiceOver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows 7</td>
+					<td>IE 11</td>
+					<td>
+						<span class="pass">Not announced when auto-triggered during silence</span><br>
+						<span class="pass">Not announced when auto-triggered during or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Not announced when auto-triggered during silence</span><br>
+						<span class="pass">Not announced when auto-triggered during or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Chrome 39</td>
+					<td>
+						<span class="pass">Not announced when auto-triggered during silence</span><br>
+						<span class="pass">Not announced when auto-triggered during or after reading current section</span><br>
+						<span class="fail">Not announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Not announced when auto-triggered during silence</span><br>
+						<span class="pass">Not announced when auto-triggered during or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Firefox 34</td>
+					<td>
+						<span class="pass">Not announced when auto-triggered during silence</span><br>
+						<span class="pass">Not announced when auto-triggered during or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td>
+						<span class="pass">Not announced when auto-triggered during silence</span><br>
+						<span class="pass">Not announced when auto-triggered during or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Chrome 39</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Not announced when auto-triggered during silence</span><br>
+						<span class="pass">Not announced when auto-triggered during or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Firefox 34</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Not announced when auto-triggered during silence</span><br>
+						<span class="pass">Not announced when auto-triggered during or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Safari 7</td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="pass">Not announced when auto-triggered during silence</span><br>
+						<span class="pass">Not announced when auto-triggered during or after reading current section</span><br>
+						<span class="pass">Announced when navigated to</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</body>
+</html>

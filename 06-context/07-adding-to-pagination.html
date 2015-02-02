@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Adding information to pagination</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+			.disabled a { color: gray; }
+			.active a { font-weight: bold;  }
+			.sr-only { color: red; }
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Adding information to pagination test</h1>
+			<p>Developers may wish to add additional context to a pagination module for screen reader users.</p> 
+			<h3>Test</h3>
+			<p>Screen readers should:</p>
+			<ul>
+				<li>announce red content, which will be hidden</li>
+				<li>announce the role of the list - as navigation</li>
+				<li>announce disabled links as "disabled" - not critical</li>
+				<li>announce selected link as "selected" - not critical</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<p class="pull-left">
+					<span class="sr-only">Pagination</span> Displaying <strong>1</strong> of 4 <span class="sr-only">search result</span> pages
+				</p>
+				<ul role="navigation" class="pagination pull-right">
+					<li class="disabled"><a href="#" aria-disabled="true"><span class="sr-only">Go to </span>First<span class="sr-only"> search result page</span></a></li>
+					<li class="disabled"><a href="#" aria-disabled="true"><span class="sr-only">Go to </span>Previous<span class="sr-only"> search result page</span></a></li>
+					<li class="active"><a href="#" aria-selected="true"><span class="sr-only">You are currently reading search result page</span> 1</a></li>
+					<li><a href="#"><span class="sr-only">Go to search result page</span> 2</a></li>
+					<li><a href="#"><span class="sr-only">Go to search result page</span> 3</a></li>
+					<li><a href="#"><span class="sr-only">Go to search result page</span> 4</a></li>
+					<li><a href="#"><span class="sr-only">Go to </span><span>Next</span> <span class="sr-only">search result page</span></a></li>
+					<li><a href="#"><span class="sr-only">Go to </span><span>Last</span> <span class="sr-only">search result page</span></a></li>
+				</ul>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;div class="paginate""&gt;
+	&lt;p class="pull-left"&gt;
+		&lt;span class="sr-only"&gt;Pagination&lt;/span&gt; 
+		Displaying &lt;strong&gt;1&lt;/strong&gt; of 4 &lt;span class="sr-only"&gt;search result&lt;/span&gt; pages
+	&lt;/p&gt;
+	&lt;ul role="navigation" class="pagination pull-right"&gt;
+		&lt;li class="disabled"&gt;
+			&lt;a href="#" aria-disabled="true"&gt;
+				&lt;span class="sr-only"&gt;Go to &lt;/span&gt;
+				&lt;span&gt;First&lt;/span&gt;
+				&lt;span class="sr-only"&gt; search result page&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class="disabled"&gt;
+			&lt;a href="#" aria-disabled="true"&gt;
+				&lt;span class="sr-only"&gt;Go to &lt;/span&gt;
+				&lt;span&gt;Previous&lt;/span&gt;
+				&lt;span class="sr-only"&gt; search result page&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class="active"&gt;
+			&lt;a href="#" aria-selected="true"&gt;
+				&lt;span class="sr-only"&gt;You are currently reading search result page&lt;/span&gt; 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href="#"&gt;
+				&lt;span class="sr-only"&gt;Go to search result page &lt;/span&gt;
+				2
+			&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href="#"&gt;
+				&lt;span class="sr-only"&gt;Go to search result page &lt;/span&gt;
+				3
+			&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href="#"&gt;
+				&lt;span class="sr-only"&gt;Go to search result page &lt;/span&gt;
+				4
+			&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href="#"&gt;
+				&lt;span class="sr-only"&gt;Go to &lt;/span&gt;
+				&lt;span&gt;Next&lt;/span&gt;
+				&lt;span class="sr-only"&gt; search result page&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href="#"&gt;
+				&lt;span class="sr-only"&gt;Go to &lt;/span&gt;
+				&lt;span&gt;Last&lt;/span&gt;
+				&lt;span class="sr-only"&gt; search result page&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td>
+							<span class="pass">PASS - red content</span><br>
+							<span class="pass">PASS - disabled</span><br>
+							<span class="pass">PASS - selected</span>
+						</td>
+						<td>
+							<span class="pass">PASS - red content</span><br>
+							<span class="pass">PASS - disabled</span><br>
+							<span class="fail">FAIL - selected</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td>
+							<span class="pass">PASS - red content</span><br>
+							<span class="pass">PASS - disabled</span><br>
+							<span class="pass">PASS - selected</span>
+						</td>
+						<td>
+							<span class="pass">PASS - red content</span><br>
+							<span class="pass">PASS - disabled</span><br>
+							<span class="fail">FAIL - selected</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td>
+							<span class="pass">PASS - red content</span><br>
+							<span class="pass">PASS - disabled</span><br>
+							<span class="pass">PASS - selected</span>
+						</td>
+						<td>
+							<span class="pass">PASS - red content</span><br>
+							<span class="pass">PASS - disabled</span><br>
+							<span class="fail">FAIL - selected</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td>
+							<span class="pass">PASS - red content</span><br>
+							<span class="pass">PASS - disabled</span><br>
+							<span class="fail">FAIL - selected</span>
+						</td>
+						<td>
+							<span class="pass">PASS - red content</span><br>
+							<span class="pass">PASS - disabled</span><br>
+							<span class="fail">FAIL - selected</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td>
+							<span class="pass">PASS - red content</span><br>
+							<span class="pass">PASS - disabled</span><br>
+							<span class="fail">FAIL - selected</span>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td>
+							<span class="pass">PASS - red content</span><br>
+							<span class="pass">PASS - disabled</span><br>
+							<span class="fail">FAIL - selected</span>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td>
+							<span class="pass">PASS - red content</span><br>
+							<span class="pass">PASS - disabled</span><br>
+							<span class="fail">FAIL - selected</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

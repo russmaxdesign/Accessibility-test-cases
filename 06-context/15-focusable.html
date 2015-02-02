@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Hiding information from screen readers</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Hiding information from screen readers test</h1>
+			<p>Developers may wish to hide functionality from screen reader users.</p>
+			<h2 id="one">Option 1: Button content - aria-hidden="true"</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>Button elements <b>should be visible</b> to browsers</li>
+				<li>Button elements <b>should not be announced</b> to screen readers</li>
+			</ul>			
+			<h3>Example</h3>
+			<div class="example">
+				<div tabindex="0">
+					<span aria-hidden="true">?</span>
+					<span class="sr-only">
+						Additional information about the Phone number field
+					</span>
+				</div>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;button aria-hidden="true"&gt;Save&lt;/button&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="fail">"Blank"</td>
+						<td class="fail">Reads heading above</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">"Blank"</td>
+						<td class="fail">"Example heading level 3"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">"Blank"</td>
+						<td class="fail">Reads heading above</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">"Blank"</td>
+						<td class="fail">"Save button. To activate press space bar"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">"Group"</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">"Save button"</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">"Group"</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>
+

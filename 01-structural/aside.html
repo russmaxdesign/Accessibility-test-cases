@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5 aside element</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>HTML5 aside element test</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>On &lt;aside&gt; elements that <b>do</b> include the appropriate role, the &lt;aside&gt; element <b>should be announced</b> when entering and optionally when leaving the element.</li> 
+				<li>On &lt;aside&gt; elements that <b>do not</b> include the appropriate role, the &lt;aside&gt; element <b>may be announced</b> when entering and optionally when leaving the element.</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<aside>
+					This is the aside
+				</aside>
+				<aside role="complementary">
+					This is the aside with a landmark
+				</aside>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;aside&gt;
+	This is the aside
+&lt;/aside&gt;
+&lt;aside role="complementary"&gt;
+	This is the aside with a landmark
+&lt;/aside&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							"This is the aside"<br><br>
+							"Complementary landmark. This is the aside with a landmark"
+						</td>
+						<td class="pass">
+							"Complementary information"<br>
+							"This is the aside"<br>
+							"Complementary information end"<br><br>
+							"Complementary information"<br>
+							"This is the aside with a landmark"<br>
+							"Complementary information end"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							"This is the aside"<br><br>
+							"Complementary landmark. This is the aside with a landmark"
+						</td>
+						<td class="pass">
+							"Complementary information"<br>
+							"This is the aside"<br>
+							"Complementary information end"<br><br>
+							"Complementary information"<br>
+							"This is the aside with a landmark"<br>
+							"Complementary information end"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							"This is the aside"<br><br>
+							"Complementary landmark. This is the aside with a landmark"
+						</td>
+						<td class="pass">
+							"Complementary information"<br>
+							"This is the aside"<br>
+							"Complementary information end"<br><br>
+							"Complementary information"<br>
+							"This is the aside with a landmark"<br>
+							"Complementary information end"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							"Complementary landmark. This is the aside"<br><br>
+							"Complementary landmark. This is the aside with a landmark"
+						</td>
+						<td class="pass">
+							"Complementary information"<br>
+							"This is the aside"<br>
+							"Complementary information end"<br><br>
+							"Complementary information"<br>
+							"This is the aside with a landmark"<br>
+							"Complementary information end"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Entering group landmark. This is the aside"<br>
+							"Leaving group landmark"<br><br>
+							"Entering complementary landmark. This is the aside with a landmark"<br>
+							"Leaving complementary landmark"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Entering complementary landmark. This is the aside"<br>
+							"Leaving complementary landmark"<br><br>
+							"Entering complementary landmark. This is the aside with a landmark"<br>
+							"Leaving complementary landmark"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Entering complementary landmark. This is the aside"<br>
+							"Leaving complementary landmark"<br><br>
+							"Entering complementary landmark. This is the aside with a landmark"<br>
+							"Leaving complementary landmark"
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

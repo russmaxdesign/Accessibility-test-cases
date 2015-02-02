@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Radio buttons and keyboard use</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+			a:focus,input:focus { outline: 1px solid red; } 		
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Radio buttons and keyboard use</h1>
+			<h3>Operation</h3>
+			<ul>
+				<li>TAB to focus on radio options</li>
+				<li>Focus appears on first radio option</li>
+				<li>Focus AND check radio buttons using ARROW keys</li>
+				<li>Right and down ARROW keys move to next radio button, back and up ARROW keys move to previous radio button.</li>
+				<li>TAB to move on to next focusable item outside radio group</li>
+			</ul>
+			<h3>Example</h3>
+			<form class="example" action="#">
+				<fieldset>
+					<legend>Do you like apples?</legend>
+					<div>
+						<input type="radio" id="apples-y" name="apples">
+						<label for="apples-y">Yes</label>
+					</div>
+					<div>
+						<input type="radio" id="apples-n" name="apples">
+						<label for="apples-n">No</label>
+					</div>
+					<div>
+						<input type="radio" id="apples-m" name="apples">
+						<label for="apples-m">Maybe</label>
+					</div>
+					<div>
+						<input type="radio" id="apples-s" name="apples">
+						<label for="apples-s">Sometimes</label>
+					</div>
+				</fieldset>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;form class="example" action="#"&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Do you like apples?&lt;/legend&gt;
+		&lt;div&gt;
+			&lt;input type="radio" id="apples-y" name="apples"&gt;
+			&lt;label for="apples-y"&gt;Yes&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;input type="radio" id="apples-n" name="apples"&gt;
+			&lt;label for="apples-n"&gt;No&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;input type="radio" id="apples-m" name="apples"&gt;
+			&lt;label for="apples-m"&gt;Maybe&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;input type="radio" id="apples-s" name="apples"&gt;
+			&lt;label for="apples-s"&gt;Sometimes&lt;/label&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

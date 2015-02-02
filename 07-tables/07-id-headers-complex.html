@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Table test 07 - complex table with headers and ids</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Table test 07 - complex table with headers and ids</h1>
+			<table>
+				<caption>Imported and domestic orange and apple prices in Sydney and Melbourne</caption>
+				<thead>
+					<tr>
+						<td></td>
+						<th colspan="2" id="imported">Imported</th>
+						<th colspan="2" id="domestic">Domestic</th>
+					</tr>
+					<tr>
+						<td></td>
+						<th id="oranges-imp">Oranges</th>
+						<th id="apples-imp">Apples</th>
+						<th id="oranges-dom">Oranges</th>
+						<th id="apples-dom">Apples</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th id="sydney" colspan="5">Sydney</th>
+					</tr>
+					<tr>
+						<th headers="sydney" id="wholesale-sydney">Wholesale</th>
+						<td headers="imported oranges-imp sydney wholesale-sydney">$1.00</td>
+						<td headers="imported apples-imp sydney wholesale-sydney">$1.25</td>
+						<td headers="domestic oranges-dom sydney wholesale-sydney">$1.20</td>
+						<td headers="domestic apples-dom sydney wholesale-sydney">$1.00</td>
+					</tr>
+					<tr>
+						<th headers="sydney" id="retail-sydney">Retail</th>
+						<td headers="imported oranges-imp sydney retail-sydney">$2.00</td>
+						<td headers="imported apples-imp sydney retail-sydney">$3.00</td>
+						<td headers="domestic oranges-dom sydney retail-sydney">$1.80</td>
+						<td headers="domestic apples-dom sydney retail-sydney">$1.60</td>
+					</tr>
+					<tr>
+						<th id="melbourne" colspan="5">Melbourne</th>
+					</tr>
+					<tr>
+						<th headers="melbourne" id="wholesale-melbourne">Wholesale</th>
+						<td headers="imported oranges-imp melbourne wholesale-melbourne">$1.20</td>
+						<td headers="imported apples-imp melbourne wholesale-melbourne">$1.30</td>
+						<td headers="domestic oranges-dom melbourne wholesale-melbourne">$1.00</td>
+						<td headers="domestic apples-dom melbourne wholesale-melbourne">$0.80</td>
+					</tr>
+					<tr>
+						<th headers="melbourne" id="retail-melbourne">Retail</th>
+						<td headers="imported oranges-imp melbourne retail-melbourne">$1.60</td>
+						<td headers="imported apples-imp melbourne retail-melbourne">$2.00</td>
+						<td headers="domestic oranges-dom melbourne retail-melbourne">$2.00</td>
+						<td headers="domestic apples-dom melbourne retail-melbourne">$1.50</td>
+					</tr>
+				</tbody>
+			</table>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;table&gt;
+	&lt;caption&gt;Imported and domestic orange and apple prices in Sydney and Melbourne&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;th colspan="2" id="imported"&gt;Imported&lt;/th&gt;
+			&lt;th colspan="2" id="domestic"&gt;Domestic&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;th id="oranges-imp"&gt;Oranges&lt;/th&gt;
+			&lt;th id="apples-imp"&gt;Apples&lt;/th&gt;
+			&lt;th id="oranges-dom"&gt;Oranges&lt;/th&gt;
+			&lt;th id="apples-dom"&gt;Apples&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th id="sydney" colspan="5"&gt;Sydney&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th headers="sydney" id="wholesale-sydney"&gt;Wholesale&lt;/th&gt;
+			&lt;td headers="imported oranges-imp sydney wholesale-sydney"&gt;$1.00&lt;/td&gt;
+			&lt;td headers="imported apples-imp sydney wholesale-sydney"&gt;$1.25&lt;/td&gt;
+			&lt;td headers="domestic oranges-dom sydney wholesale-sydney"&gt;$1.20&lt;/td&gt;
+			&lt;td headers="domestic apples-dom sydney wholesale-sydney"&gt;$1.00&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th headers="sydney" id="retail-sydney"&gt;Retail&lt;/th&gt;
+			&lt;td headers="imported oranges-imp sydney retail-sydney"&gt;$2.00&lt;/td&gt;
+			&lt;td headers="imported apples-imp sydney retail-sydney"&gt;$3.00&lt;/td&gt;
+			&lt;td headers="domestic oranges-dom sydney retail-sydney"&gt;$1.80&lt;/td&gt;
+			&lt;td headers="domestic apples-dom sydney retail-sydney"&gt;$1.60&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th id="melbourne" colspan="5"&gt;Melbourne&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th headers="melbourne" id="wholesale-melbourne"&gt;Wholesale&lt;/th&gt;
+			&lt;td headers="imported oranges-imp melbourne wholesale-melbourne"&gt;$1.20&lt;/td&gt;
+			&lt;td headers="imported apples-imp melbourne wholesale-melbourne"&gt;$1.30&lt;/td&gt;
+			&lt;td headers="domestic oranges-dom melbourne wholesale-melbourne"&gt;$1.00&lt;/td&gt;
+			&lt;td headers="domestic apples-dom melbourne wholesale-melbourne"&gt;$0.80&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th headers="melbourne" id="retail-melbourne"&gt;Retail&lt;/th&gt;
+			&lt;td headers="imported oranges-imp melbourne retail-melbourne"&gt;$1.60&lt;/td&gt;
+			&lt;td headers="imported apples-imp melbourne retail-melbourne"&gt;$2.00&lt;/td&gt;
+			&lt;td headers="domestic oranges-dom melbourne retail-melbourne"&gt;$2.00&lt;/td&gt;
+			&lt;td headers="domestic apples-dom melbourne retail-melbourne"&gt;$1.50&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

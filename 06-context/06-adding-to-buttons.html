@@ -1,0 +1,445 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Adding information to buttons</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Adding information to buttons test</h1>
+			<p>Developers may wish to add additional context to a button for screen reader users.</p> 
+			<ul>
+				<li><a href="#one">Option 1: Button title attribute</a></li>
+				<li><a href="#two">Option 2: Button aria-label attribute</a></li>
+				<li><a href="#three">Option 3: Button aria-labelledby attribute</a></li>
+				<li><a href="#four">Option 4: Button aria-describedby attribute</a></li>
+				<li><a href="#five">Option 5: Button hidden info</a></li>
+			</ul>
+			<h2 id="one">Option 1: Button title attribute</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>Should read button content and then title content - "House prices from Chatswood area".</li>
+			</ul>
+			<div class="example">
+				<button title="from Chatswood area">Prices</button>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;button title="from Chatswood area"&gt;
+	Prices
+&lt;/button&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="fail">FAIL - no title</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">FAIL - title only</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL - no title</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL - title only</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL - no title</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="two">Option 2: Button aria-label attribute</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>Should read aria-label content only - "Download high definition movie".</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<button aria-label="Download high definition movie">Download</button>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;button aria-label="Download high definition movie"&gt;
+	Download
+&lt;/button&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="three">Option 3: Button aria-labelledby attribute</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>Should read button content followed by aria-labelledby content - "Save search queries and return to main menu".</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<button aria-labelledby="info3">Save</button>
+				<p id="info3" class="hidden">search queries and return to main menu</p>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;button aria-labelledby="info3"&gt;
+	Save
+&lt;/button&gt;
+&lt;p id="info3" class="hidden"&gt;
+	search queries and return to main menu
+&lt;/p&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL - labelledby only</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">FAIL - labelledby only</td>
+						<td class="fail">FAIL - labelledby only</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">FAIL - labelledby only</td>
+						<td class="fail">FAIL - labelledby only</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">FAIL - labelledby only</td>
+						<td class="fail">FAIL - labelledby only</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL - labelledby only</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL - labelledby only</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL - labelledby only</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="four">Option 4: Button aria-describedby attribute</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>Should read button content followed by aria-describedby content - "Close and return to banking details".</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<button aria-describedby="info4">Close</button>
+				<p id="info4" class="hidden">and return to banking details</p>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;button aria-describedby="info4"&gt;
+	Close
+&lt;/button&gt;
+&lt;p id="info4" class="hidden"&gt;
+	and return to banking details
+&lt;/p&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL - no describedby</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL - no describedby</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL - no describedby</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL - describedby only</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL - no describedby</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="five">Option 5: Button hidden info</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>Should read link content including the content - "Check results on your business account".</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<button>Check results <span class="hidden">on your business account</span></button>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;button&gt;
+	Check results 
+	&lt;span class="hidden"&gt;on your business account&lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>
+

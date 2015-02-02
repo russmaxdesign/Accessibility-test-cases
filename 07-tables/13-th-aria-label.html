@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML table - TH element at top only</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>HTML table - TH element at top only test</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>Table header instructions are announced</li> 
+			</ul>
+			<h3>Example</h3>
+			<table>
+				<thead>
+					<tr>
+						<th tabindex="0" aria-label="Account name: No sort applied, activate to apply a descending sort">Account name</th>
+						<th tabindex="0" aria-label="Account type: No sort applied, activate to apply a descending sort">Account type</th>
+						<th tabindex="0" aria-label="BSB: No sort applied, activate to apply a descending sort">BSB</th>
+						<th tabindex="0" aria-label="Account number: No sort applied, activate to apply a descending sort">Account number</th>
+						<th tabindex="0" aria-label="Current Balance: No sort applied, activate to apply a descending sort">Current Balance</th>
+						<th tabindex="0" aria-label="Available Balance: No sort applied, activate to apply a descending sort">Available Balance</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Personal account</td>
+						<td>Main Account</td>
+						<td>345678</td>
+						<td>012345678</td>
+						<td>$143,000.00</td>
+						<td>$113,000.00</td>
+					</tr>
+					<tr>
+						<td>Smith Co Main USA</td>
+						<td>Secondary Account</td>
+						<td>882349</td>
+						<td>1234567</td>
+						<td>$23,123.00</td>
+						<td>$22,991.00</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3>Code sample - full table</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th tabindex="0" aria-label="Account name: No sort applied, activate to apply a descending sort"&gt;Account name&lt;/th&gt;
+			&lt;th tabindex="0" aria-label="Account type: No sort applied, activate to apply a descending sort"&gt;Account type&lt;/th&gt;
+			&lt;th tabindex="0" aria-label="BSB: No sort applied, activate to apply a descending sort"&gt;BSB&lt;/th&gt;
+			&lt;th tabindex="0" aria-label="Account number: No sort applied, activate to apply a descending sort"&gt;Account number&lt;/th&gt;
+			&lt;th tabindex="0" aria-label="Current Balance: No sort applied, activate to apply a descending sort"&gt;Current Balance&lt;/th&gt;
+			&lt;th tabindex="0" aria-label="Available Balance: No sort applied, activate to apply a descending sort"&gt;Available Balance&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Personal account&lt;/td&gt;
+			&lt;td&gt;Main Account&lt;/td&gt;
+			&lt;td&gt;345678&lt;/td&gt;
+			&lt;td&gt;012345678&lt;/td&gt;
+			&lt;td&gt;$143,000.00&lt;/td&gt;
+			&lt;td&gt;$113,000.00&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Smith Co Main USA&lt;/td&gt;
+			&lt;td&gt;Secondary Account&lt;/td&gt;
+			&lt;td&gt;882349&lt;/td&gt;
+			&lt;td&gt;1234567&lt;/td&gt;
+			&lt;td&gt;$23,123.00&lt;/td&gt;
+			&lt;td&gt;$22,991.00&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+
+			<table>
+				<caption>Support chart - tab across headers</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							x
+						</td>
+						<td class="pass">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							x
+						</td>
+						<td class="pass">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							x
+						</td>
+						<td class="pass">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							x
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							x
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

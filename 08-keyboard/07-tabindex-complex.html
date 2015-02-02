@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Specific tab order</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Specific tab order</h1>
+			<ul class="example">
+				<li><a href="#" tabindex="1">list item 1 - tabindex="1"</a></li>
+				<li><a href="#" tabindex="3">list item 2 - tabindex="3"</a></li>
+				<li><a href="#" tabindex="5">list item 3 - tabindex="5"</a></li>
+				<li><a href="#" tabindex="2">list item 4 - tabindex="2"</a></li>
+				<li><a href="#" tabindex="4">list item 5 - tabindex="4"</a></li>
+				<li><a href="#" tabindex="-1">list item 6 - tabindex="-1" - cannot tab to this</a></li>
+				<li><a href="#" tabindex="7">list item 7 - tabindex="7"</a></li>
+				<li><a href="#" tabindex="0">list item 8 - tabindex="0"</a></li>
+			</ul>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;ul class="example"&gt;
+	&lt;li&gt;&lt;a href="#" tabindex="1"&gt;list item 1 - tabindex="1"&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#" tabindex="3"&gt;list item 2 - tabindex="3"&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#" tabindex="5"&gt;list item 3 - tabindex="5"&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#" tabindex="2"&gt;list item 4 - tabindex="2"&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#" tabindex="4"&gt;list item 5 - tabindex="4"&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#" tabindex="-1"&gt;list item 6 - tabindex="-1" - cannot tab to this&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#" tabindex="7"&gt;list item 7 - tabindex="7"&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#" tabindex="0"&gt;list item 8 - tabindex="0"&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

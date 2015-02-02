@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML blockquote element</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>HTML blockquote element test</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>The &lt;blockquote&gt; element <b>should be announced</b> when entering and optionally when leaving blockquote.</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<blockquote style="margin-top: 0; margin-bottom: 0;">
+					<p>"All our words from loose using have lost their edge."</p>
+					<p class="source">Ernest Hemingway</p>
+				</blockquote>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;blockquote&gt;
+	&lt;p&gt;"All our words from loose using have lost their edge."&lt;/p&gt;
+	&lt;p class="source"&gt;Ernest Hemingway&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							"Blockquote. All our words..."<br>
+							"Ernest Hemingway"<br>
+							"Out of blockquote"
+						</td>
+						<td class="pass">
+							"Blockquote"<br>
+							"Quote. All our words... Quote"<br>
+							"Blank"<br>
+							"Ernest Hemingway"<br>
+							"Blockquote end"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							"Blockquote. All our words..."<br>
+							"Ernest Hemingway"<br>
+							"Out of blockquote"
+						</td>
+						<td class="pass">
+							"Blockquote"<br>
+							"Quote. All our words... Quote"<br>
+							"Blank"<br>
+							"Ernest Hemingway"<br>
+							"Blockquote end"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">
+							"All our words..."<br>
+							"Ernest Hemingway"
+						</td>
+						<td class="fail">
+							"Quote. All our words... Quote"<br>
+							"Blank"<br>
+							"Ernest Hemingway"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							"Blockquote. All our words..."<br>
+							"Ernest Hemingway"<br>
+							"Out of blockquote"
+						</td>
+						<td class="pass">
+							"Blockquote"<br>
+							"Quote. All our words... Quote"<br>
+							"Blank"<br>
+							"Ernest Hemingway"<br>
+							"Blockquote end"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							"All our words..."<br>
+							"Ernest Hemingway"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							"All our words..."<br>
+							"Ernest Hemingway"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							"All our words..."<br>
+							"Ernest Hemingway"
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

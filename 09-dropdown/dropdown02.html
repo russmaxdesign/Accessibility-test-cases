@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title>Dropdown test page</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<script src="../assets/js/prism.js"></script>
+		<link rel="stylesheet" href="assets/aui.css" media="all">
+		<link rel="stylesheet" href="assets/aui-experimental.css" media="all">
+		<script src="assets/require.js"></script>
+		<script src="assets/jquery.min.js"></script>
+		<script src="assets/aui.js"></script>
+		<script src="assets/aui-experimental.js"></script>
+		<link href="../assets/css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p style="margin:0 0 1em;"><a href="../index.html">Back to home</a></p>
+			<h1 style="margin: 0 0 1em;">AUI Dropdown test page</h1>
+			<button class="aui-button aui-dropdown2-trigger" aria-controls="test-dropdown0" aria-haspopup="true" role="button">Choose an account</button> 
+			<div id="test-dropdown0" class="aui-dropdown2 aui-style-default" role="menu" aria-hidden="true">
+				<div role="application">
+					<div role="presentation" class="aui-dropdown2-section">
+						<div role="group" aria-label="Your account">
+							<ul role="presentation">
+								<li role="presentation"><a role="menuitem" href="#business">Business account</a></li>
+								<li role="presentation"><a role="menuitem" href="#personal">Personal banking account</a></li>
+								<li role="presentation"><a role="menuitem" href="#other">Other account</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<p style="margin:2em 0 0;"><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Error message in forms</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Error message in forms</h1>
+			<h2>Desired outcomes</h2>
+			<p>For end-of-form validation after the form is submitted and checked</p>
+			<ul>
+				<li>An error message <b>should appear at the top of the form</b> alerting users that there are errors</li>
+				<li>Focus <b>must be taken</b> to the error message</li>
+				<li>The error message <b>should list all errors</b></li>
+				<li>Each listed error <b>should be a link</b> that takes the user to the relevant form control</li>
+				<li>Each form field that has errors <b>should be flagged</b> as an error.</li>
+				<li>An error message <b>should be read out</b> along with the relevant label</li>
+				<li>Flagging <b>should not use</b> colour alone</li>
+			</ul>
+			<h2>Option 1: Error message with full list</h2> 
+			<h3>Example</h3>
+			<form action="#" class="example">
+				<div class="error" aria-live="assertive" role="alert" tabindex="0" aria-label="Error Message">
+					<p style="margin:0;">The form has two errors that must be completed before it can be submitted</p>
+					<ol>
+						<li><a href="#one">Error: You must include your first name</a></li>
+						<li><a href="#two">Error: Email address must include an "@" symbol</a></li>
+					</ol>
+				</div>
+				<div class="row-form">
+					<label for="f" id="one">
+						<span class="label">
+							First name
+							<span class="req">*</span>
+						</span>
+						<input class="input input--error" id="f" name="f" type="text" required>
+						<span class="row-indent error-message"><b>Error</b>: You must include your first name</span>
+					</label>
+				</div>
+				<div class="row-form">
+					<label for="g">
+						<span class="label">
+							Last name
+							<span class="req">*</span>					
+						</span> 
+						<input class="input" id="g" name="g" type="text" required>
+					</label>
+				</div>
+				<div class="row-form">
+					<label for="h" id="two">
+						<span class="label">
+							Email
+							<span class="req">*</span>
+						</span>
+						<input class="input input--error" id="h" name="h" type="email" required>
+						<span class="row-indent error-message"><b>Error</b>: Email address must include an "@" symbol</span>
+					</label>
+				</div>
+				<div class="row-form">
+					<label for="i">
+						<span class="label">
+							Address
+						</span>
+						<input class="input" id="i" name="i" type="email" required>
+					</label>
+				</div>
+				<div class="row-form row-indent">
+					<input class="submit" type="submit" value="Submit">
+				</div>
+			</form>
+
+			<h2>Option 2: Error message with hidden</h2> 
+			<h3>Example</h3>
+			<form action="#" class="example">
+				<div class="error" role="alert">
+					<p style="margin:0;">The form has two errors that must be completed before it can be submitted</p>
+					<p><a href="#one">View all errors</a></p>
+				</div>
+				<div class="row-form">
+					<label for="j">
+						<span class="label">
+							First name
+							<span class="req">*</span>
+						</span>
+						<input class="input input--error" id="j" name="j" type="text" required>
+						<span class="row-indent error-message"><b>Error</b>: You must include your first name</span>
+					</label>
+				</div>
+				<div class="row-form">
+					<label for="m">
+						<span class="label">
+							Last name
+							<span class="req">*</span>					
+						</span> 
+						<input class="input" id="m" name="m" type="text" required>
+					</label>
+				</div>
+				<div class="row-form">
+					<label for="k">
+						<span class="label">
+							Email
+							<span class="req">*</span>
+						</span>
+						<input class="input input--error" id="k" name="k" type="email" required>
+						<span class="row-indent error-message"><b>Error</b>: Email address must include an "@" symbol</span>
+					</label>
+				</div>
+				<div class="row-form">
+					<label for="l">
+						<span class="label">
+							Address
+						</span>
+						<input class="input" id="l" name="l" type="email" required>
+					</label>
+				</div>
+				<div class="row-form row-indent">
+					<input class="submit" type="submit" value="Submit">
+				</div>
+			</form>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

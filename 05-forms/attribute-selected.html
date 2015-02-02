@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Attribute: aria-selected</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+			.active { font-weight: bold;  }
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="index.html">Back to home</a></p>
+			<h1>Attribute: aria-selected test</h1>
+			
+			<h2>Link aria-selected="true"</h2>
+			<h2>Link selected</h2>
+			<h2>Link aria-selected="true" and selected</h2>
+
+
+
+
+
+
+			<h2>Link aria-selected="true"</h2>
+			<ul>
+				<li>The first link below should be read out as "selected".</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<a class="active" href="#" aria-selected="true">one</a> 
+				<a href="#">two</a>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;a href="#" aria-selected="true"&gt;one&lt;/a&gt; 
+&lt;a href="#"&gt;two&lt;/a&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">FAIL</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<ul>
+				<li>The first link below should be read out as "selected".</li>
+			</ul>
+			<h3>Code sample</h3>
+			<form method="get" action="#" class="example">
+				<div class="row-form">
+					<label class="label" for="a">Favourite fruit</label>
+					<select class="select" id="a" name="a">
+						<option value="">Choose an option</option>
+						<option value="apple" selected>Apple</option>
+						<option value="pear">Pear</option>
+						<option value="banana">Banana</option>
+					</select>
+				</div>
+			</form>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;a href="#" aria-selected="true"&gt;one&lt;/a&gt; 
+&lt;a href="#"&gt;two&lt;/a&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">FAIL</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<ul>
+				<li>The first link below should be read out as "selected".</li>
+			</ul>
+			<h3>Code sample</h3>
+			<form method="get" action="#" class="example">
+				<div class="row-form">
+					<label class="label" for="b">Favourite meat</label>
+					<select class="select" id="b" name="b">
+						<option value="">Choose an option</option>
+						<option value="beef" aria-selected="true">Beef</option>
+						<option value="chicken">Chicken</option>
+						<option value="pork">Pork</option>
+					</select>
+				</div>
+			</form>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;a href="#" aria-selected="true"&gt;one&lt;/a&gt; 
+&lt;a href="#"&gt;two&lt;/a&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">FAIL</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<ul>
+				<li>The first link below should be read out as "selected".</li>
+			</ul>
+			<form method="get" action="#" class="example">
+				<div class="row-form">
+					<label class="label" for="c">Favourite color</label>
+					<select class="select" id="c" name="c">
+						<option value="">Choose an option</option>
+						<option value="red" aria-selected="true" selected>Red</option>
+						<option value="green">Green</option>
+						<option value="blue">Blue</option>
+					</select>
+				</div>
+			</form> 
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;a href="#" aria-selected="true"&gt;one&lt;/a&gt; 
+&lt;a href="#"&gt;two&lt;/a&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">FAIL</td>
+						<td class="fail">FAIL</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p><a href="index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

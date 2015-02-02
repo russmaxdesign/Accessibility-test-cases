@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Attribute: aria-disabled</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+			.disabled { color: gray; }
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="index.html">Back to home</a></p>
+			<h1>Attribute: aria-disabled</h1>
+			<ul>
+				<li><a href="#one">Link - aria-disabled</a></li>
+				<li><a href="#two">Button - aria-disabled</a></li>
+				<li><a href="#three">Button - aria-disabled - with disabled</a></li>
+			</ul>
+
+			<h2 id="one">Link - aria-disabled</h2>
+			<ul>
+				<li>The first link below should be read out as "Unavailable. Link" or "dimmed".</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<a class="disabled" href="#" aria-disabled="true">one</a> <a href="#">two</a>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;a href="#" aria-disabled="true"&gt;one&lt;/a&gt; 
+&lt;a href="#"&gt;two&lt;/a&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">"Unavailable. Link"</td>
+						<td class="pass">"Unavailable. Link"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">"Unavailable. Link"</td>
+						<td class="pass">"Unavailable. Link"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">"Unavailable. Link"</td>
+						<td class="pass">"Unavailable. Link"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">"Unavailable. Link"</td>
+						<td class="pass">"Unavailable. Link"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">"Dimmed"</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">"Dimmed"</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">"Dimmed"</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="two">Button - aria-disabled</h2>
+			<ul>
+				<li>The first button below should be read out as "disabled" or "dimmed".</li>
+			</ul>
+			<h3>Example</h3>
+			<form action="#" class="example">
+				<button type="submit" class="disabled" aria-disabled="true">three</button>
+				<button type="submit">four</button>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;button type="submit" aria-disabled="true"&gt;three&lt;/button&gt; 
+&lt;button type="submit"&gt;four&lt;/button&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">"Button. Unavailable"</td>
+						<td class="pass">"Button. Unavailable"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">"Button. Unavailable"</td>
+						<td class="pass">"Button. Unavailable"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">"Button. Unavailable"</td>
+						<td class="pass">"Button. Unavailable"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">"Button. Unavailable"</td>
+						<td class="pass">"Button. Unavailable"</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">"Dimmed"</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">"Dimmed"</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">"Dimmed"</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="three">Button - aria-disabled - with disabled</h2>
+			<ul>
+				<li>The first button below should be unavailable - not able to receive focus.</li>
+			</ul>
+			<h3>Example</h3>
+			<form action="#" class="example">
+				<button type="submit" class="disabled" aria-disabled="true" disabled>five</button>
+				<button type="submit">six</button>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;button type="submit" aria-disabled="true" disabled&gt;five&lt;/button&gt; 
+&lt;button type="submit"&gt;six&lt;/button&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">Disabled</td>
+						<td class="pass">Disabled</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">Disabled</td>
+						<td class="pass">Disabled</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">Disabled</td>
+						<td class="pass">Disabled</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">Disabled</td>
+						<td class="pass">Disabled</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">Disabled</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">Disabled</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">Disabled</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p><a href="index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

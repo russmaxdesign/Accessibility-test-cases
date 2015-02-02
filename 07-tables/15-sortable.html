@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML table - TH element at top only</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>HTML table - TH element at top only test</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>Table can be sorted using <b>keyboard</b> only</li> 
+				<li>Table headers announced <b>including sorting functionality</b></li>
+				<li>Table headers announced <b>after sorting occurs</b></li>
+				<li>Table data announced correctly <b>after table sort</b> - in order of new sort</li>
+			</ul>
+			<h3>Example</h3>
+			<table id="accounts--list__table" class="">
+				<thead>
+					<tr class="tablesorter-headerRow">
+						<th aria-label="Account name: Ascending sort applied, activate to apply a descending sort" aria-sort="ascending" aria-controls="accounts--list__table" role="columnheader" scope="col" tabindex="0" data-column="0" class="col-1 col-md-3 tablesorter-header tablesorter-headerAsc"><div class="tablesorter-header-inner">Account name</div></th>
+						<th aria-label="Account type: No sort applied, activate to apply an ascending sort" aria-sort="none" aria-controls="accounts--list__table" role="columnheader" scope="col" tabindex="0" data-column="1" class="col-2 col-md-2 tablesorter-header tablesorter-headerUnSorted"><div class="tablesorter-header-inner">Account type</div></th>
+						<th aria-label="BSB: No sort applied, activate to apply a descending sort" aria-sort="none" aria-controls="accounts--list__table" role="columnheader" scope="col" tabindex="0" data-column="2" class="col-md-1 text-right tablesorter-header tablesorter-headerUnSorted"><div class="tablesorter-header-inner">BSB</div></th>
+						<th aria-label="Account number: No sort applied, activate to apply an ascending sort" aria-sort="none" aria-controls="accounts--list__table" role="columnheader" scope="col" tabindex="0" data-column="3" class="col-md-2 text-right tablesorter-header tablesorter-headerUnSorted"><div class="tablesorter-header-inner">Account number</div></th>
+						<th aria-label="Current Balance: No sort applied, activate to apply an ascending sort" aria-sort="none" aria-controls="accounts--list__table" role="columnheader" scope="col" tabindex="0" data-column="4" class="col-md-2 text-right tablesorter-header tablesorter-headerUnSorted"><div class="tablesorter-header-inner">Current Balance</div></th>
+						<th aria-label="Available Balance: No sort applied, activate to apply an ascending sort" aria-sort="none" aria-controls="accounts--list__table" role="columnheader" scope="col" tabindex="0" data-column="5" class="col-md-2 text-right tablesorter-header tablesorter-headerUnSorted"><div class="tablesorter-header-inner">Available Balance</div></th>
+					</tr>
+				</thead>
+				<tbody aria-relevant="all" aria-live="polite">
+					<tr>
+						<td>Personal account</td>
+						<td>Main Account</td>
+						<td class="text-right">345678</td>
+						<td class="text-right">012345678</td>
+						<td class="text-right">$143,000.00</td>
+						<td class="text-right available-balance">$113,000.00</td>
+					</tr>
+					<tr>
+						<td>Smith Co Main USA</td>
+						<td>Secondary Account</td>
+						<td class="text-right">882349</td>
+						<td class="text-right">1234567</td>
+						<td class="text-right">$23,123.00</td>
+						<td class="text-right available-balance">$22,991.00</td>
+					</tr>
+				</tbody>
+			</table>
+					
+					
+
+
+			<h3>Code sample - full table</h3>
+		<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;table id="accounts--list__table" class=""&gt;
+	&lt;thead&gt;
+		&lt;tr class=""&gt;
+			&lt;th aria-label="Account name: Ascending sort applied, activate to apply a descending sort" aria-sort="ascending" style="-moz-user-select: none;" unselectable="on" aria-controls="accounts--list__table" aria-disabled="false" role="columnheader" scope="col" tabindex="0" data-column="0" class="col-1 col-md-3 tablesorter-header tablesorter-headerAsc"&gt;
+				&lt;div class="tablesorter-header-inner"&gt;Account name&lt;/div&gt;
+			&lt;/th&gt;
+			&lt;th aria-label="Account type: No sort applied, activate to apply an ascending sort" aria-sort="none" style="-moz-user-select: none;" unselectable="on" aria-controls="accounts--list__table" aria-disabled="false" role="columnheader" scope="col" tabindex="0" data-column="1" class="col-2 col-md-2 tablesorter-header tablesorter-headerUnSorted"&gt;
+				&lt;div class="tablesorter-header-inner"&gt;Account type&lt;/div&gt;
+			&lt;/th&gt;
+			&lt;th aria-label="BSB: No sort applied, activate to apply a descending sort" aria-sort="none" style="-moz-user-select: none;" unselectable="on" aria-controls="accounts--list__table" aria-disabled="false" role="columnheader" scope="col" tabindex="0" data-column="2" class="col-md-1 text-right tablesorter-header tablesorter-headerUnSorted"&gt;
+				&lt;div class="tablesorter-header-inner"&gt;BSB&lt;/div&gt;
+			&lt;/th&gt;
+			&lt;th aria-label="Account number: No sort applied, activate to apply an ascending sort" aria-sort="none" style="-moz-user-select: none;" unselectable="on" aria-controls="accounts--list__table" aria-disabled="false" role="columnheader" scope="col" tabindex="0" data-column="3" class="col-md-2 text-right tablesorter-header tablesorter-headerUnSorted"&gt;&lt;div class="tablesorter-header-inner"&gt;Account number&lt;/div&gt;&lt;/th&gt;
+			&lt;th aria-label="Current Balance: No sort applied, activate to apply an ascending sort" aria-sort="none" style="-moz-user-select: none;" unselectable="on" aria-controls="accounts--list__table" aria-disabled="false" role="columnheader" scope="col" tabindex="0" data-column="4" class="col-md-2 text-right tablesorter-header tablesorter-headerUnSorted"&gt;&lt;div class="tablesorter-header-inner"&gt;Current Balance&lt;/div&gt;&lt;/th&gt;
+			&lt;th aria-label="Available Balance: No sort applied, activate to apply an ascending sort" aria-sort="none" style="-moz-user-select: none;" unselectable="on" aria-controls="accounts--list__table" aria-disabled="false" role="columnheader" scope="col" tabindex="0" data-column="5" class="col-md-2 text-right tablesorter-header tablesorter-headerUnSorted"&gt;&lt;div class="tablesorter-header-inner"&gt;Available Balance&lt;/div&gt;&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody aria-relevant="all" aria-live="polite"&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Personal account&lt;/td&gt;
+			&lt;td&gt;Main Account&lt;/td&gt;
+			&lt;td class="text-right"&gt;345678&lt;/td&gt;
+			&lt;td class="text-right"&gt;012345678&lt;/td&gt;
+			&lt;td class="text-right"&gt;$143,000.00&lt;/td&gt;
+			&lt;td class="text-right available-balance"&gt;$113,000.00&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Smith Co Main USA&lt;/td&gt;
+			&lt;td&gt;Secondary Account&lt;/td&gt;
+			&lt;td class="text-right"&gt;882349&lt;/td&gt;
+			&lt;td class="text-right"&gt;1234567&lt;/td&gt;
+			&lt;td class="text-right"&gt;$23,123.00&lt;/td&gt;
+			&lt;td class="text-right available-balance"&gt;$22,991.00&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<!-- code end -->
+		</figure>
+
+			<h3>Code sample - aria attributes only</h3>
+		<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;th 
+	aria-label="Account name: No sort applied, activate to apply an ascending sort" 
+	aria-sort="none" 
+	style="-moz-user-select: none;" 
+	unselectable="on" 
+	aria-controls="accounts--list__table" 
+	aria-disabled="false" 
+	role="columnheader" 
+	scope="col" 
+	tabindex="0" 
+	data-column="0" 
+	class="tablesorter-header tablesorter-headerUnSorted"&gt;
+
+&lt;th 
+	aria-label="Account name: Ascending sort applied, activate to apply a descending sort" 
+	aria-sort="ascending" 
+	style="-moz-user-select: none;" 
+	unselectable="on" 
+	aria-controls="accounts--list__table" 
+	aria-disabled="false" 
+	role="columnheader" 
+	scope="col" 
+	tabindex="0" 
+	data-column="0" 
+	class="tablesorter-header tablesorter-headerAsc"&gt;
+	
+&lt;th
+	aria-label="Account type: Descending sort applied, activate to apply an ascending sort" 
+	aria-sort="descending" 
+	style="-moz-user-select: none;" 
+	unselectable="on"
+	aria-controls="accounts--list__table"
+	aria-disabled="false"
+	role="columnheader"
+	scope="col"
+	tabindex="0"
+	data-column="1"
+	class="tablesorter-header tablesorter-headerDesc"&gt;
+</code></pre>
+<!-- code end -->
+		</figure>
+
+			<table>
+				<caption>Support chart - keyboard</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>Keyboard</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td class="pass">PASS</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<table>
+				<caption>Support chart - tab across headers</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							"Account type"<br>
+							"No sort applied"<br> 
+							"Activate to apply an ascending sort"<br> 
+							"Columnheader"
+						</td>
+						<td class="pass">
+							"Account type. Colon"<br>
+							"No sort applied"<br>
+							"Activate to apply an ascending sort"<br>
+							"Account type"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">
+							Table does not render
+						</td>
+						<td class="fail">
+							Table does not render
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							"Account type"<br> 
+							"No sort applied"<br> 
+							"Activate to apply an ascending sort"
+						</td>
+						<td class="pass">
+							"Account type. Colon"<br>
+							"No sort applied"<br>
+							"Activate to apply an ascending sort"<br>
+							"Account type"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							"Account type"<br> 
+							"No sort applied"<br> 
+							"Activate to apply an ascending sort"<br> 
+							"Column header"<br>
+							"Selected editable"<br>
+							"Column 2"<br>
+						</td>
+						<td class="pass">
+							"Account type. Colon"<br> 
+							"No sort applied"<br> 
+							"Activate to apply an ascending sort"<br> 
+							"Use JAWS keys plus ALT plus M to move the controlled element"<br> 
+							"Account type"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Account type"<br> 
+							"No sort applied"<br> 
+							"Activate to apply an ascending sort"<br> 
+							"Account type" 
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							"Account type"<br>
+							"Group 2 of 6"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Account type"<br> 
+							"No sort applied"<br> 
+							"Activate to apply an ascending sort"<br> 
+							"Account type" 
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<table>
+				<caption>Support chart - activate sort</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="fail">
+							No announcement<br>
+							<br>
+							Return to cell:<br>
+							"Account type. Colon"<br>
+							"Ascending sort applied"<br>
+							"Activate to apply a descending sort"<br>
+							"Columnheader"
+						</td>
+						<td class="fail">
+							No announcement<br>
+							<br>
+							Return to cell:<br>
+							"Account type. Colon"<br>
+							"Ascending sort applied"<br>
+							"Activate to apply a descending sort"<br>
+							"Columnheader"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">
+							Table does not render
+						</td>
+						<td class="fail">
+							Table does not render
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							"Account type"<br>
+							"Ascending sort applied"<br>
+							"Activate to apply a descending sort"
+						</td>
+						<td class="fail">
+							No announcement<br>
+							<br>
+							Return to cell:<br>
+							"Account type. Colon"<br>
+							"Ascending sort applied"<br>
+							"Activate to apply a descending sort"<br>
+							"Columnheader"<br>
+							"Contained. Controlled"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							"Sorted ascending"<br>
+							"Account type"<br>
+							"Ascending sort applied"<br>
+							"Activate to apply a descending sort"
+						</td>
+						<td class="fail">
+							"Enter. Account descending"<br>
+							Begins to read table<br>
+							<br>
+							Return to cell:<br>
+							"Account type. Colon"<br>
+							"Ascending sort applied"<br>
+							"Activate to apply a descending sort"<br>
+							"Use JAWS keys plus ALT plus M to move the controlled element"<br>
+							"Sorted ascending"
+							"Account type"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							No announcement
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							No announcement
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							No announcement
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

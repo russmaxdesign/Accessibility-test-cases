@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML input type="radio" element</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>HTML input type="radio" element test</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>The legend <b>should be announced</b> with the first radio button in each fieldset</li>
+				<li>The label <b>should be announced</b> for each radio button</li>
+				<li>The radio element <b>should be announced</b> as "radio button" or similar</li>
+			</ul>
+			<h3>Example</h3>
+			<form class="example" method="get" action="#">
+				<fieldset>
+					<legend>Subscribe</legend>
+					<input type="radio" id="a" name="c" checked> <label for="a">Weekly</label><br>
+					<input type="radio" id="b" name="c"> <label for="b">Monthly</label><br>
+				</fieldset>
+				<fieldset>
+					<legend>Delivery</legend>
+					<input type="radio" id="d" name="f" required> <label for="d">Online</label><br>
+					<input type="radio" id="e" name="f" required> <label for="e">Address</label><br>
+				</fieldset>
+				<fieldset>
+					<legend>Agree to terms</legend>
+					<input type="radio" id="g" name="i" aria-required="true"> <label for="g">Agree</label><br>
+					<input type="radio" id="h" name="i" aria-required="true"> <label for="h">Disagree</label><br>
+				</fieldset>
+				<fieldset>
+					<legend>Signed</legend>
+					<input type="radio" id="j" name="l" required aria-required="true"> <label for="j">Yes</label><br>
+					<input type="radio" id="k" name="l" required aria-required="true"> <label for="k">No</label><br>
+				</fieldset>
+			</form>
+
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;form class="example" method="get" action="#"&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Subscribe&lt;/legend&gt;
+		&lt;input type="radio" id="a" name="c" checked&gt; &lt;label for="a"&gt;Weekly&lt;/label&gt;&lt;br&gt;
+		&lt;input type="radio" id="b" name="c"&gt; &lt;label for="b"&gt;Monthly&lt;/label&gt;&lt;br&gt;
+	&lt;/fieldset&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Delivery&lt;/legend&gt;
+		&lt;input type="radio" id="d" name="f" required&gt; &lt;label for="f"&gt;Online&lt;/label&gt;&lt;br&gt;
+		&lt;input type="radio" id="e" name="f" required&gt; &lt;label for="f"&gt;Address&lt;/label&gt;&lt;br&gt;
+	&lt;/fieldset&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Agree to terms&lt;/legend&gt;
+		&lt;input type="radio" id="g" name="i" aria-required="true"&gt; &lt;label for="i"&gt;Agree&lt;/label&gt;&lt;br&gt;
+		&lt;input type="radio" id="h" name="i" aria-required="true"&gt; &lt;label for="i"&gt;Disagree&lt;/label&gt;&lt;br&gt;
+	&lt;/fieldset&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Signed&lt;/legend&gt;
+		&lt;input type="radio" id="j" name="l" required aria-required="true"&gt; &lt;label for="l"&gt;Yes&lt;/label&gt;&lt;br&gt;
+		&lt;input type="radio" id="k" name="l" required aria-required="true"&gt; &lt;label for="l"&gt;No&lt;/label&gt;&lt;br&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td>
+<b>Example 1</b>:<br>
+"<span class="pass">Subscribe grouping</span>. Weekly. Radio button. Checked"<br>
+"Monthly. Radio button. Checked"<br>
+<br>
+<b>Example 1</b>:<br>
+"<span class="pass">Delivery grouping</span>. Online. Radio button. Not checked"<br>
+"Address. Radio button. Checked"<br>
+<span class="fail">Required not announced</span><br>
+<br>
+<b>Example 1</b>:<br>
+"<span class="pass">Agree to terms grouping</span>. Agree. Radio button. Required. Not checked"<br>
+"Disagree. Radio button. Checked. Required"<br>
+<br>
+<b>Example 1</b>:<br>
+"<span class="pass">Signed grouping</span>. Yes. Radio button. Required. Not checked"<br>
+"No. Radio button. Checked. Required"
+						</td>
+						<td>
+<b>Example 1</b>:<br>
+"<span class="pass">Subscribe</span>. Weekly. Radio button. Checked"<br>
+"Subscribe. Monthly. Radio button. Not checked"<br>
+<br>
+<b>Example 1</b>:<br>
+"<span class="pass">Delivery</span>. Online. Radio button. Not checked"<br>
+"Delivery. Address. Radio button. Not checked"<br>
+<span class="fail">Required not announced</span><br>
+<br>
+<b>Example 1</b>:<br>
+"<span class="pass">Agree to terms</span>. Agree. Radio button. Not checked. Required"<br>
+"Agree to terms. Disagree. Radio button. Not checked. Required"<br>
+<br>
+<b>Example 1</b>:<br>
+"<span class="pass">Signed</span>. Yes. Radio button. Not checked. Required"<br>
+"Signed. No. Radio button. Not checked. Required"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td>
+							x
+						</td>
+						<td>
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td>
+<b>Example 1</b>:<br>
+"<span class="pass">Subscribe grouping</span>. Weekly. Radio button. Checked"<br>
+"Monthly. Radio button. Checked"<br>
+<br>
+<b>Example 2</b>:<br>
+"<span class="pass">Delivery grouping</span>. Online. Radio button. Half checked. Required"<br>
+"Address. Radio button. Checked. Required"<br>
+<br>
+<b>Example 3</b>:<br>
+"<span class="pass">Agree to terms grouping</span>. Agree. Radio button. Half checked. Required"<br>
+"Disagree. Radio button. Checked. Required"<br>
+<br>
+<b>Example 4</b>:<br>
+"<span class="pass">Signed grouping</span>. Yes. Radio button. Half checked. Required"<br>
+"No. Radio button. Checked. Required"
+						</td>
+						<td>
+<b>Example 1</b>:<br>
+"<span class="pass">Subscribe</span>. Weekly. Radio button. Checked"<br>
+"Radio button. Not checked. Monthly"<br>
+<br>
+<b>Example 2</b>:<br>
+"<span class="pass">Delivery</span>. Online. Radio button. Not checked. Partially checked. Required"<br>
+"Not checked. Partially checked. Required. Radio button. Address"<br>
+<br>
+<b>Example 3</b>:<br>
+"<span class="pass">Agree to terms</span>. Agree. Radio button. Not checked. Partially checked. Required"<br>
+"Not checked. Partially checked. Required. Radio button. Disagree"<br>
+<br>
+<b>Example 4</b>:<br>
+"<span class="pass">Signed</span>. Yes. Radio button. Not checked. Partially checked. Required"<br>
+"Not checked. Partially checked. Required. Radio button. No"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td>
+<b>Example 1</b>:<br>
+"<span class="pass">Subscribe grouping</span>. Weekly. Radio button. Checked. 1 of 2"<br>
+"Monthly. Radio button. Checked. 2 of 2"<br>
+<br>
+<b>Example 2</b>:<br>
+"<span class="pass">Delivery grouping</span>. Invalid entry. Online. Radio button. invalid entry. Required. Not checked. 1 of 2"<br>
+"Address. Radio button. Checked. Required. 2 of 2"<br>
+<br>
+<b>Example 3</b>:<br>
+"<span class="pass">Agree to terms grouping</span>. Agree. Radio button. Required. Not checked. 1 of 2"<br>
+"Disagree. Radio button. Checked. Required. 2 of 2"
+<br>
+<b>Example 4</b>:<br>
+"<span class="pass">Signed grouping</span>. Invalid entry. Yes. Radio button. Invalid entry. Required. Not checked. 1 of 2"
+"No. Radio button. Checked. Required. 2 of 2"
+						</td>
+						<td>
+<b>Example 1</b>:<br>
+"<span class="pass">Subscribe</span>. Weekly. Radio button. Checked. 1 of 2. To change the selection press up or down arrow"<br>
+"Monthly. Radio button. Checked. 2 of 2. To change the selection press up or down arrow"<br>
+<br>
+<b>Example 2</b>:<br>
+"<span class="pass">Delivery</span>. Invalid entry. Online. Radio button. Not checked. Required. Invalid entry. 1 of 2. To change the selection press up or down arrow"<br>
+"Address. Radio button. Checked. Required. 2 of 2. To change the selection press up or down arrow"<br>
+<br>
+<b>Example 3</b>:<br>
+"<span class="pass">Agree to terms</span>. Agree. Radio button. Not checked. Required. 1 of 2. To change the selection press up or down arrow"<br>
+"Disagree. Radio button. Checked. Required. 2 of 2. To change the selection press up or down arrow"<br>
+<br>
+<b>Example 4</b>:<br>
+"<span class="pass">Signed</span>. Invalid entry. Yes. Radio button. Not checked. Invalid entry. 1 of 2. To change the selection press up or down arrow"<br>
+"No. Radio button. Checked. Required. 2 of 2. To change the selection press up or down arrow"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td>
+<b>Example 1</b>:<br>
+"Weekly. Selected. Collapsed. Radio button"<br>
+"Monthly. Selected. Collapsed. Radio button"<br>
+<span class="fail">Legend not announced</span><br>
+<br>
+<b>Example 2</b>:<br>
+"Online. Collapsed. Radio button"<br>
+"Address. Selected. Collapsed. Radio button"<br>
+<span class="fail">Legend not announced</span><br>
+<span class="fail">Required not announced</span><br>
+<br>
+<b>Example 3</b>:<br>
+"Agree. Collapsed. Radio button"<br>
+"Disagree. Selected. Collapsed. Radio button"<br>
+<span class="fail">Legend not announced</span><br>
+<span class="fail">Required not announced</span><br>
+<br>
+<b>Example 4</b>:<br>
+"Yes. Collapsed. Radio button"<br>
+"No. Selected. Collapsed. Radio button"
+<span class="fail">Legend not announced</span><br>
+<span class="fail">Required not announced</span>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td>
+<b>Example 1</b>:<br>
+"Weekly. <span class="pass">Subscribe. Subscribe</span>. Radio button"<br>
+"Monthly. <span class="pass">Subscribe. Subscribe</span>. Radio button"<br>
+<br>
+<b>Example 2</b>:<br>
+"Online. <span class="pass">Delivery. Delivery</span>. Radio button"<br>
+"Address. <span class="pass">Delivery. Delivery</span>. Radio button"<br>
+<span class="fail">Required not announced</span><br>
+<br>
+<b>Example 3</b>:<br>
+"Agree. <span class="pass">Agree to terms. Agree to terms</span>. Radio button'<br>
+"Disagree. <span class="pass">Agree to terms. Agree to terms</span>. Radio button"<br>
+<span class="fail">Required not announced</span><br>
+<br>
+<b>Example 4</b>:<br>
+"Yes. <span class="pass">Signed. Signed</span>. Radio button"<br>
+"No. <span class="pass">Signed. Signed</span>. Radio button"
+<span class="fail">Required not announced</span>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td>
+<b>Example 1</b>:<br>
+"Weekly. <span class="pass">Subscribe</span>. Selected. Radio button. 1 of 2"<br>
+"Monthly. <span class="pass">Subscribe</span>. Selected. Radio button. 2 of 2"<br>
+<br>
+<b>Example 2</b>:<br>
+"Online. <span class="pass">Delivery</span>. Radio button. 1 of 2"<br>
+"Address. <span class="pass">Delivery</span>. Selected. Radio button. 2 of 2"<br>
+<span class="fail">Required not announced</span><br>
+<br>
+<b>Example 3</b>:<br>
+"Agree. <span class="pass">Agree to terms</span>. Radio button. 1 of 2"<br>
+"Disagree. <span class="pass">Agree to terms</span>. Selected. Radio button. 2 of 2"<br>
+<span class="fail">Required not announced</span><br>
+<br>
+<b>Example 4</b>:<br>
+"Yes. <span class="pass">Signed</span>. Radio button. 1 of 2'<br>
+"No. <span class="pass">Signed</span>. Selected. Radio button. 2 of 2"
+<span class="fail">Required not announced</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

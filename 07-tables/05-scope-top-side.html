@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Table test 04 - scope at top and side</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Table test 04 - scope at top and side</h1>
+			<table>
+				<caption>This is the caption</caption>
+				<thead>
+					<tr>
+						<th scope="col">Name</th>
+						<th scope="col">City</th>
+						<th scope="col">Country</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">Peter</th>
+						<td>Sydney</td>
+						<td>Australia</td>
+					</tr>
+					<tr>
+						<th scope="row">Mary</th>
+						<td>Wellington</td>
+						<td>New Zealand</td>
+					</tr>
+					<tr>
+						<th scope="row">Stanley</th>
+						<td>Paris</td>
+						<td>France</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2>Code</h2>
+		<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;table&gt;
+	&lt;caption&gt;This is the caption&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th <b>scope="col"</b>&gt;Name&lt;/th&gt;
+			&lt;th <b>scope="col"</b>&gt;City&lt;/th&gt;
+			&lt;th <b>scope="col"</b>&gt;Country&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th <b>scope="row"</b>&gt;Peter&lt;/th&gt;
+			&lt;td&gt;Sydney&lt;/td&gt;
+			&lt;td&gt;Australia&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th <b>scope="row"</b>&gt;Mary&lt;/th&gt;
+			&lt;td&gt;Wellington&lt;/td&gt;
+			&lt;td&gt;New Zealand&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th <b>scope="row"</b>&gt;Stanley&lt;/th&gt;
+			&lt;td&gt;Paris&lt;/td&gt;
+			&lt;td&gt;France&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<!-- code end -->
+		</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

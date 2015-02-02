@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Select menus and keyboard use</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+			a:focus,select:focus { outline: 1px solid red; }
+			form div { margin-bottom: 1em; }	
+			#color { height: 250px; }	
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Select menus and keyboard use</h1>
+			<h3>Operation</h3>
+			<h4>Windows</h4>
+			<ul>
+				<li>TAB to focus on select menu</li>
+				<li>Focus appears on select menu</li>
+				<li>DOWN ARROW move to next option, UP ARROW to move to previous option</li>
+				<li>SPACEBAR to expand (make all optons visible)</li>
+				<li>ESC to expand options (make all optons visible) - Windows only</li>
+				<li>option chosen using ARROW only</li>
+			</ul>
+			<h4>OSX</h4>
+			<ul>
+				<li>TAB to focus on select menu</li>
+				<li>Focus appears on select menu</li>
+				<li>DOWN ARROW move to next option, UP ARROW to move to previous option</li>
+				<li>DOWN ARROW and UP ARROW automatically expand options</li>
+				<li>Option chosen using ENTER or SPACE BAR.</li>
+			</ul>
+			<h3>Example</h3>
+			<form class="example" action="#">
+				<div>
+					<label for="fruit">Favourite fruit</label>
+					<select id="fruit" name="fruit">
+						<option>Apple</option>
+						<option>Apricot</option>
+						<option>Avocado</option>
+						<option>Banana</option>
+						<option>Breadfruit</option>
+						<option>Bilberry</option>
+						<option>Blackberry</option>
+						<option>Blackcurrant</option>
+						<option>Blueberry</option>
+						<option>Boysenberry</option>
+						<option>Cantaloupe</option>
+						<option>Currant</option>
+						<option>Cherry</option>
+						<option>Cherimoya</option>
+						<option>Cloudberry</option>
+					</select>
+				</div>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;form class="example" action="#"&gt;
+	&lt;div&gt;
+		&lt;label for="fruit"&gt;Favourite fruit&lt;/label&gt;
+		&lt;select id="fruit" name="fruit"&gt;
+			&lt;option&gt;Apple&lt;/option&gt;
+			&lt;option&gt;Apricot&lt;/option&gt;
+			&lt;option&gt;Avocado&lt;/option&gt;
+			&lt;option&gt;Banana&lt;/option&gt;
+			&lt;option&gt;Breadfruit&lt;/option&gt;
+			&lt;option&gt;Bilberry&lt;/option&gt;
+			&lt;option&gt;Blackberry&lt;/option&gt;
+			&lt;option&gt;Blackcurrant&lt;/option&gt;
+			&lt;option&gt;Blueberry&lt;/option&gt;
+			&lt;option&gt;Boysenberry&lt;/option&gt;
+			&lt;option&gt;Cantaloupe&lt;/option&gt;
+			&lt;option&gt;Currant&lt;/option&gt;
+			&lt;option&gt;Cherry&lt;/option&gt;
+			&lt;option&gt;Cherimoya&lt;/option&gt;
+			&lt;option&gt;Cloudberry&lt;/option&gt;
+		&lt;/select&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

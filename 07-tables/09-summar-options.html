@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Aria-describedby - table summary vs describedby</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Aria-describedby - table summary vs describedby</h1>
+			<h2>Table using summary attribute</h2>
+			<table summary="A chart comparing different names">
+				<caption>Male and female names</caption>
+				<tr>
+					<th>Male</th>
+					<th>Female</th>
+				</tr>
+				<tr>
+					<td>John</td>
+					<td>Mary</td>
+				</tr>
+				<tr>
+					<td>Peter</td>
+					<td>Jenny</td>
+				</tr>
+			</table>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;table <strong>summary</strong>="A chart comparing different names"&gt;
+	...
+&lt;/table&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<h2>Table using aria-describedby</h2>
+			<table aria-describedby="table-summary">
+				<caption>Comparing fruit, veggies and meat</caption>
+				<tr>
+					<th>Veggies</th>
+					<th>Fruit</th>
+					<th>Meat</th>
+				</tr>
+				<tr>
+					<td>Lettuce</td>
+					<td>Apple</td>
+					<td>Beef</td>
+				</tr>
+				<tr>
+					<td>Carrot</td>
+					<td>Pear</td>
+					<td>Pork</td>
+				</tr>
+				<tr>
+					<td>Potato</td>
+					<td>Orange</td>
+					<td>Lamb</td>
+				</tr>
+			</table>
+			<h2>Additional information</h2>
+			<p id="table-summary">This table is a detailed comparison of fruit, meat and veggies for those that care.</p>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;table <strong>aria-describedby</strong>="table-summary"&gt;
+	...
+&lt;/table&gt;
+	...
+&lt;p id="table-summary"&gt;This table is a detailed comparison of fruit, meat and veggies for those that care.&lt;/p&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">
+							x
+						</td>
+						<td class="fail">
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							x
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML definition lists</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>HTML definition list test</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>List <b>should be announced</b> as "definition" or "description" list when entering and leaving list. </li>
+				<li>Number of list items <b>should be announced</b>. 
+				<li>Ideally, number of list items <b>should be announced</b> based on term/description pairs, not total number of items. In the example below, the total number of list items should be two not four.</li>
+				<li>Each list item <b>should be announced</b>.</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<dl style="margin-top: 0; margin-bottom: 0;">
+					<dt>Apple</dt>
+					<dd>Red</dd>
+					<dt>Banana</dt>
+					<dd>Yellow</dd>
+				</dl>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;dl&gt;
+	&lt;dt&gt;Apple&lt;/dt&gt;
+	&lt;dd&gt;Red&lt;/dd&gt;
+	&lt;dt&gt;Banana&lt;/dt&gt;
+	&lt;dd&gt;Yellow&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="fail">
+							"List with 4 items. Apple"<br>
+							"Red"<br>
+							"Banana"<br>
+							"Yellow"<br>
+							"Out of list"
+						</td>
+						<td class="pass">
+							"Definition list with 2 items"<br>
+							"Apple"<br>
+							"Red"<br>
+							"Banana"<br>
+							"Yellow"<br>
+							"List end"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">
+							"List with 4 items. Apple"<br>
+							"Red"<br>
+							"Banana"<br>
+							"Yellow"<br>
+							"Out of list"
+						</td>
+						<td class="pass">
+							"Definition list with 2 items"<br>
+							"Apple"<br>
+							"Red"<br>
+							"Banana"<br>
+							"Yellow"<br>
+							"List end"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">
+							"List with 4 items. Apple"<br>
+							"Red"<br>
+							"Banana"<br>
+							"Yellow"<br>
+							"Out of list"
+						</td>
+						<td class="pass">
+							"Definition list with 2 items"<br>
+							"Apple"<br>
+							"Red"<br>
+							"Banana"<br>
+							"Yellow"<br>
+							"List end"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">
+							"List with 4 items. Apple"<br>
+							"Red"<br>
+							"Banana"<br>
+							"Yellow"<br>
+							"Out of list"
+						</td>
+						<td class="pass">
+							"Definition list with 2 items"<br>
+							"Apple"<br>
+							"Red"<br>
+							"Banana"<br>
+							"Yellow"<br>
+							"List end"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							"List 4 items"<br>
+							"Apple"<br>
+							"Red"<br>
+							"Banana"<br>
+							"Yellow"<br>
+							"End of list"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Definition list 4 items"<br>
+							"Apple"<br>
+							"Red"<br>
+							"Banana"<br>
+							"Yellow"<br>
+							"End of definition list"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Description list 4 items"<br>
+							"Apple"<br>
+							"Red"<br>
+							"Banana"<br>
+							"Yellow"<br>
+							"End of description list"
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

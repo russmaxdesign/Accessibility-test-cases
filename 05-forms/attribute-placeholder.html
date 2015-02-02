@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Attribute: placeholder</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+			::-webkit-input-placeholder { color: #666; }
+			:-moz-placeholder { color: #666; }
+			::-moz-placeholder { color: #666; }
+			:-ms-input-placeholder { color: #666; }
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="index.html">Back to home</a></p>
+			<h1>Attribute: placeholder</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>The placeholder value <b>should be announced</b> on focus</li>
+			</ul>
+			<h3>Example</h3>
+			<form method="get" action="#" class="example">
+				<div class="row-form">
+					<label class="label" for="a">Name</label>
+					<input class="input" id="a" name="a" type="text" placeholder="Add your name">
+				</div>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;input type="text" placeholder="Add your name"&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<h3>CSS sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-css">::-webkit-input-placeholder { color: #666; }
+:-moz-placeholder { color: #666; }
+::-moz-placeholder { color: #666; }
+:-ms-input-placeholder { color: #666; }
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="fail">
+							"Name. Edit. Blank"
+						</td>
+						<td class="fail">
+							"Name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">
+							"Name. Edit. Blank"
+						</td>
+						<td class="fail">
+							"Name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							"Name. Edit. <b>Add your name</b>"
+						</td>
+						<td class="pass">
+							"Name. Edit. <b>Add your name</b>. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">
+							"Name. Edit with autocomplete. Blank"
+						</td>
+						<td class="fail">
+							"Name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							"Name. Edit. Text."
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							"Name. Text."
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"<b>Add you name</b>. Name. Edit. Text."
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p><a href="index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>
+

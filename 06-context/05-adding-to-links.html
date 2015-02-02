@@ -1,0 +1,447 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Adding information to links</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Adding information to links test</h1>
+			<p>Developers may wish to add additional context to a link for screen reader users.</p> 
+			<ul>
+				<li><a href="#one">Option 1: Link title attribute</a></li>
+				<li><a href="#two">Option 2: Link aria-label attribute</a></li>
+				<li><a href="#three">Option 3: Link aria-labelledby attribute</a></li>
+				<li><a href="#four">Option 4: Link aria-describedby attribute</a></li>
+				<li><a href="#five">Option 5: Link hidden info</a></li>
+			</ul>
+			<h2 id="one">Option 1: Link title attribute</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>Should read link content and then title content - "Buy a book from the Tolkein range".</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<a href="#" title="from the Tolkein range">Buy a book</a>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;a href="#" title="from the Tolkein range"&gt;
+	Buy a book
+&lt;/a&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="fail">FAIL - no title</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">FAIL - no title</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL - no title</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL - no title</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="two">Option 2: Link aria-label attribute</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>Should read aria-label content only - "Purchase apples while they are fresh".</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<a href="#" aria-label="Purchase apples - while they are fresh">Buy apples</a>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;a href="#" aria-label="Purchase apples while they are fresh"&gt;
+	Buy apples
+&lt;/a&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">FAIL - does not read aria</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="three">Option 3: Link aria-labelledby attribute</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>Should read link content followed by aria-labelledby content - "Color blue is a calming color".</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<a href="#" aria-labelledby="info1">Color blue</a>
+				<p id="info1" class="hidden">is a calming color</p>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;a href="#" aria-labelledby="info1"&gt;
+	Color blue
+&lt;/a&gt;
+&lt;p id="info1" class="hidden"&gt;
+	is a calming color
+&lt;/p&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL - aria-labelledby only</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">PASS</td>
+						<td class="fail">FAIL - aria-labelledby only</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">FAIL - no aria-label</td>
+						<td class="fail">FAIL - aria-labelledby only</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">FAIL - aria-labelledby only</td>
+						<td class="fail">FAIL - aria-labelledby only</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="four">Option 4: Link aria-describedby attribute</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>Should read link content followed by aria-describedby content - "Close and return to banking details".</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<a href="#" aria-describedby="info2">Close</a>
+				<p id="info2" class="hidden">and return to banking details</p>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;a href="#" aria-describedby="info1"&gt;
+	Close
+&lt;/a&gt;
+&lt;p id="info1" class="hidden"&gt;
+	 and return to banking details
+&lt;/p&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">FAIL - no describedby</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="five">Option 5: Link hidden info</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>Should read link content including the content - "See the dog run after a ball".</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<a href="#">See the dog <span class="hidden">run after a ball</span></a>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">
+&lt;a href="#"&gt;
+	See the dog 
+	&lt;span class="hidden"&gt;run after a ball&lt;/span&gt;
+&lt;/a&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">PASS</td>
+						<td class="pass">PASS</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">PASS</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>
+

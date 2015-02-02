@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML fieldset and nested fieldset test</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>HTML fieldset and nested fieldset test</h1>
+			<ul>
+				<li><a href="#one">Simple fieldset</a></li>
+				<li><a href="#two">Nested fieldset</a></li>
+			</ul>
+			
+			<h2 id="one">Simple fieldset</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>The legend should be announced when entering the fieldset from the top or bottom.</li>
+			</ul>
+			<h3>Example</h3>
+			<form class="example" action="#">
+				<fieldset>
+					<legend>Personal details</legend>
+					<div class="row-form">
+						<label class="label" for="a">Name</label>
+						<input class="input" id="a" name="a" type="text">
+					</div>
+					<div class="row-form">
+						<label class="label" for="b">Address</label>
+						<input class="input" id="b" name="b" type="text">
+					</div>
+				</fieldset>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;form class="example" action="#"&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Personal details&lt;/legend&gt;
+		&lt;div&gt;
+			&lt;label for="a"&gt;Name&lt;/label&gt;
+			&lt;input id="a" name="a" type="text"&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;label for="b"&gt;Address&lt;/label&gt;
+			&lt;input id="b" name="b" type="text"&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Personal details grouping. Name. Edit. Blank"<br>
+							"Address. Edit. Blank"<br>
+							<br>
+							<b>Up:</b><br>
+							"Personal details grouping. Address. Edit. Blank"<br>
+							"Name. Edit. Blank"
+						</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Personal details. Name. Edit. Type in text"<br>
+							"Personal details. Address. Edit. Type in text"<br>
+							<br>
+							<b>Up:</b><br>
+							"Personal details. Address. Edit. Type in text"<br>
+							"Personal details. Name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Personal details grouping. Name. Edit. Blank"<br>
+							"Address. Edit. Blank"<br>
+							<br>
+							<b>Up:</b><br>
+							"Personal details grouping. Address. Edit. Blank"<br>
+							"Name. Edit. Blank"
+						</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Personal details. Name. Edit. Type in text"<br>
+							"Personal details. Address. Edit. Type in text"<br>
+							<br>
+							<b>Up:</b><br>
+							"Personal details. Address. Edit. Type in text"<br>
+							"Personal details. Name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Personal details grouping. Name. Edit. Blank"<br>
+							"Address. Edit. Blank"<br>
+							<br>
+							<b>Up:</b><br>
+							"Personal details grouping. Address. Edit. Blank"<br>
+							"Name. Edit. Blank"
+						</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Personal details. Name. Edit. Type in text"<br>
+							"Personal details. Address. Edit. Type in text"<br>
+							<br>
+							<b>Up:</b><br>
+							"Personal details. Address. Edit. Type in text"<br>
+							"Personal details. Name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Personal details grouping. Name. Edit with autocomplete. Blank"<br>
+							"Address. Edit. Blank"<br>
+							<br>
+							<b>Up:</b><br>
+							"Personal details grouping. Address. Edit with autocomplete. Blank"<br>
+							"Name. Edit. Blank"
+						</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Personal details. Name. Edit. Type in text"<br>
+							"Address. Edit. Type in text"<br>
+							<br>
+							<b>Up:</b><br>
+							"Personal details. Address. Edit. Type in text"<br>
+							"Name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							<b>Down:</b><br>
+							"Name. Edit. Text"<br>
+							"Address. Edit. Text"<br>
+							<br>
+							<b>Up:</b><br>
+							"Address. Edit. Text"<br>
+							"Name. Edit. Text"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Name. Personal details. Personal details. Text"<br>
+							"Address. Personal details. Personal details. Text"<br>
+							<br>
+							<b>Up:</b><br>
+							"Address. Personal details. Personal details. Text"<br>
+							"Name. Personal details. Personal details. Text"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Name. Personal details. Edit. Text"<br>
+							"Address. Personal details. Edit. Text"<br>
+							<br>
+							<b>Up:</b><br>
+							"Address. Personal details. Edit. Text"<br>
+							"Name. Personal details. Edit. Text"
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="two">Nested fieldset</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>The nested legend should be announced when entering the fieldset from the top or bottom.</li>
+			</ul>
+			<h3>Example</h3>
+			<form class="example" action="#">
+				<fieldset>
+					<legend>Add your details</legend>
+					<div class="row-form">
+						<label class="label" for="c">Phone</label>
+						<input class="input" id="c" name="c" type="text">
+					</div>
+					<fieldset>
+						<legend>Favourites?</legend>
+						<div class="row-form">
+							<label class="label" for="d">Color</label>
+							<input class="input" id="d" name="d" type="text">
+						</div>
+						<div class="row-form">
+							<label class="label" for="e">Fruit</label>
+							<input class="input" id="e" name="e" type="text">
+						</div>
+					</fieldset>
+					<div class="row-form">
+						<label class="label" for="f">Email</label>
+						<input class="input" id="f" name="f" type="text">
+					</div>
+				</fieldset>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;form class="example" action="#"&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Add your details&lt;/legend&gt;
+		&lt;div class="row-form"&gt;
+			&lt;label for="c"&gt;Phone&lt;/label&gt;
+			&lt;input id="c" name="c" type="text"&gt;
+		&lt;/div&gt;
+		&lt;fieldset&gt;
+			&lt;legend&gt;Favourite colors?&lt;/legend&gt;
+			&lt;div&gt;
+				&lt;input type="checkbox" id="red" name="red"&gt;
+				&lt;label for="red"&gt;red&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div&gt;
+				&lt;input type="checkbox" id="green" name="green"&gt;
+				&lt;label for="green"&gt;green&lt;/label&gt;
+			&lt;/div&gt;
+		&lt;/fieldset&gt;
+		&lt;div class="row-form"&gt;
+			&lt;label for="d"&gt;Email&lt;/label&gt;
+			&lt;input id="d" name="d" type="text"&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Add your details. Grouping. Phone. Edit. Blank"<br>
+							"Favourites. Grouping. Color. Edit. Blank"<br>
+							"Fruit. Edit. Blank"<br>
+							"Email. Edit. Blank"<br>
+							<br>
+							<b>Up:</b><br>
+							"Add your details. Grouping. Email. Edit. Blank"<br>
+							"Favourites. Grouping. Fruit. Edit. Blank"<br>
+							"Color. Edit. Blank"<br>
+							"Phone. Edit. Blank"<br>
+						</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Add your details. Phone. Edit. Type in text"<br>
+							"Favourites. Color. Edit. Type in text"<br>
+							"Favourites. Fruit. Edit. Type in text"<br>
+							"Add your details. Email. Edit. Type in text"<br>
+							<br>
+							<b>Up:</b><br>
+							"Add your details. Email. Edit. Type in text"<br>
+							"Favourites. Fruit. Edit. Type in text"<br>
+							"Favourites. Color. Edit. Type in text"<br>
+							"Add your details. Phone. Edit. Type in text"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Add your details. Grouping. Phone. Edit. Blank"<br>
+							"Favourites. Grouping. Color. Edit. Blank"<br>
+							"Fruit. Edit. Blank"<br>
+							"Email. Edit. Blank"<br>
+							<br>
+							<b>Up:</b><br>
+							"Add your details. Grouping. Email. Edit. Blank"<br>
+							"Favourites. Grouping. Fruit. Edit. Blank"<br>
+							"Color. Edit. Blank"<br>
+							"Phone. Edit. Blank"<br>
+						</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Add your details. Phone. Edit. Type in text"<br>
+							"Favourites. Color. Edit. Type in text"<br>
+							"Favourites. Fruit. Edit. Type in text"<br>
+							"Add your details. Email. Edit. Type in text"<br>
+							<br>
+							<b>Up:</b><br>
+							"Add your details. Email. Edit. Type in text"<br>
+							"Favourites. Fruit. Edit. Type in text"<br>
+							"Favourites. Color. Edit. Type in text"<br>
+							"Add your details. Phone. Edit. Type in text"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Add your details. Grouping. Phone. Edit. Blank"<br>
+							"Favourites. Grouping. Color. Edit. Blank"<br>
+							"Fruit. Edit. Blank"<br>
+							"Email. Edit. Blank"<br>
+							<br>
+							<b>Up:</b><br>
+							"Add your details. Grouping. Email. Edit. Blank"<br>
+							"Favourites. Grouping. Fruit. Edit. Blank"<br>
+							"Color. Edit. Blank"<br>
+							"Phone. Edit. Blank"<br>
+						</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Add your details. Phone. Edit. Type in text"<br>
+							"Favourites. Color. Edit. Type in text"<br>
+							"Favourites. Fruit. Edit. Type in text"<br>
+							"Add your details. Email. Edit. Type in text"<br>
+							<br>
+							<b>Up:</b><br>
+							"Add your details. Email. Edit. Type in text"<br>
+							"Favourites. Fruit. Edit. Type in text"<br>
+							"Favourites. Color. Edit. Type in text"<br>
+							"Add your details. Phone. Edit. Type in text"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Add your details. Grouping. Phone. Edit with autocomplete. Blank"<br>
+							"Favourites. Grouping. Color. Edit with autocomplete. Blank"<br>
+							"Fruit. Edit with autocomplete. Blank"<br>
+							"Email. Edit with autocomplete. Blank"<br>
+							<br>
+							<b>Up:</b><br>
+							"Add your details. Grouping. Email with autocomplete. Edit. Blank"<br>
+							"Favourites. Grouping. Fruit. Edit with autocomplete. Blank"<br>
+							"Color. Edit with autocomplete. Blank"<br>
+							"Phone. Edit with autocomplete. Blank"<br>
+						</td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Add your details. Phone. Edit. Type in text"<br>
+							"Favourites. Color. Edit. Type in text"<br>
+							"Fruit. Edit. Type in text"<br>
+							"Email. Edit. Type in text"<br>
+							<br>
+							<b>Up:</b><br>
+							"Add your details. Email. Edit. Type in text"<br>
+							"Favourites. Fruit. Edit. Type in text"<br>
+							"Color. Edit. Type in text"<br>
+							"Phone. Edit. Type in text"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							"Phone. Edit. Text"<br>
+							"Color. Edit. Text"<br>
+							"Fruit. Edit. Text"<br>
+							"Email. Edit. Text"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Phone. Add your details. Add your details. Text<br>
+							"Colors. Favourites. Favourites. Add your details. Add your details. Text<br>
+							"Fruit. Favourites. Favourites. Add your details. Add your details. Text<br>
+							"Email. Add your details. Add your details. Text<br>
+							<br>
+							<b>Up:</b><br>
+							"Email. Add your details. Add your details. Text<br>
+							"Fruit. Favourites. Favourites. Add your details. Add your details. Text<br>
+							"Colors. Favourites. Favourites. Add your details. Add your details. Text<br>
+							"Phone. Add your details. Add your details. Text<br>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>Down:</b><br>
+							"Phone. Add your details. Edit text<br>
+							"Colors. Favourites. Edit text<br>
+							"Fruit. Favourites. Edit text<br>
+							"Email. Add your details. Edit text<br>
+							<br>
+							<b>Up:</b><br>
+							"Email. Add your details. Edit text<br>
+							"Fruit. Favourites. Favourites. Edit text<br>
+							"Colors. Favourites. Favourites. Edit text<br>
+							"Phone. Add your details. Edit text<br>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

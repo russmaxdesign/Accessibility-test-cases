@@ -1,0 +1,494 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Alternatives to the fieldset element</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Alternatives to the fieldset element</h1>
+			<p>Developers may wish to add information above radio buttons, but the fieldset may not always be appropriate.</p> 
+			<ul>
+				<li><a href="#one">Option 1: fieldset</a></li>
+				<li><a href="#two">Option 2: using aria-describedby</a></li>
+				<li><a href="#three">Option 3: radiogroup</a></li>
+			</ul>
+
+			<h2 id="one">Option 1: fieldset</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>The legend <b>should be announced</b> when entering the fieldset from the top or bottom.</li>
+			</ul>
+			<h3>Example</h3>
+			<form class="example" action="#">
+				<fieldset>
+					<legend>Do you like apples?</legend>
+					<input type="radio" id="apples-y" name="apples"> <label for="apples-y">Yes</label><br>
+					<input type="radio" id="apples-n" name="apples"> <label for="apples-n">No</label>
+				</fieldset>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;fieldset&gt;
+	<strong>&lt;legend&gt;Do you like apples?&lt;/legend&gt;</strong>
+	&lt;input type="radio" id="apples-y" name="apples"&gt;
+	&lt;label for="apples-y"&gt;Yes&lt;/label&gt;&lt;br&gt;
+	&lt;input type="radio" id="apples-n" name="apples"&gt;
+	&lt;label for="apples-n"&gt;No&lt;/label&gt;
+&lt;/fieldset&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Do you like apples. Grouping. Yes. Radio button. Not checked."<br>
+							<br>
+							<b>Up</b>:<br>
+							"Do you like apples. Grouping. No. Radio button. Not checked."
+						</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Do you like apples. Yes. Radio button. Not checked. 1 of 2"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Do you like apples. No. Radio button. Not checked. 2c of 2"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Do you like apples. Grouping. Yes. Radio button. Not checked."<br>
+							<br>
+							<b>Up</b>:<br>
+							"Do you like apples. Grouping. No. Radio button. Not checked."
+						</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Do you like apples. Yes. Radio button. Not checked. 1 of 2"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Do you like apples. No. Radio button. Not checked. 2c of 2"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Do you like apples. Grouping. Yes. Radio button. Half checked."<br>
+							<br>
+							<b>Up</b>:<br>
+							"Do you like apples. Grouping. No. Radio button. Half checked."
+						</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Do you like apples. Yes. Radio button. Not checked. Partially checked."<br>
+							<br>
+							<b>Up</b>:<br>
+							"Do you like apples. No. Radio button. Not checked. Partially checked."<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Do you like apples. Grouping. Yes. Radio button. Not checked. 1 of 2"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Do you like apples. Grouping. No. Radio button. Not checked. 2 of 2"
+						</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Do you like apples. Yes. Radio button. Not checked. 1 of 2"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Do you like apples. No. Radio button. Not checked. 2 of 2"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							<b>Down</b>:<br>
+							"Yes. Radio button"<br>
+							<br>
+							<b>Up</b>:<br>
+							"No. Radio button"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Yes. Do you like apples. Do you like apples, Radio button"<br>
+							<br>
+							<b>Up</b>:<br>
+							"No. Do you like apples. Do you like apples. Radio button."<br>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Yes. Do you like apples. Radio button. 1 of 2"<br>
+							<br>
+							<b>Up</b>:<br>
+							"No. Do you like apples. Radio button. 2 of 2"<br>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="two">Option 2: using aria-describedby</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>The aria-describedby information <b>should be announced</b> with the first radio input.</li>
+			</ul>
+			<h3>Example</h3>
+			<form class="example" action="#">
+				<p id="description">What is you favourite day?</p>
+				<input aria-describedby="description" type="radio" id="monday" name="day"> <label for="monday">Monday</label><br>
+				<input aria-describedby="description" type="radio" id="friday" name="day"> <label for="friday">Friday</label>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup"><strong>&lt;p id="description"&gt;
+	What is you favourite day?
+&lt;/p&gt;</strong>
+&lt;input <strong>aria-describedby="description"</strong> type="radio" id="monday" name="day"&gt;
+&lt;label for="monday"&gt;Monday&lt;/label&gt;&lt;br&gt;
+&lt;input <strong>aria-describedby="description"</strong> type="radio" id="friday" name="day"&gt;
+&lt;label for="friday"&gt;Friday&lt;/label&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Monday. Radio button not checked. What is your favourite day"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Friday. Radio button not checked. What is your favourite day"
+						</td>
+						<td class="pass">
+							"Monday. Radio button not checked. What is your favourite day"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Friday. Radio button not checked. What is your favourite day"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Monday. Radio button not checked. What is your favourite day"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Friday. Radio button not checked. What is your favourite day"
+						</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Monday. Radio button not checked. 1 of 2. What is your favourite day"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Friday. Radio button not checked. 2 of 2. What is your favourite day"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Monday. Radio button half checked. What is your favourite day"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Friday. Radio button half checked. What is your favourite day"
+						</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Monday. Radio button not checked. Partially checked. What is your favourite day"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Friday. Radio button not checked. Partially checked. What is your favourite day"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Monday. Radio button not checked. What is your favourite day. 1 of 2"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Friday. Radio button not checked. What is your favourite day. 2 of 2"
+						</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Monday. Radio button not checked. 1 of 2. What is your favourite day."<br>
+							<br>
+							<b>Up</b>:<br>
+							"Friday. Radio button checked. 2 of 2. What is your favourite day"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							<b>Down</b>:<br>
+							"Monday. Radio button"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Friday. Radio button"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"What is your favourite day. Radio button"<br>
+							<br>
+							<b>Up</b>:<br>
+							"What is your favourite day. Radio button"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							<b>Down</b>:<br>
+							"Monday. Radio button. 1 of 2"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Friday. Radio button. 2 of 2"<br>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="three">Option 3: radiogroup</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>The aria-labelledby information <b>should be announced</b> when entering the fieldset from the top or bottom.</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example" role="radiogroup" aria-labelledby="subscription">
+				<p id="subscription">
+					Pick a subscription
+				</p>
+				<input type="radio" id="daily" name="subscribe"><label for="daily"> Daily</label><br>
+				<input type="radio" id="weekly" name="subscribe"><label for="weekly"> Weekly</label><br>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;div <strong>role="radiogroup" aria-labelledby="subscription"</strong>&gt;
+	&lt;p <strong>id="subscription"</strong>&gt;
+		Pick a subscription
+	&lt;/p&gt;
+	&lt;input type="radio" id="daily" name="subscribe"&gt;
+	&lt;label for="daily"&gt;Daily&lt;/label&gt;&lt;br&gt;
+	&lt;input type="radio" id="weekly" name="subscribe"&gt;
+	&lt;label for="weekly"&gt;Weekly&lt;/label&gt;&lt;br&gt;
+&lt;/div&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Pick a subscription. Grouping. Daily. Radio button not checked."<br>
+							<br>
+							<b>Up</b>:<br>
+							"Pick a subscription. Grouping. Weekly. Radio button not checked."<br>
+						</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Pick a subscription. Daily. Radio button not checked."<br>
+							<br>
+							<b>Up</b>:<br>
+							"Pick a subscription. Weekly. Radio button not checked."<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Pick a subscription. Grouping. Daily. Radio button not checked."<br>
+							<br>
+							<b>Up</b>:<br>
+							"Pick a subscription. Grouping. Weekly. Radio button not checked."<br>
+						</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Pick a subscription.. Daily. Radio button not checked. 1 of 2"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Pick a subscription. Weekly. Radio button not checked. 1 of 2"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">
+							<b>Down</b>:<br>
+							"Daily. Radio button half checked."<br>
+							<br>
+							<b>Up</b>:<br>
+							"Weekly. Radio button half checked."<br>
+						</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Pick a subscription. Daily. Radio button not checked. Partially checked"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Pick a subscription. Weekly. Radio button not checked. Partially checked"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Pick a subscription. Grouping. Daily. Radio button not checked. 1 of 2"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Pick a subscription. Grouping. Weekly. Radio button not checked. 2 of 2"<br>
+						</td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Pick a subscription. Daily. Radio button not checked. 1 of 2"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Pick a subscription. Weekly. Radio button not checked. 2 of 2"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Daily. Pick a subscription. Pick a subscription. Radio button. 1 of 2"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Weekly. Pick a subscription. Pick a subscription. Radio button. 2 of 2"<br>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Daily. Pick a subscription. Pick a subscription. Radio button"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Weekly. Pick a subscription. Pick a subscription. Radio button"<br>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>Down</b>:<br>
+							"Daily. Pick a subscription. Radio button. 1 of 2"<br>
+							<br>
+							<b>Up</b>:<br>
+							"Weekly. Pick a subscription. Radio button. 2 of 2"<br>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

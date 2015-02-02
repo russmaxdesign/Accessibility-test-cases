@@ -1,0 +1,107 @@
+
+/* general demo styles */
+html, body
+{
+	font:normal normal normal 100%/1.4 sans-serif;
+	
+	background:#fff;
+	color:#000;
+}
+@media all and (min-width:45em)
+{
+	body
+	{
+		width:66%;
+		margin:0 auto;
+	}
+}	
+
+h1
+{
+	font-weight:normal;
+	font-size:2em;
+}
+h1 > small
+{
+	display:block;
+	
+	font-size:0.8em;
+}
+
+button
+{
+	padding:0.7em 1em;
+	
+	font-size:1em;
+}
+
+
+
+
+
+
+
+/* message box */
+#message
+{
+}
+
+
+
+/* message content */
+#message > p
+{
+	overflow:hidden;
+	
+	padding:0.8em 1em;
+}
+#message > p::before
+{
+	content:"";
+	
+	float:left;
+	width:24px;
+	height:24px;
+	
+	margin:-0.05em 12px -0.2em 0;
+	
+	background:url("icons.png") no-repeat;
+}
+
+
+
+/* info message content */
+#message.info > p
+{
+	background:#e5f2ff;
+	color:#004;
+}
+#message.info > p::before
+{
+	background-position:0 0;
+}
+
+/* warning message content */
+#message.warning > p
+{
+	background:#ffeddb;
+	color:#420;
+}
+#message.warning > p::before
+{
+	background-position:0 -26px;
+}
+
+/* error message content */
+#message.error > p
+{
+	background:#ffebea;
+	color:#400;
+}
+#message.error > p::before
+{
+	background-position:0 -52px;
+}
+
+
+

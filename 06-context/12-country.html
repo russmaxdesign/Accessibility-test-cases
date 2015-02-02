@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Understandable country codes</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+	.sr-only 
+	{
+		position: absolute !important;
+		clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+		clip: rect(1px, 1px, 1px, 1px);
+		padding:0 !important;
+		border:0 !important;
+		height: 1px !important;
+		width: 1px !important;
+		overflow: hidden;
+	}
+			
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Understandable country codes</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>Country codes <b>should be understandable</b> for screen reader users abbreviations</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<p>1 <span aria-hidden="true">AED</span> <span class="sr-only">A.E.D</span> (alternative with full stops: A.E.D)</p>
+				<p>2 <span aria-hidden="true">AED</span> <span class="sr-only">A. E. D</span> (alternative with full stops and spaces: A. E. D)</p>
+				<p>3 <span aria-hidden="true">AED</span> <span class="sr-only">A.&nbsp;&nbsp;E.&nbsp;&nbsp;D</span> (alternative with full stops and double spaces: A.&nbsp;&nbsp;E.&nbsp;&nbsp;D)</p>
+				<p>4 <span aria-hidden="true">AED</span> <span class="sr-only">A E D</span> (alternative with spaces: A E D)</p>
+				<p>5 <span aria-hidden="true">AED</span> <span class="sr-only">A&nbsp;&nbsp;E&nbsp;&nbsp;D</span> (alternative with double spaces: A&nbsp;&nbsp;E&nbsp;&nbsp;D)</p>
+			</div>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;p&gt;1 &lt;span aria-hidden="true"&gt;AED&lt;/span&gt; &lt;span class="sr-only"&gt;A.E.D&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2 &lt;span aria-hidden="true"&gt;AED&lt;/span&gt; &lt;span class="sr-only"&gt;A. E. D&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;3 &lt;span aria-hidden="true"&gt;AED&lt;/span&gt; &lt;span class="sr-only"&gt;A.  E. D&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;4 &lt;span aria-hidden="true"&gt;AED&lt;/span&gt; &lt;span class="sr-only"&gt;A E D&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;5 &lt;span aria-hidden="true"&gt;AED&lt;/span&gt; &lt;span class="sr-only"&gt;A  E  D&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="fail">
+							"1 AdotEdotD"<br>
+							"2 AED"<br>
+							"3 AED"<br>
+							"4 AED"<br>
+							"5 AED"<br>
+						</td>
+						<td class="fail">
+							"1 AdotEdotD"<br>
+							"2 ahED"<br>
+							"3 ahED"<br>
+							"4 ahED"<br>
+							"5 ahED"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="fail">
+							"1 AdotEdotD"<br>
+							"2 AED"<br>
+							"3 AED"<br>
+							"4 AED"<br>
+							"5 AED"<br>
+						</td>
+						<td class="fail">
+							"1 AdotEdotD"<br>
+							"2 ahED"<br>
+							"3 ahED"<br>
+							"4 ahED"<br>
+							"5 ahED"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="fail">
+							"1 AdotEdotD"<br>
+							"2 AED"<br>
+							"3 AED"<br>
+							"4 AED"<br>
+							"5 AED"<br>
+						</td>
+						<td class="fail">
+							"1 AdotEdotD"<br>
+							"2 ahED"<br>
+							"3 ahED"<br>
+							"4 ahED"<br>
+							"5 ahED"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="fail">
+							"1 AdotEdotD"<br>
+							"2 AED"<br>
+							"3 AED"<br>
+							"4 AED"<br>
+							"5 AED"<br>
+						</td>
+						<td class="fail">
+							"1 AdotEdotD"<br>
+							"2 AED"<br>
+							"3 AED"<br>
+							"4 AED"<br>
+							"5 AED"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"1 A. E. D"<br>
+							"2 A. E. D"<br>
+							"3 A. E. D"<br>
+							"4 A E D"<br>
+							"5 A E D"<br>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="fail">
+							"1"<br>
+							"AED"<br>
+							"A. E. D"<br><br>
+							"2"<br>
+							"AED"<br>
+							A. E. D"<br><br>
+							"3"<br>
+							"AED"<br>
+							"A. E. D"<br><br>
+							"4"<br>
+							"AED"<br>
+							"A E D"<br><br>
+							"5"<br>
+							"AED"<br>
+							"A E D"<br>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"1 A. E. D"<br>
+							"2 A. E. D"<br>
+							"3 A. E. D"<br>
+							"4 A E D"<br>
+							"5 A E D"<br>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

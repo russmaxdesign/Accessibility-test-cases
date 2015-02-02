@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Lists inside forms</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Lists inside forms</h1>
+			<ul>
+				<li><a href="#one">Form with no list</a></li>
+				<li><a href="#two">Form with list</a></li>
+			</ul>
+
+
+			<h2 id="one">Form with no list</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>List items <b>should not be</b> announced</li>
+			</ul>
+			<h3>Example</h3>
+			<form class="example" method="get" action="#">
+				<div class="row-form">
+					<label class="label" for="firstname">First name</label>
+					<input class="input" id="firstname" name="firstname" type="text">
+				</div>
+				<div class="row-form">
+					<label class="label" for="lastname">Last name</label>
+					<input class="input" id="lastname" name="lastname" type="text">
+				</div>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;form action="#"&gt;
+	&lt;div&gt;
+		&lt;label for="firstname"&gt;First name&lt;/label&gt;
+		&lt;input id="firstname" name="firstname" type="text"&gt;
+	&lt;/div&gt;
+	&lt;div&gt;
+		&lt;label for="lastname"&gt;Last name&lt;/label&gt;
+		&lt;input id="lastname" name="lastname" type="text"&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							"First name. Edit. Blank"<br>
+							"Last name. Edit. Blank"
+						</td>
+						<td class="pass">
+							"First name. Edit. Type in text"<br>
+							"Last name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							"First name. Edit. Blank"<br>
+							"Last name. Edit. Blank"<br>
+						</td>
+						<td class="pass">
+							"First name. Edit. Type in text"<br>
+							"Last name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							"First name. Edit. Blank"<br>
+							"Last name. Edit. Blank"<br>
+						</td>
+						<td class="pass">
+							"First name. Edit. Type in text"<br>
+							"Last name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							"First name. Edit with autocomplete. Blank"<br>
+							"Last name. Edit with autocomplete. Blank"<br>
+						</td>
+						<td class="pass">
+							"First name. Edit. Type in text"<br>
+							"Last name. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"First name. Edit text"<br>
+							"Last name. Edit text"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"First name. Text"<br>
+							"Last name. Text"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"First name. Edit text"<br>
+							"Last name. Edit text"
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="two">Form with list</h2>
+			<h3>Test</h3>
+			<ul>
+				<li>List items <b>should be</b> announced</li>
+			</ul>
+			<h3>Example</h3>
+			<form class="example" method="get" action="#">
+				<ul>
+					<li class="row-form" style="list-style:none;">
+						<label class="label" for="email">Email</label>
+						<input class="input" id="email" name="email" type="text">
+					</li>
+					<li class="row-form" style="list-style:none;">
+						<label class="label" for="address">Address</label>
+						<input class="input" id="address" name="address" type="text">
+					</li>
+				</ul>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;form action="#"&gt;
+	<strong>&lt;ul&gt;
+		&lt;li&gt;</strong>
+			&lt;label for="email"&gt;Email&lt;/label&gt;
+			&lt;input id="email" name="email" type="text"&gt;
+		<strong>&lt;/li&gt;
+		&lt;li&gt;</strong>
+			&lt;label for="address"&gt;Address&lt;/label&gt;
+			&lt;input id="address" name="address" type="text"&gt;
+		<strong>&lt;/li&gt;
+	&lt;/ul&gt;</strong>
+&lt;/form&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							"<b>List</b> Email. Edit. Blank"<br>
+							"Address. Edit. Blank"
+						</td>
+						<td class="fail">
+							"Email. Edit. Type in text"<br>
+							"Address. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							"<b>List</b>. Email. Edit. Blank"<br>
+							"Address. Edit. Blank"
+						</td>
+						<td class="fail">
+							"Email. Edit. Type in text"<br>
+							"Address. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							"<b>List</b>. Email. Edit. Blank"<br>
+							"Address. Edit. Blank"
+						</td>
+						<td class="fail">
+							"Email. Edit. Type in text"<br>
+							"Address. Edit. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							"<b>List</b> Email. Edit with autocomplete. Blank"<br>
+							"Address. Edit with autocomplete. Blank"
+						</td>
+						<td class="pass">
+							"Email. Edit. <b>1 of 2</b>. Type in text"<br>
+							"Address. Edit. <b>2 of 2</b>. Type in text"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Email. Edit text. <b>List 2 items</b>"<br>
+							"Last name. Edit text"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Email. Email. Text. <b>2 item</b>s"<br>
+							"Address. Address. text"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Email. Edit text. <b>List 2 items</b>"<br>
+							"Last name. Edit text"
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

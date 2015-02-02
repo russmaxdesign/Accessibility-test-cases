@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML select element</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>HTML select element test</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>The label <b>should be</b> announced.</li>
+				<li>The selected option <b>should be</b> announced.</li>
+				<li>If no selected option, the first option <b>should be</b> announced.</li>
+				<li>Select elements with required attribute <b>should be</b> announced as "required"</li>
+				<li>Select elements with aria-required="true" attribute <b>should be</b> announced as "required"</li>
+			</ul>
+			<h3>Example</h3>
+			<form class="example" method="get" action="#">
+				<div class="row-form">
+					<label class="label" for="a">Favourite fruit</label>
+					<select class="select" id="a" name="a">
+						<option value="" selected>Choose an option</option>
+						<option value="apple">Apple</option>
+						<option value="pear">Pear</option>
+						<option value="banana">Banana</option>
+					</select>
+				</div>
+				<div class="row-form">
+					<label class="label" for="b">Favourite meat</label>
+					<select class="select" id="b" name="b" required>
+						<option value="">Choose an option</option>
+						<option value="beef">Beef</option>
+						<option value="chicken">Chicken</option>
+						<option value="pork">Pork</option>
+					</select>
+				</div>
+				<div class="row-form">
+					<label class="label" for="c">Favourite color</label>
+					<select class="select" id="c" name="c" required aria-required="true">
+						<option value="">Choose an option</option>
+						<option value="red">Red</option>
+						<option value="green">Green</option>
+						<option value="blue">Blue</option>
+					</select>
+				</div>
+				<div class="row-form">
+					<label class="label" for="d">Favourite city</label>
+					<select class="select" id="d" name="d" aria-required="true">
+						<option value="">Choose an option</option>
+						<option value="Sydney">Sydney</option>
+						<option value="Melbourne">Melbourne</option>
+						<option value="Canberra">Canberra</option>
+					</select>
+				</div>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;form method="get" action="#"&gt;
+	&lt;div&gt;
+		&lt;label for="a"&gt;Favourite fruit&lt;/label&gt;
+		&lt;select id="a" name="a"&gt;
+			&lt;option value="" selected&gt;Choose an option&lt;/option&gt;
+			&lt;option value="apple"&gt;Apple&lt;/option&gt;
+			&lt;option value="pear"&gt;Pear&lt;/option&gt;
+			&lt;option value="banana"&gt;Banana&lt;/option&gt;
+		&lt;/select&gt;
+	&lt;/div&gt;
+	&lt;div&gt;
+		&lt;label for="b"&gt;Favourite meat&lt;/label&gt;
+		&lt;select id="b" name="b" required&gt;
+			&lt;option value=""&gt;Choose an option&lt;/option&gt;
+			&lt;option value="beef"&gt;Beef&lt;/option&gt;
+			&lt;option value="chicken"&gt;Chicken&lt;/option&gt;
+			&lt;option value="pork"&gt;Pork&lt;/option&gt;
+		&lt;/select&gt;
+	&lt;/div&gt;
+	&lt;div&gt;
+		&lt;label for="c"&gt;Favourite color&lt;/label&gt;
+		&lt;select id="c" name="c" required aria-required="true"&gt;
+			&lt;option value=""&gt;Choose an option&lt;/option&gt;
+			&lt;option value="red"&gt;Red&lt;/option&gt;
+			&lt;option value="green"&gt;Green&lt;/option&gt;
+			&lt;option value="blue"&gt;Blue&lt;/option&gt;
+		&lt;/select&gt;
+	&lt;/div&gt;
+	&lt;div class="row-form"&gt;
+		&lt;label for="d"&gt;Favourite city&lt;/label&gt;
+		&lt;select id="d" name="d" aria-required="true"&gt;
+			&lt;option value=""&gt;Choose an option&lt;/option&gt;
+			&lt;option value="Sydney"&gt;Sydney&lt;/option&gt;
+			&lt;option value="Melbourne"&gt;Melbourne&lt;/option&gt;
+			&lt;option value="Canberra"&gt;Canberra&lt;/option&gt;
+		&lt;/select&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td>
+<b>Example 1:</b><br>
+Favourite fruit. combo box. Choose an option. collapsed<br>
+<br>
+<b>Example 2:</b><br>
+Favourite meat. combo box. Choose an option. collapsed<br>
+<span class="fail">no required announced</span><br>
+<br>
+<b>Example 3:</b><br>
+Favourite color. combo box. Choose an option. collapsed. <span class="pass">required</span><br>
+<br>
+<b>Example 4:</b><br>
+Favourite city. combo box. Choose an option. collapsed. <span class="pass">required</span>
+						</td>
+						<td>
+<b>Example 1:</b><br>
+Favourite fruit. combo box. Choose an option. To change the selection use the arrow key<br>
+<br>
+<b>Example 2:</b><br>
+Favourite meat. combo box. Choose an option. To change the selection use the arrow key<br>
+<span class="fail">no required announced</span><br>
+<br>
+<b>Example 3:</b><br>
+Favourite color. combo box. Choose an option. To change the selection use the arrow key<br>
+<span class="fail">no required announced</span><br>
+<br>
+<b>Example 4:</b><br>
+Favourite city. combo box. Choose an option. To change the selection use the arrow key<br>
+<span class="fail">no required announced</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td>
+							x
+						</td>
+						<td>
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td>
+<b>Example 1:</b><br>
+Favourite fruit. combo box. Choose an option. collapsed<br>
+<br>
+<b>Example 2:</b><br>
+Favourite meat. combo box. Choose an option. collapsed. <span class="pass">required</span><br>
+<br>
+<b>Example 3:</b><br>
+Favourite color. combo box. Choose an option. collapsed. <span class="pass">required</span><br>
+<br>
+<b>Example 4:</b><br>
+Favourite city. combo box. Choose an option. collapsed. <span class="pass">required</span>
+						</td>
+						<td>
+<b>Example 1:</b><br>
+Favourite fruit. combo box. Choose an option. To change the selection use the arrow key<br>
+<br>
+<b>Example 2:</b><br>
+Favourite meat. combo box. <span class="pass">required</span>. Choose an option. To change the selection use the arrow key<br>
+<br>
+<b>Example 3:</b><br>
+Favourite color. combo box. <span class="pass">required</span>. Choose an option. To change the selection use the arrow key<br>
+<br>
+<b>Example 4:</b><br>
+Favourite city. combo box. <span class="pass">required</span>. Choose an option. To change the selection use the arrow key
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td>
+<b>Example 1:</b><br>
+Favourite fruit. combo box. Choose an option. collapsed<br>
+<br>
+<b>Example 2:</b><br>
+Favourite meat. combo box. Choose an option. collapsed. invalid entry. <span class="pass">required</span><br>
+<br>
+<b>Example 3:</b><br>
+Favourite color. combo box. Choose an option. collapsed. invalid entry. <span class="pass">required</span><br>
+<br>
+<b>Example 4:</b><br>
+Favourite city. combo box. Choose an option. collapsed. <span class="pass">required</span>
+						</td>
+						<td>
+<b>Example 1:</b><br>
+Favourite fruit. combo box. Choose an option. To change the selection use the arrow key<br>
+<br>
+<b>Example 2:</b><br>
+Favourite meat. combo box. <span class="pass">required</span>. invalid entry. Choose an option. To change the selection use the arrow key<br>
+<br>
+<b>Example 3:</b><br>
+Favourite color. combo box. <span class="pass">required</span>. invalid entry. Choose an option. To change the selection use the arrow key<br>
+<br>
+<b>Example 4:</b><br>
+Favourite city. combo box. <span class="pass">required</span>. Choose an option. To change the selection use the arrow key
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td>
+<b>Example 1:</b><br>
+Choose an option. Favourite fruit. collapsed popup button<br>
+<br>
+<b>Example 2:</b><br>
+Choose an option. Favourite meat. collapsed popup button<br>
+<span class="fail">no required announced</span><br>
+<br>
+<b>Example 3:</b><br>
+Choose an option. Favourite color. collapsed popup button<br>
+<span class="fail">no required announced</span><br>
+<br>
+<b>Example 4:</b><br>
+Choose an option. Favourite city. collapsed popup button<br>
+<span class="fail">no required announced</span>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td>
+<b>Example 1:</b><br>
+Choose an option. Favourite fruit. popup button<br>
+<br>
+<b>Example 2:</b><br>
+Choose an option. Favourite meat. popup button<br>
+<span class="fail">no required announced</span><br>
+<br>
+<b>Example 3:</b><br>
+Choose an option. Favourite color. popup button<br>
+<span class="fail">no required announced</span><br>
+<br>
+<b>Example 4:</b><br>
+Choose an option. Favourite city. popup button<br>
+<span class="fail">no required announced</span>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td>
+<b>Example 1:</b><br>
+Choose an option. Favourite fruit. popup button<br>
+<br>
+<b>Example 2:</b><br>
+Choose an option. Favourite meat. popup button<br>
+<span class="fail">no required announced</span><br>
+<br>
+<b>Example 3:</b><br>
+Choose an option. Favourite color. popup button<br>
+<span class="fail">no required announced</span><br>
+<br>
+<b>Example 4:</b><br>
+Choose an option. Favourite city. popup button<br>
+<span class="fail">no required announced</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,528 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML table - summary and caption</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>HTML table - summary and caption</h1>
+			<p>Ideally, the &lt;caption&gt; element and summary attribute should be used to describe the purpose of the table.</p> 
+			<h3>In line-by-line mode</h3>
+			<ul>
+				<li>If a summary attribute is present, it <b>should be announced</b> before the table is announced in JAWS and with the table in NVDA</li>
+				<li>If a caption is present, it <b>should be announced</b> after the table element is announced in JAWS an with the table in NVDA</li>
+			</ul>
+			<h3>In T mode:</h3>
+			<ul>
+				<li>If a summary attribute is present, it <b>should be announced</b> with the table in both JAWS and NVDA</li>
+				<li>If a caption is present, it <b>should be announced</b> with the table in both JAWS and NVDA</li>
+			</ul>
+			<h2>Example 1: Table only</h2>
+			<h3>Example</h3>
+			<table>
+				<tr>
+					<th>header cell 1 a</th>
+					<th>header cell 1 b</th>
+				</tr>
+				<tr>
+					<td>cell 1 a</td>
+					<td>cell 1 b</td>
+				</tr>
+			</table>
+<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;header cell 1 a&lt;/th&gt;
+		&lt;th&gt;header cell 1 b&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;cell 1 a&lt;/td&gt;
+		&lt;td&gt;cell 1 b&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+
+			<h2>Example 2: Table with summary</h2>
+			<h3>Example</h3>
+			<table summary="Summary2">
+				<tr>
+					<th>header cell 2 a</th>
+					<th>header cell 2 b</th>
+				</tr>
+				<tr>
+					<td>cell 2 a</td>
+					<td>cell 2 b</td>
+				</tr>
+			</table>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;table summary="Summary2"&gt;
+	&lt;tr&gt;
+		&lt;th&gt;header cell 2 a&lt;/th&gt;
+		&lt;th&gt;header cell 2 b&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;cell 2 a&lt;/td&gt;
+		&lt;td&gt;cell 2 b&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<h2>Example 3: Table with caption</h2>
+			<h3>Example</h3>
+			<table>
+				<caption>Caption3</caption>
+				<tr>
+					<th>header cell 3 a</th>
+					<th>header cell 3 b</th>
+				</tr>
+				<tr>
+					<td>cell 3 a</td>
+					<td>cell 3 b</td>
+				</tr>
+			</table>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;table&gt;
+	&lt;caption&gt;Caption3&lt;/caption&gt;
+	&lt;tr&gt;
+		&lt;th&gt;header cell 3 a&lt;/th&gt;
+		&lt;th&gt;header cell 3 b&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;cell 3 a&lt;/td&gt;
+		&lt;td&gt;cell 3 b&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+
+			<h2>Example 4: Table with caption and summary</h2>
+			<h3>Example</h3>
+			<table summary="summary4">
+				<caption>Caption4</caption>
+				<tr>
+					<th>header cell 4 a</th>
+					<th>header cell 4 b</th>
+				</tr>
+				<tr>
+					<td>cell 4 a</td>
+					<td>cell 4 b</td>
+				</tr>
+			</table>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;table summary="summary4"&gt;
+	&lt;caption&gt;Caption4&lt;/caption&gt;
+	&lt;tr&gt;
+		&lt;th&gt;header cell 4 a&lt;/th&gt;
+		&lt;th&gt;header cell 4 b&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;cell 4 a&lt;/td&gt;
+		&lt;td&gt;cell 4 b&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+
+			<table>
+				<caption>Support chart - line-by-line</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table with 2 rows and 2 columns. Row 1. Column 1. Header cell 1 a"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Summary 2</span>"<br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Caption 3</span>"<br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Summary 4</span>"<br>
+							"<span class="pass">Caption 4</span>"
+						</td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table with 2 columns and 2 rows"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"<span class="pass">Summary. Colon. Summary 2</span>"<br>
+							"Table with 2 columns and 2 rows"<br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Table with 2 columns and 2 rows"<br>
+							"<span class="pass">Caption 3</span>"<br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"<span class="pass">Summary. Colon. Summary 4</span>"<br>
+							"Table with 2 columns and 2 rows"<br>
+							"<span class="pass">Caption 4</span>"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td>
+							x
+						</td>
+						<td>
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table with 2 rows and 2 columns. Row 1. Column 1. Header cell 1 a"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Summary 2</span>"<br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Caption 3</span>"<br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Summary 4</span>"<br>
+							<span class="fail">Caption not announced</span>
+						</td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table with 2 columns and 2 rows"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"<span class="pass">Summary. Colon. Summary 2</span>"<br>
+							"Table with 2 columns and 2 rows"<br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Table with 2 columns and 2 rows"<br>
+							<span class="fail">Caption not announced</span><br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"<span class="pass">Summary. Colon. Summary 4</span>"<br>
+							"Table with 2 columns and 2 rows"<br>
+							<span class="fail">Caption not announced</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table with 2 rows and 2 columns. Row 1. Column 1. Header cell 1 a"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Summary 2</span>"<br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Caption 3</span>"<br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Summary 4</span>"<br>
+							"<span class="pass">Caption 4</span>"
+						</td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table with 2 columns and 2 rows"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"<span class="pass">Summary. Colon. Summary 2</span>"<br>
+							"Table with 2 columns and 2 rows"<br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Table with 2 columns and 2 rows"<br>
+							"<span class="pass">Caption 3</span>"<br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"<span class="pass">Summary. Colon. Summary 4</span>"<br>
+							"Table with 2 columns and 2 rows"<br>
+							"<span class="pass">Caption 4</span>"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table. 2 columns. 2 rows"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"Table. 2 columns. 2 rows"<br>
+							<span class="fail">Summary not announced</span><br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"<span class="pass">Caption 3</span>. Table. 2 columns. 2 rows"<br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"<span class="pass">Caption 4</span>. Table. 2 columns. 2 rows"<br>
+							<span class="fail">Summary not announced</span><br>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Header cell 1a. header cell 1b. List box"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"Header cell 2a. header cell 2b. <span class="pass">Summary 2</span>. List box"<br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"<span class="pass">Caption 3</span>"<br>
+							"Header cell 3a. header cell 3b. <span class="pass">Caption 3</span>. List box"<br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"<span class="pass">Summary 4</span>. Group with 3 items"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table. 2 columns. 2 rows"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"Table. 2 columns. 2 rows"<br>
+							<span class="fail">Summary not announced</span><br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Table. 2 columns. 2 rows"<br>
+							<span class="fail">Caption not announced</span><br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"Table. 2 columns. 2 rows"<br>
+							<span class="fail">Summary and caption not announced</span><br>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<table>
+				<caption>Support chart - "T" - jump to table</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table with 2 rows and 2 columns. Row 1. Column 1. Header cell 1 a"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Summary 2</span>"<br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Caption 3</span>"<br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Summary 4</span>"<br>
+						</td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table with 2 columns and 2 rows. Column 1. Row 1. Header cell 1 a"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"Table with 2 columns and 2 rows. <span class="pass">Summary2</span>. Column 1. Row 1. Header cell 2 a"<br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Table with 2 columns and 2 rows. <span class="pass">Caption3</span>. Column 1. Row 1. Header cell 3 a"<br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"Table with 2 columns and 2 rows. <span class="pass">Summary4</span>. <span class="pass">Caption4</span>. Column 1. Row 1. Header cell 4 a"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td>
+							x
+						</td>
+						<td>
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table with 2 rows and 2 columns. Row 1. Column 1. Header cell 1 a"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Summary 2</span>"<br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Caption 3</span>"<br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Summary 4</span>"<br>
+						</td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table with 2 columns and 2 rows. Column 1. Row 1. Header cell 1 a"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"Table with 2 columns and 2 rows. <span class="pass">Summary2</span>. Column 1. Row 1. Header cell 2 a"<br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Table with 2 columns and 2 rows. Column 1. Row 1. Header cell 3 a"<br>
+							<span class="fail">Caption not announced</span><br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"Table with 2 columns and 2 rows. <span class="pass">Summary4</span>. Column 1. Row 1. Header cell 4 a"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table with 2 rows and 2 columns. Row 1. Column 1. Header cell 1 a"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Summary 2</span>"<br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Caption 3</span>"<br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"Table with 2 rows and 2 columns. <span class="pass">Summary 4</span>"<br>
+						</td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table with 2 columns and 2 rows. Column 1. Row 1. Header cell 1 a"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"Table with 2 columns and 2 rows. <span class="pass">Summary2</span>. Column 1. Row 1. Header cell 2 a"<br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Table with 2 columns and 2 rows. <span class="pass">Caption3</span>. Column 1. Row 1. Header cell 3 a"<br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"Table with 2 columns and 2 rows. <span class="pass">Caption4</span>. <span class="pass">Summary4</span>. Column 1. Row 1. Header cell 4 a"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table. 2 columns. 2 rows"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"Table. 2 columns. 2 rows"<br>
+							<span class="fail">Summary not announced</span><br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Caption 3. Table. 2 columns. 2 rows"<br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"Caption 4. Table. 2 columns. 2 rows"<br>
+							<span class="fail">Summary not announced</span><br>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Header cell 1a. header cell 1b. List box"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"Header cell 2a. header cell 2b. Summary 2. List box"<br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Caption 3"<br>
+							"Header cell 3a. header cell 3b. Caption 3. List box"<br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"Summary 4. Group with 3 items"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td>
+							<b>Example 1: Table only</b><br>
+							"Table. 2 columns. 2 rows"<br>
+							<br>
+							<b>Example 2: Table with summary</b><br>
+							"Table. 2 columns. 2 rows"<br>
+							<span class="fail">Summary not announced</span><br>
+							<br>
+							<b>Example 3: Table with caption</b><br>
+							"Table. 2 columns. 2 rows"<br>
+							<span class="fail">Caption not announced</span><br>
+							<br>
+							<b>Example 4: Table with caption and summary</b><br>
+							"Table. 2 columns. 2 rows"<br>
+							<span class="fail">Summary and caption not announced</span><br>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

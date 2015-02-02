@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML heading elements</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>HTML heading elements test</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>Heading levels <b>should be announced</b> with heading content.</li>
+			</ul>
+			<h3>Example</h3>
+			<div class="example">
+				<h1 style="font-size: 24px; margin:0 0 10px;">Primary</h1>
+				<h2 style="font-size: 20px; margin:0 0 10px;">Secondary</h2>
+				<h3 style="font-size: 16px; margin:0 0 10px;">Medium</h3>
+				<h4 style="font-size: 14px; margin:0 0 10px;">Small</h4>
+				<h5 style="font-size: 12px; margin:0 0 10px;">Smaller</h5>
+				<h6 style="font-size: 10px; margin:0;">Tiny</h6>
+			</div>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;h1&gt;Primary&lt;/h1&gt;
+&lt;h2&gt;Secondary&lt;/h2&gt;
+&lt;h3&gt;Medium&lt;/h3&gt;
+&lt;h4&gt;Small&lt;/h4&gt;
+&lt;h5&gt;Smaller&lt;/h5&gt;
+&lt;h6&gt;Tiny&lt;/h6&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			
+			<p>
+			<table>
+				<caption>Support chart - Navigating headings via Read mode</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							"Heading level 1. Primary."<br>
+							"Heading level 2. Secondary."<br>
+							"Heading level 3. Medium."<br>
+							"Heading level 4. Small."<br>
+							"Heading level 5. Smaller."<br>
+							"Heading level 6. Tiny."
+						</td>
+						<td class="pass">
+							"Heading level 1. Primary."<br>
+							"Heading level 2. Secondary."<br>
+							"Heading level 3. Medium."<br>
+							"Heading level 4. Small."<br>
+							"Heading level 5. Smaller."<br>
+							"Heading level 6. Tiny."
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							"Heading level 1. Primary."<br>
+							"Heading level 2. Secondary."<br>
+							"Heading level 3. Medium."<br>
+							"Heading level 4. Small."<br>
+							"Heading level 5. Smaller."<br>
+							"Heading level 6. Tiny."
+						</td>
+						<td class="pass">
+							"Heading level 1. Primary."<br>
+							"Heading level 2. Secondary."<br>
+							"Heading level 3. Medium."<br>
+							"Heading level 4. Small."<br>
+							"Heading level 5. Smaller."<br>
+							"Heading level 6. Tiny."
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							"Heading level 1. Primary."<br>
+							"Heading level 2. Secondary."<br>
+							"Heading level 3. Medium."<br>
+							"Heading level 4. Small."<br>
+							"Heading level 5. Smaller."<br>
+							"Heading level 6. Tiny."
+						</td>
+						<td class="pass">
+							"Heading level 1. Primary."<br>
+							"Heading level 2. Secondary."<br>
+							"Heading level 3. Medium."<br>
+							"Heading level 4. Small."<br>
+							"Heading level 5. Smaller."<br>
+							"Heading level 6. Tiny."
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							"Heading level 1. Primary."<br>
+							"Heading level 2. Secondary."<br>
+							"Heading level 3. Medium."<br>
+							"Heading level 4. Small."<br>
+							"Heading level 5. Smaller."<br>
+							"Heading level 6. Tiny."
+						</td>
+						<td class="pass">
+							"Heading level 1. Primary."<br>
+							"Heading level 2. Secondary."<br>
+							"Heading level 3. Medium."<br>
+							"Heading level 4. Small."<br>
+							"Heading level 5. Smaller."<br>
+							"Heading level 6. Tiny."
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Heading level 1. Primary."<br>
+							"Heading level 2. Secondary."<br>
+							"Heading level 3. Medium."<br>
+							"Heading level 4. Small."<br>
+							"Heading level 5. Smaller."<br>
+							"Heading level 6. Tiny."
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Heading level 1. Primary."<br>
+							"Heading level 2. Secondary."<br>
+							"Heading level 3. Medium."<br>
+							"Heading level 4. Small."<br>
+							"Heading level 5. Smaller."<br>
+							"Heading level 6. Tiny."
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Heading level 1. Primary."<br>
+							"Heading level 2. Secondary."<br>
+							"Heading level 3. Medium."<br>
+							"Heading level 4. Small."<br>
+							"Heading level 5. Smaller."<br>
+							"Heading level 6. Tiny."
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table>
+				<caption>Support chart - Navigating headings using "h" key (Windows) or Control + Option + Command + H (Mac)</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							"Primary. Heading level 1."<br>
+							"Secondary. Heading level 2."<br>
+							"Medium. Heading level 3."<br>
+							"Small. Heading level 4."<br>
+							"Smaller. Heading level 5. "<br>
+							"Tiny. Heading level 6."
+						</td>
+						<td class="pass">
+							"Primary. Heading level 1."<br>
+							"Secondary. Heading level 2."<br>
+							"Medium. Heading level 3."<br>
+							"Small. Heading level 4."<br>
+							"Smaller. Heading level 5. "<br>
+							"Tiny. Heading level 6."
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							"Primary. Heading level 1."<br>
+							"Secondary. Heading level 2."<br>
+							"Medium. Heading level 3."<br>
+							"Small. Heading level 4."<br>
+							"Smaller. Heading level 5. "<br>
+							"Tiny. Heading level 6."
+						</td>
+						<td class="pass">
+							"Primary. Heading level 1."<br>
+							"Secondary. Heading level 2."<br>
+							"Medium. Heading level 3."<br>
+							"Small. Heading level 4."<br>
+							"Smaller. Heading level 5. "<br>
+							"Tiny. Heading level 6."
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							"Primary. Heading level 1."<br>
+							"Secondary. Heading level 2."<br>
+							"Medium. Heading level 3."<br>
+							"Small. Heading level 4."<br>
+							"Smaller. Heading level 5. "<br>
+							"Tiny. Heading level 6."
+						</td>
+						<td class="pass">
+							"Primary. Heading level 1."<br>
+							"Secondary. Heading level 2."<br>
+							"Medium. Heading level 3."<br>
+							"Small. Heading level 4."<br>
+							"Smaller. Heading level 5. "<br>
+							"Tiny. Heading level 6."
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							"Primary. Heading level 1."<br>
+							"Secondary. Heading level 2."<br>
+							"Medium. Heading level 3."<br>
+							"Small. Heading level 4."<br>
+							"Smaller. Heading level 5. "<br>
+							"Tiny. Heading level 6."
+						</td>
+						<td class="pass">
+							"Primary. Heading level 1."<br>
+							"Secondary. Heading level 2."<br>
+							"Medium. Heading level 3."<br>
+							"Small. Heading level 4."<br>
+							"Smaller. Heading level 5. "<br>
+							"Tiny. Heading level 6."
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Heading level 1. Primary."<br>
+							"Heading level 2. Secondary."<br>
+							"Heading level 3. Medium."<br>
+							"Heading level 4. Small."<br>
+							"Heading level 5. Smaller."<br>
+							"Heading level 6. Tiny."
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Heading level 1. Primary."<br>
+							"Heading level 2. Secondary."<br>
+							"Heading level 3. Medium."<br>
+							"Heading level 4. Small."<br>
+							"Heading level 5. Smaller."<br>
+							"Heading level 6. Tiny."
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							"Heading level 1. Primary."<br>
+							"Heading level 2. Secondary."<br>
+							"Heading level 3. Medium."<br>
+							"Heading level 4. Small."<br>
+							"Heading level 5. Smaller."<br>
+							"Heading level 6. Tiny."
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

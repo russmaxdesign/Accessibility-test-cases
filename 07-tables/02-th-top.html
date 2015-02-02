@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML table - TH element at top only</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>HTML table - TH element at top only test</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>Top TH content <b>should be announced</b> with TD cells</li> 
+			</ul>
+			<h3>Example</h3>
+			<table>
+				<caption>This is the caption</caption>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>City</th>
+						<th>Country</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Peter</td>
+						<td>Sydney</td>
+						<td>Australia</td>
+					</tr>
+					<tr>
+						<td>Mary</td>
+						<td>Wellington</td>
+						<td>New Zealand</td>
+					</tr>
+					<tr>
+						<td>Stanley</td>
+						<td>Paris</td>
+						<td>France</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2>Code</h2>
+		<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;table&gt;
+	&lt;caption&gt;This is the caption&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			<b>&lt;th&gt;</b>Name<b>&lt;/th&gt;</b>
+			<b>&lt;th&gt;</b>City<b>&lt;/th&gt;</b>
+			<b>&lt;th&gt;</b>Country<b>&lt;/th&gt;</b>
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Peter&lt;/td&gt;
+			&lt;td&gt;Sydney&lt;/td&gt;
+			&lt;td&gt;Australia&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Mary&lt;/td&gt;
+			&lt;td&gt;Wellington&lt;/td&gt;
+			&lt;td&gt;New Zealand&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Stanley&lt;/td&gt;
+			&lt;td&gt;Paris&lt;/td&gt;
+			&lt;td&gt;France&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<!-- code end -->
+		</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td>
+<b>Announcing cells forwards:</b><br>
+Row 1. Column 1. Name<br>
+Column 2. City<br>
+Column 3. Country<br>
+Row 2. <span class="pass">Name</span>. Column 1. Peter<br>
+<span class="pass">City</span>. Column 2. Sydney<br>
+<span class="pass">Country</span>. Column 3. Australia<br>
+<br>
+<b>Announcing cells backwards:</b><br>
+						</td>
+						<td>
+<b>Announcing cells forwards:</b><br>
+Name. Column 1<br>
+City. Column 2<br>
+Country. Column 3<br>
+<span class="pass">Name</span>. Peter. Column 1<br>
+<span class="pass">City</span>. Sydney. Column 2<br>
+<span class="pass">Country</span>. Australia. Column 3<br>
+<br>
+<b>Announcing cells backwards:</b><br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td>
+							x
+						</td>
+						<td>
+							x
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td>
+<b>Announcing cells forwards:</b><br>
+Row 1. Column 1. Name<br>
+Column 2. City<br>
+Column 3. Country<br>
+Row 2. <span class="fail">NO NAME</span>. Column 1. Peter<br>
+<span class="fail">NO CITY</span>. Column 2. Sydney<br>
+<span class="fail">NO COUNTRY</span>. Column 3. Australia<br>
+<br>
+<b>Announcing cells backwards:</b><br>
+						</td>
+						<td>
+<b>Announcing cells forwards:</b><br>
+Name. Column 1<br>
+City. Column 2<br>
+Country. Column 3<br>
+<span class="pass">Name</span>. Peter. Column 1<br>
+<span class="pass">City</span>. Sydney. Column 2<br>
+<span class="pass">Country</span>. Australia. Column 3<br>
+<br>
+<b>Announcing cells backwards:</b><br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td>
+<b>Announcing cells forwards:</b><br>
+Row 1. Column 1. Name<br>
+Column 2. City<br>
+Column 3. Country<br>
+Row 2. <span class="pass">Name</span>. Column 1. Peter<br>
+<span class="pass">City</span>. Column 2. Sydney<br>
+<span class="pass">Country</span>. Column 3. Australia<br>
+<br>
+<b>Announcing cells backwards:</b><br>
+						</td>
+						<td>
+<b>Announcing cells forwards:</b><br>
+Name. Column 1<br>
+City. Column 2<br>
+Country. Column 3<br>
+<span class="pass">Name</span>. Peter. Column 1<br>
+<span class="pass">City</span>. Sydney. Column 2<br>
+<span class="pass">Country</span>. Australia. Column 3<br>
+<br>
+<b>Announcing cells backwards:</b><br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td>
+							x
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td>
+							x
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td>
+							x
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

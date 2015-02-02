@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Attribute: role="button"</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Attribute: role="button"</h1>
+			<ul>
+				<li><a href="#one">Examples without role="button"</a></li>
+				<li><a href="#two">Examples without role="button"</a></li>
+			</ul>
+
+
+			<h3>Test</h3>
+			<ul>
+				<li>The role="button" attribute <b>should change</b> a link to a button</li>
+				<li>The role="button" attribute <b>should have no impact</b> on other submit button types which are already buttons</li>
+			</ul>
+			<h2 id="one">Examples without role="button"</h2>
+			<h3>Example</h3>
+			<form class="example" method="get" action="#">
+				<div class="row-form">
+					<a href="#">Review</a>
+					<input type="submit" value="Cancel">
+					<input type="button" value="Save">
+					<button type="submit">Submit</button>
+				</div>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;form method="get" action="#"&gt;
+	&lt;div class="row-form"&gt;
+		&lt;a href="#"&gt;Review&lt;a&gt;
+		&lt;input type="submit" value="Cancel"&gt;
+		&lt;input type="button" value="Save"&gt;
+		&lt;button type="submit"&gt;Submit&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							<b>"Review. Link"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"
+						</td>
+						<td class="pass">
+							<b>"Review. Link"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							<b>"Review. Link"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"
+						</td>
+						<td class="pass">
+							<b>"Review. Link"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							<b>"Review. Link"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"
+						</td>
+						<td class="pass">
+							<b>"Review. Link"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							<b>"Review. Link"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"
+						</td>
+						<td class="pass">
+							<b>"Review. Link"</b><br>
+							"Cancel. Button. To activate press space bar"<br>
+							"Save. Button. To activate press space bar"<br>
+							"Submit. Button. To activate press space bar"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>"Internal link. Review"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>"Link. Review"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>"Internal link. Review"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"<br>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<h2 id="two">Examples without role="button"</h2>
+			<h3>Example</h3>
+			<form class="example" method="get" action="#">
+				<div class="row-form">
+					<a role="button" href="#">Review</a>
+					<input role="button" type="submit" value="Cancel">
+					<input role="button" type="button" value="Save">
+					<button role="button" type="submit">Submit</button>
+				</div>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;form method="get" action="#"&gt;
+	&lt;div class="row-form"&gt;
+		&lt;a role="button" href="#"&gt;Review&lt;a&gt;
+		&lt;input role="button" type="submit" value="Cancel"&gt;
+		&lt;input role="button" type="button" value="Save"&gt;
+		&lt;button role="button" type="submit"&gt;Submit&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td class="pass">
+							<b>"Review. Button"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"<br>
+						</td>
+						<td class="pass">
+							<b>"Review. Button"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td class="pass">
+							<b>"Review. Button"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"<br>
+						</td>
+						<td class="pass">
+							<b>"Review. Button"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td class="pass">
+							<b>"Review. Button"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"<br>
+						</td>
+						<td class="pass">
+							<b>"Review. Button"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td class="pass">
+							<b>"Review. Button"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"<br>
+						</td>
+						<td class="pass">
+							"Review. Button. To activate press space bar"<br>
+							"Cancel. Button. To activate press space bar"<br>
+							"Save. Button. To activate press space bar"<br>
+							"Submit. Button. To activate press space bar"<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>"Review. Button"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"<br>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>"Review. Button"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"<br>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td class="pass">
+							<b>"Review. Button"</b><br>
+							"Cancel. Button"<br>
+							"Save. Button"<br>
+							"Submit. Button"<br>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,776 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>In page tabs</title>
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js">
+		</script>
+		<script src="../assets/js/prism.js">
+		</script>
+	</head>
+	<body>
+		<h1>In page tabs tests</h1>
+
+		<h2><a href="arrows-aria.html">Tabs Demo (Arrows + ARIA)</a></h2>
+		<h3>Test</h3>
+		<h4>Keyboard</h4>
+		<ul>
+			<li>TAB keystroke to first tab, TAB keystroke to panel, TAB keystroke to focusable items in panel, TAB keystroke out of panel</li>
+			<li>LEFT and/or DOWN ARROW keystroke to move to next tab. RIGHT and/or UP ARROW keystroke to move to previous tab</li>
+		</ul>
+		<h4>Screen reader</h4>
+		<ul>
+			<li>Announce tab - "Mercury"</li>
+			<li>Announce that tab is selected - "Selected"</li>
+			<li>Possibly Announce tab number - "1 of 5"</li>
+			<li>Announce panel - "Mercury".</li>
+			<li>Possibly announce that is is a tab panel - "Tabpanel"</li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>OS</th>
+					<th>Browser</th>
+					<th>NVDA 2014.4</th>
+					<th>JAWS 16</th>
+					<th>VoiceOver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows 7</td>
+					<td>IE 11</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">"Mercury. Venus. Earth. Mars. Jupiter. Tab control. Mercury. Tab selected. Mercury"<br>
+						"Venus. Tab selected. Venus"<br>
+						"Earth. Tab selected. Earth"<br>
+						"Mars. Tab selected. Mars"<br>
+						"Jupiter. Tab selected. Jupiter"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">"Blank"<br>
+						"Blank"<br>
+						"Blank"<br>
+						"Blank"<br>
+						"Blank"</span>
+					</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">
+						"Mercury. Tab selected"<br>
+						"Venus. Tab selected"<br>
+						"Earth. Tab selected"<br>
+						"Mars. Tab selected"<br>
+						"Jupiter. Tab selected"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Chrome 39</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">"Tab control. Mercury. Tab selected"<br>
+						"Venus. Tab selected"<br>
+						"Earth. Tab selected"<br>
+						"Mars. Tab selected"<br>
+						"Jupiter. Tab selected"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						"Mercury. Property. Page expanded" then reads panel<br>
+						"Venus. Property. Page expanded" then reads panel<br>
+						"Earth. Property. Page expanded" then reads panel<br>
+						"Mars. Property. Page expanded" then reads panel<br>
+						"Jupiter. Property. Page expanded" then reads panel</span>
+					</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">
+						"Mercury. Tab selected"<br>
+						"Venus. Tab selected"<br>
+						"Earth. Tab selected"<br>
+						"Mars. Tab selected"<br>
+						"Jupiter. Tab selected"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="pass">
+						"Tab. Mercury. Tab"<br>
+						"Tab. Venus. Tab"<br>
+						"Tab. Earth. Tab"<br>
+						"Tab. Mars. Tab"<br>
+						"Tab. Jupiter. Tab"</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Firefox 34</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">
+						"Tab control. Mercury. Tab selected. 1 of 5"<br>
+						"Venus. Tab selected. 2 of 5"<br>
+						"Earth. Tab selected. 3 of 5"<br>
+						"Mars. Tab selected. 4 of 5"<br>
+						"Jupiter. Tab selected. 5 of 5"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">
+						"Mercury. Tab selected. Use the JAWS key plus ALT plus M. 1 of 5"<br>
+						"Venus. Tab selected. Use the JAWS key plus ALT plus M. 2 of 5"<br>
+						"Earth. Tab selected. Use the JAWS key plus ALT plus M. 3 of 5"<br>
+						"Mars. Tab selected. Use the JAWS key plus ALT plus M. 4 of 5"<br>
+						"Jupiter. Tab selected. Use the JAWS key plus ALT plus M. 5 of 5"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="pass">
+						"Tab. Mercury. Tab panel"<br>
+						"Tab. Venus. Tab panel"<br>
+						"Tab. Earth. Tab panel"<br>
+						"Tab. Mars. Tab panel"<br>
+						"Tab. Jupiter. Tab panel"</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Chrome 39</td>
+					<td></td>
+					<td></td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">"Mercury. Selected tab. 1 of 5"<br>
+						"Venus. Selected tab. 2 of 5"<br>
+						"Earth. Selected tab. 3 of 5"<br>
+						"Mars. Selected tab. 4 of 5"<br>
+						"Jupiter. Selected tab. 5 of 5"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="pass">"Mercury. With 2 items. Tabpanel"<br>
+						"Venus. With 2 items. Tabpanel"<br>
+						"Earth. With 5 items. Tabpanel"<br>
+						"Mars. With 2 items. Tabpanel"<br>
+						"Jupiter. With 3 items. Tabpanel"</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Firefox 34</td>
+					<td></td>
+					<td></td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">"Mercury. Tab"<br>
+						"Venus. Tab"<br>
+						"Earth. Tab"<br>
+						"Mars. Tab"<br>
+						"Jupiter. Tab"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Safari 7</td>
+					<td></td>
+					<td></td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">"Mercury. Selected tab. 1 of 5"<br>
+						"Venus. Selected tab. 2 of 5"<br>
+						"Earth. Selected tab. 3 of 5"<br>
+						"Mars. Selected tab. 4 of 5"<br>
+						"Jupiter. Selected tab. 5 of 5"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="pass">"Mercury. With 2 items. Tabpanel"<br>
+						"Venus. With 2 items. Tabpanel"<br>
+						"Earth. With 5 items. Tabpanel"<br>
+						"Mars. With 2 items. Tabpanel"<br>
+						"Jupiter. With 3 items. Tabpanel"</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2><a href="arrows-no-aria.html">Tabs Demo (Arrows Only)</a></h2>
+		<h3>Test</h3>
+		<h4>Keyboard</h4>
+		<ul>
+			<li>TAB keystroke to first tab, TAB keystroke to panel, TAB keystroke to focusable items in panel, TAB keystroke out of panel</li>
+			<li>LEFT and/or DOWN ARROW keystroke to move to next tab. RIGHT and/or UP ARROW keystroke to move to previous tab</li>
+		</ul>
+		<h4>Screen reader</h4>
+		<ul>
+			<li>Announce tab - "Mercury"</li>
+			<li>Announce that tab is selected - "Selected"</li>
+			<li>Possibly Announce tab number - "1 of 5"</li>
+			<li>Announce panel - "Mercury".</li>
+			<li>Possibly announce that is is a tab panel - "Tabpanel"</li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>OS</th>
+					<th>Browser</th>
+					<th>NVDA 2014.4</th>
+					<th>JAWS 16</th>
+					<th>VoiceOver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows 7</td>
+					<td>IE 11</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">
+						"List with 5 items. Mercury"<br>
+						Cannot navigate to other items using Left/right/up/down ARROW keystrokes</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						Reads panel</span>
+					</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">
+						"Mercury"<br>
+						(using down ARROW can read each item but cannot access)<br>
+						"Venus"<br>
+						"Earth"<br>
+						"Mars"<br>
+						"Jupiter"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						Reads heading inside panel</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Chrome 39</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">
+						"Navigation landmark. List with 5 items. Mercury"<br>
+						Cannot navigate to other items using Left/right/up/down ARROW keystrokes</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						"Out of list" then reads panel</span>
+					</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">
+						"Mercury"<br>
+						(using down ARROW can read each item)<br>
+						"Venus"<br>
+						"Earth"<br>
+						"Mars"<br>
+						"Jupiter"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Firefox 34</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">"Navigation landmark. List with 5 items. Mercury"<br>
+						Cannot navigate to other items using Left/right/up/down ARROW keystrokes</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						"Out of list" then reads panel</span>
+					</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">
+						"Navigation region. Mercury. Link"<br>
+						Cannot navigate to other items using Left/right/up/down ARROW keystrokes</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						"Blank"</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Chrome 39</td>
+					<td></td>
+					<td></td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">"Mercury. Group with 5 items"<br>
+						"Venus. Group"<br>
+						"Earth. Group"<br>
+						"Mars. Group"<br>
+						"Jupiter. Group"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Firefox 34</td>
+					<td></td>
+					<td></td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">"Link. Mercury. List 5 items"<br>
+						"Link. Venus"<br>
+						"Link. Earth"<br>
+						"Link. Mars"<br>
+						"Link. Jupiter"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Safari 7</td>
+					<td></td>
+					<td></td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">"Mercury. Group with 5 items"<br>
+						"Venus. Group"<br>
+						"Earth. Group"<br>
+						"Mars. Group"<br>
+						"Jupiter. Group"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2><a href="tab-aria.html">Tabs Demo (Tab + ARIA)</a></h2>
+		<h3>Test</h3>
+		<h4>Keyboard</h4>
+		<ul>
+			<li>TAB keystroke to tabs, ENTER keystroke to panel</li>
+		</ul>
+		<h4>Screen reader</h4>
+		<ul>
+			<li>Announce tab - "Mercury". Announce tab number - "1 of 5". Announce that tab is selected - "Selected".</li>
+			<li>Announce panel - "Mercury". Announce that is is a tab panel - "Tabpanel"</li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>OS</th>
+					<th>Browser</th>
+					<th>NVDA 2014.4</th>
+					<th>JAWS 16</th>
+					<th>VoiceOver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows 7</td>
+					<td>IE 11</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">"Mercury. Venus. Earth. Mars. Jupiter. Tab control. Mercury. Tab selected. Mercury"<br>
+						"Venus. Tab. Venus"<br>
+						"Earth. Tab. Earth"<br>
+						"Mars. Tab. Mars"<br>
+						"Jupiter. Tab. Jupiter"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">"Blank"<br>
+						"Blank"<br>
+						"Blank"<br>
+						"Blank"<br>
+						"Blank"</span>
+					</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">
+						"Mercury. Tab selected"<br>
+						"Venus. Tab. To activate tab page press space bar"<br>
+						"Earth. To activate tab page press space bar"<br>
+						"Mars. To activate tab page press space bar"<br>
+						"Jupiter. To activate tab page press space bar"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Chrome 39</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">"Tab control. Mercury. Tab selected"<br>
+						"Venus. Tab"<br>
+						"Earth. Tab"<br>
+						"Mars. Tab"<br>
+						"Jupiter. Tab"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						"Mercury. Property. Page expanded" then reads panel<br>
+						"Venus. Property. Page expanded" then reads panel<br>
+						"Earth. Property. Page expanded" then reads panel<br>
+						"Mars. Property. Page expanded" then reads panel<br>
+						"Jupiter. Property. Page expanded" then reads panel</span>
+					</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">
+						"Mercury. Tab selected"<br>
+						"Venus. Tab. To activate tab page press space bar"<br>
+						"Earth. To activate tab page press space bar"<br>
+						"Mars. To activate tab page press space bar"<br>
+						"Jupiter. To activate tab page press space bar"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="pass">
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Firefox 34</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">
+						"Tab control. Mercury. Tab selected. 1 of 5"<br>
+						"Venus. Tab. 2 of 5"<br>
+						"Earth. Tab. 3 of 5"<br>
+						"Mars. Tab. 4 of 5"<br>
+						"Jupiter. Tab. 5 of 5"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">
+						"Mercury. Tab selected. Use the JAWS key plus ALT plus M. 1 of 5"<br>
+						"Venus. Tab. 2 of 5. To activate tab page press space bar"<br>
+						"Earth. Tab. 3 of 5. To activate tab page press space bar"<br>
+						"Mars. Tab. 4 of 5. To activate tab page press space bar"<br>
+						"Jupiter. Tab. 5 of 5. To activate tab page press space bar"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="pass">
+						"Mercury. Tab panel"<br>
+						"Venus. Tab panel"<br>
+						"Earth. Tab panel"<br>
+						"Mars. Tab panel"<br>
+						"Jupiter. Tab panel"</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Chrome 39</td>
+					<td></td>
+					<td></td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">"Mercury. Selected tab. 1 of 5"<br>
+						"Venus. tab. 2 of 5"<br>
+						"Earth. tab. 3 of 5"<br>
+						"Mars. tab. 4 of 5"<br>
+						"Jupiter. tab. 5 of 5"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="pass">"Mercury. With 2 items. Tabpanel"<br>
+						"Venus. With 2 items. Tabpanel"<br>
+						"Earth. With 5 items. Tabpanel"<br>
+						"Mars. With 2 items. Tabpanel"<br>
+						"Jupiter. With 3 items. Tabpanel"</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Firefox 34</td>
+					<td></td>
+					<td></td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">"Mercury. Tab"<br>
+						"Venus. Tab"<br>
+						"Earth. Tab"<br>
+						"Mars. Tab"<br>
+						"Jupiter. Tab"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="pass">Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Safari 7</td>
+					<td></td>
+					<td></td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="pass">"Mercury. Selected tab. 1 of 5"<br>
+						"Venus. Selected tab. 2 of 5"<br>
+						"Earth. Selected tab. 3 of 5"<br>
+						"Mars. Selected tab. 4 of 5"<br>
+						"Jupiter. Selected tab. 5 of 5"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="pass">"Mercury. With 2 items. Tabpanel"<br>
+						"Venus. With 2 items. Tabpanel"<br>
+						"Earth. With 5 items. Tabpanel"<br>
+						"Mars. With 2 items. Tabpanel"<br>
+						"Jupiter. With 3 items. Tabpanel"</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2><a href="tab-no-aria.html">Tabs Demo (Tab only)</a></h2>
+		<h3>Test</h3>
+		<h4>Keyboard</h4>
+		<ul>
+			<li>TAB keystroke to first tab, TAB keystroke to panel, TAB keystroke to focusable items in panel, TAB keystroke out of panel</li>
+			<li>LEFT and/or DOWN ARROW keystroke to move to next tab. RIGHT and/or UP ARROW keystroke to move to previous tab</li>
+		</ul>
+		<h4>Screen reader</h4>
+		<ul>
+			<li>Announce tab - "Mercury". Announce tab number - "1 of 5". Announce that tab is selected - "Selected".</li>
+			<li>Announce panel - "Mercury". Announce that is is a tab panel - "Tabpanel"</li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>OS</th>
+					<th>Browser</th>
+					<th>NVDA 2014.4</th>
+					<th>JAWS 16</th>
+					<th>VoiceOver</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows 7</td>
+					<td>IE 11</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">
+						"List with 5 items. Mercury"<br>
+						Cannot navigate to other items using Left/right/up/down ARROW keystrokes</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						Reads panel</span>
+					</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">
+						"Mercury"<br>
+						(using down ARROW can read each item but cannot access)<br>
+						"Venus"<br>
+						"Earth"<br>
+						"Mars"<br>
+						"Jupiter"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						Reads heading inside panel</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Chrome 39</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">
+						"Navigation landmark. List with 5 items. Mercury"<br>
+						Cannot navigate to other items using Left/right/up/down ARROW keystrokes</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						Reads panel</span>
+					</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">
+						"Mercury"<br>
+						(using down ARROW can read each item)<br>
+						"Venus"<br>
+						"Earth"<br>
+						"Mars"<br>
+						"Jupiter"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Windows 7</td>
+					<td>Firefox 34</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">
+						"Clickable navigation. List with 5 items. Mercury"<br>
+						Cannot navigate to other items using Left/right/up/down ARROW keystrokes</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						"Out of list" then reads panel</span>
+					</td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">
+						"Navigation region. Mercury"<br>
+						"Venus"<br>
+						"Earth"<br>
+						"Mars"<br>
+						"Jupiter"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Chrome 39</td>
+					<td></td>
+					<td></td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">"Mercury. Group with 5 items"<br>
+						"Venus. Group"<br>
+						"Earth. Group"<br>
+						"Mars. Group"<br>
+						"Jupiter. Group"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Firefox 34</td>
+					<td></td>
+					<td></td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">"Mercury. List 5 items"<br>
+						"Link. Venus"<br>
+						"Link. Earth"<br>
+						"Link. Mars"<br>
+						"Link. Jupiter"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+				</tr>
+				<tr>
+					<td>OSX 10.9</td>
+					<td>Safari 7</td>
+					<td></td>
+					<td></td>
+					<td>
+						<b>Moving across the tabs:</b><br>
+						<span class="fail">"Mercury. Group with 5 items"<br>
+						"Venus. Group"<br>
+						"Earth. Group"<br>
+						"Mars. Group"<br>
+						"Jupiter. Group"</span><br>
+						<br>
+						<b>Focus on panel:</b><br>
+						<span class="fail">Reads panel<br>
+						Reads panel<br>
+						Reads panel<br>
+						Reads panel</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+	</body>
+</html>

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Multiple select menus and keyboard use</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+			a:focus,select:focus { outline: 1px solid red; }
+			form div { margin-bottom: 1em; }	
+			#color { height: 250px; }	
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>Multiple select menus and keyboard use</h1>
+			<h3>Operation</h3>
+			<ul>
+				<li>TAB to focus on select menu</li>
+				<li>Focus appears on select menu</li>
+				<li>Right and down ARROW keys move to next option, back and up ARROW keys move to previous option.<br></li>
+				<li>SHIFT to multi-select items.</li>
+			</ul>
+			<h3>Example</h3>
+			<form class="example" action="#">
+				<div>
+					<label for="color">Favourite color</label>
+					<select id="color" name="color" multiple>
+						<option>Amaranth</option>
+						<option>Amber</option>
+						<option>Amethyst</option>
+						<option>Apricot</option>
+						<option>Aquamarine</option>
+						<option>Azure</option>
+						<option>Baby blue</option>
+						<option>Beige</option>
+						<option>Black</option>
+						<option>Blue</option>
+						<option>Blue-green</option>
+						<option>Blue-violet</option>
+					</select>
+				</div>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;form class="example" action="#"&gt;
+	&lt;div&gt;
+		&lt;label for="color"&gt;Favourite color&lt;/label&gt;
+		&lt;select id="color" name="color" multiple&gt;
+			&lt;option&gt;Amaranth&lt;/option&gt;
+			&lt;option&gt;Amber&lt;/option&gt;
+			&lt;option&gt;Amethyst&lt;/option&gt;
+			&lt;option&gt;Apricot&lt;/option&gt;
+			&lt;option&gt;Aquamarine&lt;/option&gt;
+			&lt;option&gt;Azure&lt;/option&gt;
+			&lt;option&gt;Baby blue&lt;/option&gt;
+			&lt;option&gt;Beige&lt;/option&gt;
+			&lt;option&gt;Black&lt;/option&gt;
+			&lt;option&gt;Blue&lt;/option&gt;
+			&lt;option&gt;Blue-green&lt;/option&gt;
+			&lt;option&gt;Blue-violet&lt;/option&gt;
+		&lt;/select&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

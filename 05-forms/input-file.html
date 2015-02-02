@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML input type="file" element</title>
+		<link href="../assets/css/normalize-v3.0.2.css" rel="stylesheet">
+		<link href="../assets/css/styles.css" rel="stylesheet">
+		<script src="../assets/js/html5.js"></script>
+		<script src="../assets/js/prism.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="main main--wide">
+			<p><a href="../index.html">Back to home</a></p>
+			<h1>HTML input type="file" element test</h1>
+			<h3>Test</h3>
+			<ul>
+				<li>The label <b>should be announced</b></li>
+				<li>The purpose of the element ("file upload" or choose a file") <b>should be announced</b></li>
+				<li>input type="file" elements with required attribute <b>should be</b> announced as "Required"</li>
+				<li>input type="file" elements with aria-required="true" attribute <b>should be</b> announced as "Required"</li>
+			</ul>
+			<h3>Example</h3>
+			<form class="example" method="get" action="#">
+				<div class="row-form">
+					<label class="label" for="a">Portfolio</label>
+					<input id="a" name="a" type="file">
+				</div>
+				<div class="row-form">
+					<label class="label" for="b">Photo</label>
+					<input id="b" name="b" type="file" required>
+				</div>
+				<div class="row-form">
+					<label class="label" for="c">File</label>
+					<input id="c" name="c" type="file" aria-required="true">
+				</div>
+				<div class="row-form">
+					<label class="label" for="d">Document</label>
+					<input id="d" name="d" type="file" required aria-required="true">
+				</div>
+			</form>
+			<h3>Code sample</h3>
+			<figure>
+<!-- code start -->
+<pre class="code-sample"><code class="language-markup">&lt;label for="a"&gt;Portfolio&lt;/label&gt;
+&lt;input id="a" name="a" type="file"&gt;
+
+&lt;label for="b"&gt;Photo&lt;/label&gt;
+&lt;input id="b" name="b" type="file" required&gt;
+
+&lt;label for="c"&gt;File&lt;/label&gt;
+&lt;input id="c" name="c" type="file" aria-required="true"&gt;
+
+&lt;label for="d"&gt;Document&lt;/label&gt;
+&lt;input id="d" name="d" type="file" required aria-<span class="pass">Required</span>="true"&gt;
+</code></pre>
+<!-- code end -->
+			</figure>
+			<table>
+				<caption>Support chart</caption>
+				<thead>
+					<tr>
+						<th>OS</th>
+						<th>Browser</th>
+						<th>NVDA 2014.4</th>
+						<th>JAWS 16</th>
+						<th>VoiceOver</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 11</td>
+						<td>
+							<b>Example 1:</b><br>
+							"Portfolio. Edit. Read only. Enter name of file to upload. Blank"<br>
+							"Portfolio button. Browse."<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Photo. Edit. Read only. Enter name of file to upload. Blank"<br>
+							"Photo button. Browse."<br>
+							<span class="fail">Required not announced</span><br>
+							<br>
+							<b>Example 1:</b><br>
+							"File. Edit. Read only. <span class="pass">Required</span>. Enter name of file to upload. Blank"<br>
+							"File button. <span class="pass">Required</span>. Browse.<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Document. Edit. Read only. <span class="pass">Required</span>. Enter name of file to upload. Blank"<br>
+							"Document button. <span class="pass">Required</span>. Browse.
+						</td>
+						<td>
+							<b>Example 1:</b><br>
+							"Portfolio. File. Upload. Edit. Enter name of file to upload"<br>
+							"File upload edit. Browse..."<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Photo. File. Upload. Edit. Enter name of file to upload"<br>
+							"File upload edit. Browse..."<br>
+							<span class="fail">Required not announced</span><br>
+							<br>
+							<b>Example 1:</b><br>
+							"File. File. Upload. Edit. <span class="pass">Required</span>. Enter name of file to upload"<br>
+							"File upload edit. Browse..."<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Document. File. Upload. Edit. <span class="pass">Required</span>. Enter name of file to upload"<br>
+							"File upload edit. Browse..."<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>IE 8</td>
+						<td>
+							<b>Example 1:</b><br>
+							"Portfolio. Edit. Read only. Enter name of file to upload. Blank"<br>
+							"Portfolio button. Browse."<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Photo. Edit. Read only. Enter name of file to upload. Blank"<br>
+							"Photo button. Browse."<br>
+							<span class="fail">Required not announced</span><br>
+							<br>
+							<b>Example 1:</b><br>
+							"File. Edit. Read only. <span class="pass">Required</span>. Enter name of file to upload. Blank"<br>
+							"File button. <span class="pass">Required</span>. Browse.<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Document. Edit. Read only. <span class="pass">Required</span>. Enter name of file to upload. Blank"<br>
+							"Document button. <span class="pass">Required</span>. Browse.
+						</td>
+						<td>
+							<b>Example 1:</b><br>
+							"Portfolio. File. Upload. Edit. Enter name of file to upload"<br>
+							"File upload edit. Browse..."<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Photo. File. Upload. Edit. Enter name of file to upload"<br>
+							"File upload edit. Browse..."<br>
+							<span class="fail">Required not announced</span><br>
+							<br>
+							<b>Example 1:</b><br>
+							"File. File. Upload. Edit. <span class="pass">Required</span>. Enter name of file to upload"<br>
+							"File upload edit. Browse..."<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Document. File. Upload. Edit. <span class="pass">Required</span>. Enter name of file to upload"<br>
+							"File upload edit. Browse..."<br>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Chrome 39</td>
+						<td>
+							<b>Example 1:</b><br>
+							"Choose file. Button"<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Choose file. Button. <span class="pass">Required</span>"<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Choose file. Button. <span class="pass">Required</span>"<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Choose file. Button. <span class="pass">Required</span>"
+						</td>
+						<td>
+							<b>Example 1:</b><br>
+							"Portfolio"<br>
+							<span class="fail">Does not announce purpose</span><br>
+							<br>
+							<b>Example 1:</b><br>
+							"Photo"<br>
+							<span class="fail">Does not announce purpose</span><br>
+							<br>
+							<b>Example 1:</b><br>
+							"File"<br>
+							<span class="fail">Does not announce purpose</span><br>
+							<br>
+							<b>Example 1:</b><br>
+							"Document"<br>
+							<span class="fail">Does not announce purpose</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Windows 7</td>
+						<td>Firefox 34</td>
+						<td>
+							<b>Example 1:</b><br>
+							"Browse. Button"<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Browse. Button. Invalid entry. <span class="pass">Required</span>"<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Browse. Button. <span class="pass">Required</span>"<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Browse. Button. Invalid entry. <span class="pass">Required</span>"
+						</td>
+						<td>
+							<b>Example 1:</b><br>
+							"Portfolio. Frame. Browser. Button. To activate press space bar"<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Photo. Frame. <span class="pass">Required</span>. Invalid entry. Browser. Button. <span class="pass">Required</span>. Invalid entry. To activate press space bar"<br>
+							<br>
+							<b>Example 1:</b><br>
+							"File. Frame. <span class="pass">Required</span>. Browser. Button. <span class="pass">Required</span>. To activate press space bar"<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Document. Frame. <span class="pass">Required</span>. Invalid entry. Browser. Button. <span class="pass">Required</span>. Invalid entry. To activate press space bar"
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Chrome 39</td>
+						<td></td>
+						<td></td>
+						<td>
+							<b>Example 1:</b><br>
+							"Choose file. Portfolio. Button"<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Choose file. Photo. Button"<br>
+							<span class="fail">Required not announced</span><br>
+							<br>
+							<b>Example 1:</b><br>
+							"Choose file. File. Button"<br>
+							<span class="fail">Required not announced</span><br>
+							<br>
+							<b>Example 1:</b><br>
+							"Choose file. Document. Button"<br>
+							<span class="fail">Required not announced</span>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Firefox 34</td>
+						<td></td>
+						<td></td>
+						<td>
+							<b>Example 1:</b><br>
+							"Browse... Portfolio. Button"<br>
+							<br>
+							<b>Example 1:</b><br>
+							"Browse... Photo. Button"<br>
+							<span class="fail">Required not announced</span><br>
+							<br>
+							<b>Example 1:</b><br>
+							"Browse... File. Button"<br>
+							<span class="fail">Required not announced</span><br>
+							<br>
+							<b>Example 1:</b><br>
+							"Browse... Document. Button"<br>
+							<span class="fail">Required not announced</span><br>
+						</td>
+					</tr>
+					<tr>
+						<td>OSX 10.9</td>
+						<td>Safari 7</td>
+						<td></td>
+						<td></td>
+						<td>
+							<b>Example 1:</b><br>
+							"No file selected. Portfolio. File. Upload button"<br>
+							<br>
+							<b>Example 1:</b><br>
+							"No file selected. Photo. File. Upload button"<br>
+							<br>
+							<b>Example 1:</b><br>
+							"No file selected. File. File. Upload button"<br>
+							<br>
+							<b>Example 1:</b><br>
+							"No file selected. Document. File. Upload button"<br>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<p><a href="../index.html">Bottom of page - Back to home</a></p>
+		</div>
+	</body>
+</html>

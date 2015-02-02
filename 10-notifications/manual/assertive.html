@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8" />
+
+	<title>Manually injecting content into the page - aria-live="assertive"</title>
+
+	<link rel="stylesheet" href="../styles.css" type="text/css" />
+
+</head>
+<body>
+
+	<h1>Demo: Manually injecting content into the page <small>(aria-live="assertive")</small></h1>
+	
+	<div id="message" class="error" aria-live="assertive"></div>
+	
+	<p>
+			It was the best of times, it was the worst of times, it was the age 
+			of wisdom, it was the age of foolishness, it was the epoch of belief, 
+			it was the epoch of incredulity, it was the season of Light, it was 
+			the season of Darkness, it was the spring of hope, it was the winter 
+			of despair, we had everything before us, we had nothing before us, 
+			we were all going direct to Heaven, we were all going direct the 
+			other way &#x2014; in short, the period was so far like the present 
+			period, that some of its noisiest authorities insisted on its being 
+			received, for good or for evil, in the superlative degree of 
+			comparison only.
+	</p>
+
+
+
+	<script type="text/javascript">
+	(function()
+	{
+	
+		var button = document.createElement('button');
+		button.type = 'button';
+		button.innerHTML = 'Error panel';
+		
+		document.body.appendChild(button);
+	
+	
+	
+		button.addEventListener('click', function()
+		{
+		
+			document.getElementById('message').innerHTML = '<p><strong>Error:</strong> This is an error notification.</p>';
+		
+		}, false);
+	
+	})();
+	</script>
+
+
+</body>
+</html>
